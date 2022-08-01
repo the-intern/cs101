@@ -1,6 +1,6 @@
 # Introduction
 
-> Every art, and every science ... and  ... every action and moral choice, aims, it is thought, at some good: for which reason a common and by no means a bad description of the Chief Good is, "that to which all things aim." - Aristotle, Ethics
+> Every art, and every science ... and  ... every action and moral choice, aims, it is thought, at some good: for which reason a common and by no means a bad description of the Chief Good is, "that towards which all things aim." - Aristotle, Ethics
 
 As with just about everything else in life, pursuing with a purpose is almost pointless.  Learning a programming language and how you do anything with it is no different.
 
