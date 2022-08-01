@@ -1,0 +1,11 @@
+format: jb-book
+root: intro
+options:
+  numbered: true
+chapters:
+- file: 01-intro/intro
+  sections:
+  - file: 01-intro/typewriter/index
+  - file: 01-intro/coding_environment_i/index
+  - file: 01-intro/coding_environment_ii/index
+  - file: 01-intro/coding_environment_iii/index
