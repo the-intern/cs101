@@ -8,10 +8,10 @@ This is an approximation of the typewriter I used in school, purchased when a so
 
 Many my age or just younger will recall the purchase of a Commodore or Apple in the very early days of personal computing in the 1980s.  I had no such luck.
 
-
 But what I lacked in access to 'technology' I, in some ways, made up for by learning to type and type fast.
 
-In coding, keyboarding, i.e., the manual effort to put code to text, is, for most mere mortals, an essential skill -- __essential__ as in, "You may not think it important, but it makes a gargantuan difference in your coding work."
+```{tip} In coding, keyboarding, i.e., the manual effort to put code to text, is, for most mere mortals, an essential skill -- __essential__ as in, "You may not think it important, but it makes a gargantuan difference in your coding work."
+```
 
 You'll often hear the term __source code__.
 
