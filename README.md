@@ -1,2 +1,4 @@
-# cs101
-jupyter book of jbook repo
+# CS 101 Jupyter Book
+
+---
+
