@@ -1,6 +1,13 @@
 # Coding as a Manual Labor
 
-> What the hand does the mind remembers. - Maria Montessori
+```{admonition} Coding is Tactile
+:class: tip
+
+> ___What the hand does the mind remembers.___
+
+Maria Montessori
+
+```
 
 This is an approximation of the typewriter I used in school, purchased when a sophomore in high school and used throughout college and graduate school.
 

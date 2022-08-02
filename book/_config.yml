@@ -34,7 +34,7 @@ html:
 
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patters: [.vscode, "*.sh", .env]
+exclude_patters: [.vscode, "*.sh", .env, templates]
 only_build_toc_files: true
 # +----------------------------------------+
 

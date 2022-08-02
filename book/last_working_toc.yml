@@ -4,20 +4,16 @@ root: intro
   # titlesonly: true
 
 parts:
-
-- caption: Preliminaries
+- caption: Objectives
   numbered: true
-
   chapters:
-    # sections:
-    - file: 00-preliminaries/intro
-      sections:
-      - file: 00-preliminaries/typewriter/index
+  - file: 01-intro/intro
 
 - caption: Getting Started
   numbered: true
   chapters:
-    # sections:
+  - file: 01-intro/typewriter/index
+    sections:
     - file: 01-intro/coding_environment_i/index
     - file: 01-intro/coding_environment_ii/index
     - file: 01-intro/coding_environment_iii/index
@@ -25,8 +21,7 @@ parts:
 - caption: First Program
   numbered: true
   chapters:
-    # sections:
-    - file: 02-expressions/index
+  - file: 02-expressions/index
 
 
 # parts:
