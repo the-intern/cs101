@@ -1,5 +1,5 @@
 format: jb-book
-root: intro
+root: intro/intro
 # defaults:  # The defaults key will be applied to all chapters and sub-sections
   # titlesonly: true
 
