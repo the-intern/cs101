@@ -1,4 +1,8 @@
+# the interns files
 .vscode/
+outline.md
+templates/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -142,4 +146,3 @@ dmypy.json
 
 # OSX
 .DS_Store
-
