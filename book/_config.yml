@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: "CS 101"
+title: "Coding: CS 101"
 author: The Intern
 copyright: "2022-2023"
 logo: images/intern.jpeg
@@ -34,7 +34,9 @@ html:
 
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patterns: [.vscode, "*.sh", .env, templates, drafts]
+exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline]
 only_build_toc_files: true
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
 # +----------------------------------------+
 

@@ -1,44 +1,24 @@
 format: jb-book
-root: intro/intro
+root: intro
+#
 # defaults:  # The defaults key will be applied to all chapters and sub-sections
   # titlesonly: true
 
 parts:
-
-- caption: Preliminaries
-  numbered: true
-
-  chapters:
-    # sections:
-    - file: 00-preliminaries/intro
-      sections:
-      - file: 00-preliminaries/typewriter/index
-
-- caption: Getting Started
-  numbered: true
-  chapters:
-    # sections:
-    - file: 01-intro/coding_environment_i/index
-    - file: 01-intro/coding_environment_ii/index
-    - file: 01-intro/coding_environment_iii/index
-
-- caption: First Program
-  numbered: true
-  chapters:
-    # sections:
+  - caption: Preliminaries
+    chapters:
+      - file: 00-preliminaries/intro
+        sections:
+        - file: 00-preliminaries/typewriter/index
+  - caption: Getting Started
+    chapters:
+      - file: 01-intro/intro
+        sections:
+        - file: 01-intro/coding_environment_i/index
+        - file: 01-intro/coding_environment_ii/index
+        - file: 01-intro/coding_environment_iii/index
+  - caption: First Program
+    chapters:
     - file: 02-expressions/index
-
-
-# parts:
-#   - caption: Name of Part 1
-#     chapters:
-#     - file: path/to/part1/chapter1
-#     - file: path/to/part1/chapter2
-#       sections:
-#       - file: path/to/part1/chapter2/section1
-#   - caption: Name of Part 2
-#     chapters:
-#     - file: path/to/part2/chapter1
-#     - file: path/to/part2/chapter2
-#       sections:
-#       - file: path/to/part2/chapter2/section1
+      sections:
+        - file: 02-expressions/math/index
