@@ -1,3 +1,0 @@
-# Math Expressions
-
-lorem ipsum
