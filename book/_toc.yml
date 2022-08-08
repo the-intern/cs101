@@ -5,20 +5,29 @@ root: intro
   # titlesonly: true
 
 parts:
-  - caption: Preliminaries
+  - caption: Part I - Introduction
+    numbered: true
     chapters:
-      - file: 00-preliminaries/intro
+      - file: part-i/index
         sections:
-        - file: 00-preliminaries/typewriter/index
-  - caption: Getting Started
+        - file: part-i/introduction/index
+        - file: part-i/search-engine-intro/index
+        - file: part-i/coding-environment-i/index
+        - file: part-i/typing-skills/index
+        - file: part-i/quiz-i/index
+        - file: part-i/expressions/index
+
+  - caption: Part II - Repetition
+    numbered: true
     chapters:
-      - file: 01-intro/intro
+      - file: part-ii/index
         sections:
-        - file: 01-intro/coding_environment_i/index
-        - file: 01-intro/coding_environment_ii/index
-        - file: 01-intro/coding_environment_iii/index
-  - caption: First Program
+        - file: part-ii/procedures/index
+        - file: part-ii/return-statements/index
+
+  - caption: Part III - Placeholder
+    numbered: true
     chapters:
-    - file: 02-expressions/index
+    - file: part-iii/index
       sections:
-        - file: 02-expressions/math/index
+        - file: part-iii/placeholder/index

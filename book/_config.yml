@@ -29,14 +29,18 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
-  use_repository_button: true
+  use_issues_button: false
+  use_repository_button: false
+  use_multitoc_numbering: true
+  home_page_in_navbar: true
+
 
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline]
+exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store]
 only_build_toc_files: true
 launch_buttons:
   colab_url: "https://colab.research.google.com"
+
 # +----------------------------------------+
 
