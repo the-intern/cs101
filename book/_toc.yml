@@ -4,6 +4,7 @@ root: intro
 # defaults:
   # titlesonly: true
 
+file: intro
 parts:
   - caption: Part I - Introduction
     numbered: true
