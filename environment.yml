@@ -12,4 +12,5 @@ dependencies:
   - sphinx-sitemap
   - python
   - pip
+  - jupytext
 prefix: /opt/anaconda3/envs/jupyterbook-env
