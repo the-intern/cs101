@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.5. Quick Quiz &#8212; Coding: CS 101</title>
+    <title>1.9. Testing Display-None &#8212; Coding: CS 101</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.6. Shea Example" href="sheaexample.html" />
-    <link rel="prev" title="1.4. Coding is Manual Labor" href="../typing-skills/index.html" />
+    <link rel="next" title="1.10. Expressions and Math" href="../expressions/index.html" />
+    <link rel="prev" title="1.8. Using MyST with md File for Quizzes" href="usingmarkdown.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -153,13 +153,13 @@ const thebe_selector_output = ".output, .cell_output"
      1.4. Coding is Manual Labor
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quiz-i/index.html">
      1.5. Quick Quiz
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sheaexample.html">
+    <a class="reference internal" href="../quiz-i/sheaexample.html">
      1.6. Shea Example
     </a>
    </li>
@@ -169,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../test-display-none/usingmarkdown.html">
+    <a class="reference internal" href="usingmarkdown.html">
      1.8. Using MyST with
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -179,8 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
      File for Quizzes
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../test-display-none/index.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      1.9. Testing Display-None
     </a>
    </li>
@@ -303,7 +303,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/the-intern/cs101/main?urlpath=tree/book/part-i/quiz-i/index.ipynb"
+        <a href="https://mybinder.org/v2/gh/the-intern/cs101/main?urlpath=tree/book/part-i/test-display-none/index.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +321,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/the-intern/cs101/blob/main/book/part-i/quiz-i/index.ipynb"
+        <a href="https://colab.research.google.com/github/the-intern/cs101/blob/main/book/part-i/test-display-none/index.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -382,7 +382,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/part-i/quiz-i/index.ipynb"
+        <a href="../../_sources/part-i/test-display-none/index.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -419,23 +419,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#below-is-a-hidden-cell">
+   1.9.1. Below is a hidden cell
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Quick Quiz</h1>
+                <h1>Testing Display-None</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#below-is-a-hidden-cell">
+   1.9.1. Below is a hidden cell
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -443,8 +480,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="quick-quiz">
-<h1><span class="section-number">1.5. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-display-none">
+<h1><span class="section-number">1.9. </span>Testing Display-None<a class="headerlink" href="#testing-display-none" title="Permalink to this headline">#</a></h1>
+<p>Per jmshea:</p>
+<blockquote>
+<div><p>JupyterQuiz now supports pulling the data (as JSON) from the content of an HTML element. If you put an element with style “display:none” in a Markdown cell, then the user will not be able directly read that data.</p>
+</div></blockquote>
+<section id="below-is-a-hidden-cell">
+<h2><span class="section-number">1.9.1. </span>Below is a hidden cell<a class="headerlink" href="#below-is-a-hidden-cell" title="Permalink to this headline">#</a></h2>
+<p>Anything?</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -460,7 +505,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./part-i/quiz-i"
+            path: "./part-i/test-display-none"
         },
         predefinedOutput: true
     }
@@ -474,17 +519,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../typing-skills/index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="usingmarkdown.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1.4. </span>Coding is Manual Labor</p>
+            <p class="prev-next-title"><span class="section-number">1.8. </span>Using MyST with <code class="docutils literal notranslate"><span class="pre">md</span></code> File for Quizzes</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="sheaexample.html" title="next page">
+    <a class='right-next' id="next-link" href="../expressions/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.6. </span>Shea Example</p>
+        <p class="prev-next-title"><span class="section-number">1.10. </span>Expressions and Math</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
