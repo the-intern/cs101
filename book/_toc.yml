@@ -15,6 +15,10 @@ parts:
         - file: part-i/coding-environment-i/index
         - file: part-i/typing-skills/index
         - file: part-i/quiz-i/index
+        - file: part-i/quiz-i/sheaexample
+        - file: part-i/quiz-ii/index
+        - file: part-i/test-display-none/usingmarkdown
+        - file: part-i/test-display-none/index
         - file: part-i/expressions/index
 
   - caption: Part II - Repetition
