@@ -10,6 +10,6 @@ kernelspec:
   name: python3
 ---
 
+# Building an Index and Understanding the Internet
 
-# Part III - Placeholder
-
+Under construction
