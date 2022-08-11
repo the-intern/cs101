@@ -14,14 +14,10 @@ parts:
         - file: part-i/search-engine-intro/index
         - file: part-i/coding-environment-i/index
         - file: part-i/typing-skills/index
-        - file: part-i/quiz-i/index
-        - file: part-i/quiz-i/sheaexample
-        - file: part-i/quiz-ii/index
-        - file: part-i/test-display-none/usingmarkdown
-        - file: part-i/test-display-none/index
+        - file: part-i/quick-quiz/index
         - file: part-i/expressions/index
 
-  - caption: Part II - Repetition
+  - caption: Part II - Repetition | Procedures & Control
     numbered: true
     chapters:
       - file: part-ii/index
@@ -29,9 +25,42 @@ parts:
         - file: part-ii/procedures/index
         - file: part-ii/return-statements/index
 
-  - caption: Part III - Placeholder
+  - caption: Part III - Data and Webcrawling
     numbered: true
     chapters:
     - file: part-iii/index
       sections:
         - file: part-iii/placeholder/index
+        - file: part-iii/placeholder/movie
+
+  - caption: Part IV - An Index and An Understanding of the Internet
+    numbered: true
+    chapters:
+    - file: part-iv/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part V - Speed, Algorithms, and Data
+    numbered: true
+    chapters:
+    - file: part-v/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part VI - Page Rankings, Recursion, and A Search Engine
+    numbered: true
+    chapters:
+    - file: part-vi/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part VII - A Decision to Be Made
+    numbered: true
+    chapters:
+    - file: part-vii/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie

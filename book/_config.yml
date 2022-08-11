@@ -38,11 +38,20 @@ html:
 
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store]
-only_build_toc_files: true
+exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store, __ignore]
+
+only_build_toc_files: false
+
 launch_buttons:
   thebe: true
   colab_url: "https://colab.research.google.com"
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - html_image
+    - amsmath
 
 # +----------------------------------------+
 

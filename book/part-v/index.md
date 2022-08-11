@@ -10,6 +10,6 @@ kernelspec:
   name: python3
 ---
 
+# Speed: Algorithms and Data Structures
 
-# Part III - Placeholder
-
+Under construction
