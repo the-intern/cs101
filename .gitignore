@@ -1,4 +1,5 @@
 # the interns files
+__ignore/
 .vscode/
 outline.md
 templates/
