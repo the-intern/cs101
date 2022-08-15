@@ -8,8 +8,14 @@ logo: images/intern.jpeg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
+# * change to "cache" from "force"
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
+  # ! placeholder for use later on
+  exclude_patterns:
+    - '_index.md'
+    - 'pattern2'
+    - '*pattern3withwildcard'
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -52,6 +58,12 @@ parse:
     # including those that are enabled by default!
     - html_image
     - amsmath
+
+# ! +------theme test ---------------------+
+# sphinx:
+#   config:
+#     ! launch buttons not supported
+#     html_theme: pydata_sphinx_theme
 
 # +----------------------------------------+
 
