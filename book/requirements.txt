@@ -15,7 +15,7 @@ blinker==1.4
 Bottleneck @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_29949159-f86f-474b-bc1f-aaa1e0e222b4ofusifik/croots/recipe/bottleneck_1657175564045/work
 brotlipy @ file:///Users/runner/miniforge3/conda-bld/brotlipy_1648854210220/work
 cachetools @ file:///tmp/build/80754af9/cachetools_1619597386817/work
-certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_83242e7e-f82d-4a71-8ef2-9d71d212d249gu_wxmeq/croots/recipe/certifi_1655968827803/work/certifi
+certifi==2022.6.15
 cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1656783005990/work
 charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1655906222726/work
 click @ file:///opt/concourse/worker/volumes/live/2d66025a-4d79-47c4-43be-6220928b6c82/volume/click_1646056610594/work
@@ -35,6 +35,7 @@ executing @ file:///home/conda/feedstock_root/build_artifacts/executing_16588523
 fastjsonschema @ file:///home/conda/feedstock_root/build_artifacts/python-fastjsonschema_1658064924516/work/dist
 flit_core @ file:///home/conda/feedstock_root/build_artifacts/flit-core_1645629044586/work/source/flit_core
 fonttools==4.25.0
+furo @ file:///home/conda/feedstock_root/build_artifacts/furo_1655877608589/work
 future @ file:///Users/builder/ci_310/future_1642502263251/work
 ghp-import @ file:///home/conda/feedstock_root/build_artifacts/ghp-import_1651585738538/work
 gitdb @ file:///home/conda/feedstock_root/build_artifacts/gitdb_1635085722655/work
@@ -134,6 +135,7 @@ sniffio @ file:///Users/runner/miniforge3/conda-bld/sniffio_1648819218453/work
 snowballstemmer @ file:///home/conda/feedstock_root/build_artifacts/snowballstemmer_1637143057757/work
 soupsieve @ file:///home/conda/feedstock_root/build_artifacts/soupsieve_1658207591808/work
 Sphinx @ file:///home/conda/feedstock_root/build_artifacts/sphinx_1648404928645/work
+sphinx-basic-ng @ file:///home/conda/feedstock_root/build_artifacts/sphinx-basic-ng_1656421732198/work
 sphinx-book-theme==0.3.3
 sphinx-comments @ file:///home/conda/feedstock_root/build_artifacts/sphinx-comments_1598555952140/work
 sphinx-copybutton @ file:///home/conda/feedstock_root/build_artifacts/sphinx-copybutton_1644147394672/work
@@ -144,6 +146,7 @@ sphinx-sitemap @ file:///home/conda/feedstock_root/build_artifacts/sphinx-sitema
 sphinx-thebe @ file:///home/conda/feedstock_root/build_artifacts/sphinx-thebe_1651288635093/work
 sphinx-togglebutton @ file:///home/conda/feedstock_root/build_artifacts/sphinx-togglebutton_1649881535721/work
 sphinx_design @ file:///home/conda/feedstock_root/build_artifacts/sphinx-design_1650527944719/work
+sphinx_inline_tabs @ file:///home/conda/feedstock_root/build_artifacts/sphinx-inline-tabs_1641305889944/work
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-bibtex @ file:///home/conda/feedstock_root/build_artifacts/sphinxcontrib-bibtex_1649660741282/work
 sphinxcontrib-devhelp==1.0.2
