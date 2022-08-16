@@ -361,42 +361,6 @@ title="Launch on Binder"
 
       </li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/the-intern/cs101-deployment/blob/main/part-iii/placeholder/index.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="initThebeSBT()"
-  class="headerbtn headerbtn-launch-thebe"
-  data-toggle="tooltip"
-data-placement="left"
-title="Launch Thebe"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="headerbtn__text-container">Live Code</span>
-</button>
-
-      </li>
-      
     </ul>
   </div>
 </div>
@@ -492,8 +456,8 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "the-intern/cs101-deployment",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
