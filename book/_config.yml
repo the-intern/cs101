@@ -28,8 +28,9 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/the-intern/cs101  # Online location of your book
-  path_to_book: book  # Optional path to your book, relative to the repository root
+  # url: https://github.com/the-intern/cs101  # Online location of your book
+  url: https://github.com/the-intern/cs101-deployment
+  # path_to_book: _build  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -39,7 +40,8 @@ html:
   use_repository_button: false
   use_multitoc_numbering: true
   home_page_in_navbar: true
-  url: https://the-intern.github.io/cs101/intro
+  # url: https://the-intern.github.io/cs101/intro
+  url: https://github.com/the-intern/cs101-deployment/_build/html/intro
 
 
 # +----------------------------------------+
