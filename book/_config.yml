@@ -45,6 +45,7 @@ html:
 
 
 # +----------------------------------------+
+# +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
 exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store, __ignore]
 
@@ -52,8 +53,7 @@ only_build_toc_files: false
 
 # this just isn't worth it.
 launch_buttons:
-  thebe: false
-  # colab_url: "https://colab.research.google.com"
+  binderhub_url: ""
 
 parse:
   myst_enable_extensions:
