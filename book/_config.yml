@@ -47,7 +47,9 @@ html:
 # +----------------------------------------+
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store, __ignore]
+exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store, __ignore, _build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+
+
 
 only_build_toc_files: false
 
@@ -60,13 +62,32 @@ parse:
     # don't forget to list any other extensions you want enabled,
     # including those that are enabled by default!
     - html_image
+    - html_admonition
     - amsmath
+    - deflist
+    - colon_fence
+    - dollarmath
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+    # - fieldlist
+    # - strikethrough
+
 
 # ! +------theme test ---------------------+
-# sphinx:
-#   config:
-#     ! launch buttons not supported
+# launch buttons not supported nor much else
 #     html_theme: pydata_sphinx_theme
+sphinx:
+  config:
+    mathjax3_config:
+      tex:
+        macros:
+          "N": "\\mathbb{N}"
+          "floor": ["\\lfloor#1\\rfloor", 1]
+          "bmat" : ["\\left[\\begin{array}"]
+          "emat" : ["\\end{array}\\right]"]
 
 # +----------------------------------------+
 
