@@ -1,24 +1,23 @@
 format: jb-book
-root: intro
+root: home
 # The defaults key will be applied to all chapters and sub-sections
 # defaults:
   # titlesonly: true
 
 parts:
   - caption: Part I - Introduction
-    numbered: true
+    numbered: false
     chapters:
-      - file: part-i/index
+      - file: part-i/a-why/index
+      - file: part-i/b-how/index
         sections:
-        - file: part-i/introduction/index
-        - file: part-i/search-engine-intro/index
-        - file: part-i/coding-environment-i/index
-        - file: part-i/typing-skills/index
-        - file: part-i/quick-quiz/index
-        - file: part-i/expressions/index
+        - file: part-i/b-how/1-immediate-goals/index
+        - file: part-i/b-how/2-python/index
+        - file: part-i/b-how/3-search-engines/index
+      - file: part-i/c-where/index.md
 
   - caption: Part II - Repetition | Procedures & Control
-    numbered: true
+    numbered: false
     chapters:
       - file: part-ii/index
         sections:
@@ -26,7 +25,7 @@ parts:
         - file: part-ii/return-statements/index
 
   - caption: Part III - Data and Webcrawling
-    numbered: true
+    numbered: false
     chapters:
     - file: part-iii/index
       sections:
@@ -34,7 +33,7 @@ parts:
         - file: part-iii/placeholder/movie
 
   - caption: Part IV - An Index and An Understanding of the Internet
-    numbered: true
+    numbered: false
     chapters:
     - file: part-iv/index
       # sections:
@@ -42,7 +41,7 @@ parts:
       #   - file: part-iii/placeholder/movie
 
   - caption: Part V - Speed, Algorithms, and Data
-    numbered: true
+    numbered: false
     chapters:
     - file: part-v/index
       # sections:
@@ -50,7 +49,7 @@ parts:
       #   - file: part-iii/placeholder/movie
 
   - caption: Part VI - Page Rankings, Recursion, and A Search Engine
-    numbered: true
+    numbered: false
     chapters:
     - file: part-vi/index
       # sections:
@@ -58,9 +57,19 @@ parts:
       #   - file: part-iii/placeholder/movie
 
   - caption: Part VII - A Decision to Be Made
-    numbered: true
+    numbered: false
     chapters:
     - file: part-vii/index
       # sections:
       #   - file: part-iii/placeholder/index
       #   - file: part-iii/placeholder/movie
+
+  - caption: Glossary
+    numbered: false
+    chapters:
+      - file: glossary/index
+
+  - caption: Quotes
+    numbered: false
+    chapters:
+      - file: quotes/index
