@@ -8,6 +8,7 @@ parts:
   - caption: Part I - Introduction
     numbered: false
     chapters:
+      - file: part-i/all-part-i.md
       - file: part-i/a-why/index
       - file: part-i/b-how/index
         sections:

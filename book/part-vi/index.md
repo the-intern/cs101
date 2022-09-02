@@ -10,6 +10,6 @@ kernelspec:
   name: python3
 ---
 
-# Page Rankings, Recursion, and a Search Engine
+# To Be Decided
 
-Under construction
+Under consideration
