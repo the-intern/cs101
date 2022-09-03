@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: "Coding: CS 101"
+title: "Coding"
 author: The Intern
 copyright: "2022-2023"
 logo: images/intern.jpeg
@@ -10,10 +10,9 @@ logo: images/intern.jpeg
 # See https://jupyterbook.org/content/execute.html
 # * change to "cache" from "force"
 execute:
-  execute_notebooks: cache
+  execute_notebooks: force
   # ! placeholder for use later on
   exclude_patterns:
-    - '_index.md'
     - 'pattern2'
     - '*pattern3withwildcard'
 
@@ -36,6 +35,8 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  # A path to a favicon
+  favicon                   : "images/_logo.svg"
   use_issues_button: false
   use_repository_button: false
   use_multitoc_numbering: true
@@ -56,6 +57,9 @@ only_build_toc_files: false
 # this just isn't worth it.
 launch_buttons:
   binderhub_url: ""
+
+# ! see
+# ! https://sphinx-book-theme.readthedocs.io/en/latest/reference/kitchen-sink/paragraph-markup.html#admonitions
 
 parse:
   myst_enable_extensions:

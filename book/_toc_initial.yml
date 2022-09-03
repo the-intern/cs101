@@ -1,0 +1,76 @@
+format: jb-book
+root: home
+# The defaults key will be applied to all chapters and sub-sections
+# defaults:
+  # titlesonly: true
+
+parts:
+  - caption: Part 0 - Preliminaries
+    numbered: false
+    chapters:
+      - file: part-i/all-part-i.md
+      - file: part-i/a-why/index
+      - file: part-i/b-how/index
+        sections:
+        - file: part-i/b-how/1-immediate-goals/index
+        - file: part-i/b-how/2-python/index
+        - file: part-i/b-how/3-search-engines/index
+      - file: part-i/c-where/index.md
+
+  - caption: Part II - Repetition | Procedures & Control
+    numbered: false
+    chapters:
+      - file: part-ii/index
+        sections:
+        - file: part-ii/procedures/index
+        - file: part-ii/return-statements/index
+
+  - caption: Part III - Data and Webcrawling
+    numbered: false
+    chapters:
+    - file: part-iii/index
+      sections:
+        - file: part-iii/placeholder/index
+        - file: part-iii/placeholder/movie
+
+  - caption: Part IV - An Index and An Understanding of the Internet
+    numbered: false
+    chapters:
+    - file: part-iv/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part V - Speed, Algorithms, and Data
+    numbered: false
+    chapters:
+    - file: part-v/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part VI - Page Rankings, Recursion, and A Search Engine
+    numbered: false
+    chapters:
+    - file: part-vi/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Part VII - A Decision to Be Made
+    numbered: false
+    chapters:
+    - file: part-vii/index
+      # sections:
+      #   - file: part-iii/placeholder/index
+      #   - file: part-iii/placeholder/movie
+
+  - caption: Glossary
+    numbered: false
+    chapters:
+      - file: glossary/index
+
+  - caption: Quotes
+    numbered: false
+    chapters:
+      - file: quotes/index

@@ -10,7 +10,7 @@ kernelspec:
   name: python3
 ---
 
-# A. Why
+# A
 
 ````{card} Man Made Code
 > God made the angels to show him splendor, as he made animals for innocence and plants for their simplicity.  But _Man_ he made to serve him wittily, in the tangle of his mind.
