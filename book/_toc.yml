@@ -10,14 +10,18 @@ parts:
     chapters:
         - file: part-i/index
           sections:
-          - file: part-i/a
+          - file: part-i/gameplan
+          - file: part-i/word-re-python
+          - file: part-i/search-engines
 
-  # - caption: Glossary
-  #   numbered: false
-  #   chapters:
-  #     - file: glossary/index
 
-  # - caption: Quotes
-  #   numbered: false
-  #   chapters:
-  #     - file: quotes/index
+
+
+  - caption: Addenda
+    numbered: false
+    chapters:
+      - file: addenda/index
+        sections:
+        - file: addenda/glossary/index
+        - file: addenda/bibliography/index
+        - file: addenda/quotes/index

@@ -85,6 +85,8 @@ parse:
 #     html_theme: pydata_sphinx_theme
 sphinx:
   config:
+    bibtex_reference_style: author_year
+    bibtex_bibfiles: ["references.bib"]
     mathjax3_config:
       tex:
         macros:
