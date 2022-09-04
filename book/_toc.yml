@@ -14,9 +14,6 @@ parts:
           - file: part-i/word-re-python
           - file: part-i/search-engines
 
-
-
-
   - caption: Addenda
     numbered: false
     chapters:
