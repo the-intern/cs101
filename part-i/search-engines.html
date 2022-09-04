@@ -326,14 +326,25 @@ title="Print to PDF"
 </div>
 <p>We all know the basic purpose and use of an internet search engine.  But can we build our own, even if rudimentary?</p>
 <p>We can.  It won’t compete with Google’s or DuckDuckGo.  But we can, with some Python, build out an engine that uses the first implementation of the Google search engine circa 1998.</p>
-<p>We’ll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper <a class="reference external" href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">The PageRank Citation Ranking: Bringing Order to the Web</a> <img alt="page rank" src="../_images/pagerankpaper.png" /></p>
+<p>We’ll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper <a class="reference external" href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">The PageRank Citation Ranking: Bringing Order to the Web</a></p>
+<figure class="align-default" id="pagerank">
+<a class="reference internal image-reference" href="../_images/pagerankpaper.png"><img alt="../_images/pagerankpaper.png" src="../_images/pagerankpaper.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Brin and Page’s 1998 paper introducing PageRank search engine method</span><a class="headerlink" href="#pagerank" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Using a simple form of <em>PageRank</em>, we’ll:</p>
 <ul class="simple">
 <li><p>build a crawler, i.e., a program that, using a <em>starter page</em> will go from page to page following anchor tags (a.k.a., links) to find related pages</p></li>
 <li><p>build an index, i.e., creating a database of the documents or pages found and mapping content to their <em>urls</em></p></li>
 <li><p>using that index, finding pages, ranked by relevance, to any given search query:</p></li>
 </ul>
-<p><img alt="search engine" src="../_images/searchengine.png" /></p>
+<figure class="align-default" id="separts">
+<a class="reference internal image-reference" href="../_images/searchengine.png"><img alt="../_images/searchengine.png" src="../_images/searchengine.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The 3 steps to building a search engine</span><a class="headerlink" href="#separts" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
