@@ -12,7 +12,14 @@ We all know the basic purpose and use of an internet search engine.  But can we 
 
 We can.  It won't compete with Google's or DuckDuckGo.  But we can, with some Python, build out an engine that uses the first implementation of the Google search engine circa 1998.
 
-We'll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper [The PageRank Citation Ranking: Bringing Order to the Web](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf) ![page rank](../images/part-i/pagerankpaper.png)
+We'll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper [The PageRank Citation Ranking: Bringing Order to the Web](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf)
+
+```{figure} ../images/part-i/pagerankpaper.png
+:height: 250px
+:name: PageRank
+
+Brin and Page's 1998 paper introducing PageRank search engine method
+```
 
 Using a simple form of _PageRank_, we'll:
 
@@ -20,4 +27,9 @@ Using a simple form of _PageRank_, we'll:
 - build an index, i.e., creating a database of the documents or pages found and mapping content to their _urls_
 - using that index, finding pages, ranked by relevance, to any given search query:
 
-![search engine](../images/part-i/searchengine.png)
+```{figure} ../images/part-i/searchengine.png
+:height: 250px
+:name: SEParts
+
+The 3 steps to building a search engine
+```
