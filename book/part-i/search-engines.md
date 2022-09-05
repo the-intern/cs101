@@ -14,18 +14,11 @@ We can.  It won't compete with Google's or DuckDuckGo.  But we can, with some Py
 
 We'll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper [The PageRank Citation Ranking: Bringing Order to the Web](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf)
 
-```{figure} ../images/part-i/pagerankpaper.png
-:height: 250px
-:name: PageRank
-
-Brin and Page's 1998 paper introducing PageRank search engine method
-```
-
 Using a simple form of _PageRank_, we'll:
 
 - build a crawler, i.e., a program that, using a _starter page_ will go from page to page following anchor tags (a.k.a., links) to find related pages
 - build an index, i.e., creating a database of the documents or pages found and mapping content to their _urls_
-- using that index, finding pages, ranked by relevance, to any given search query:
+- use that index, find pages - ranked by relevance - to any given search query
 
 ```{figure} ../images/part-i/searchengine.png
 :height: 250px

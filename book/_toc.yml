@@ -10,9 +10,19 @@ parts:
     chapters:
         - file: part-i/index
           sections:
+          - file: part-i/the-minds-tangle
+          - file: part-i/only-thing-necessary
           - file: part-i/gameplan
           - file: part-i/word-re-python
           - file: part-i/search-engines
+
+  - caption: Getting Hands Dirty
+    numbered: false
+    chapters:
+        - file: part-ii/index
+          sections:
+          - file: part-ii/learn-to-type
+          - file: part-ii/coding-env
 
   - caption: Addenda
     numbered: false
