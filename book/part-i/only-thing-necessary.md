@@ -1,42 +1,50 @@
-# Only One Thing is Necessary
+```{admonition} What Might Have Been
 
-```{admonition} •
+Quentin leaned forward and shook his finger at me.
 
- _I think that it's extraordinarily important that we in computer science keep fun in computing. When it started out, it was an awful lot of fun. Of course, the paying customers got shafted every now and then, and after a while we began to take their complaints seriously. We began to feel as if we really were responsible for the successful, error-free perfect use of these machines. I don't think we are. I think we're responsible for stretching them, setting them off in new directions, and keeping fun in the house. I hope the field of computer science never loses its sense of fun. ... What's in your hands, I think and hope, is intelligence: the ability to see the machine as more than when you were first led up to it, that you can make it more._
+_Listen, old man, if you don’t work these equations, what will be the point of all we’ve done? We might end up building a good rocket that’ll fly just fine, and all the grown-ups and teachers will brag on us. Who knows? We might even be able to bluff our way past the judges at the science fair. But you’ll know and I’ll know — all the boys will know — what could have been done if you hadn’t lost your nerve. We could have built a great rocket._
 
-> __Alan J. Perlis__, computer scientist and recipient of _The Turing Award_
+> __Rocket Boys, A Memoir__, Homer Hickam (1989)
 
 ```
 
-## Looking Through the Wrong End of the Telescope
+# The One Thing Necessary
 
-When the Soviets launched Sputnik in 1957 Homer Hickam was 14, living in an impoverished coal-mining town in West Virginia, and destined by the expectations of the day to live a short life hundreds of feet underground.
+When the Soviets launched Sputnik Homer Hickam was 14, living in an impoverished West Virginia mining town, and destined by the expectations of the day to live a short life hundreds of feet underground breathing coal dust in a dark shaft.
 
-Sputnik changed that trajectory.  So fascinated did he become by it that in high school he, with three other friends, taught himself the science and math of building and launching rockets.
+Sputnik changed that path.
 
-He tells the story of his overcoming his inaptitude of math in his push to improve their rocket launches:
+So much did that satellite fascinate him that in high school, though otherwise fearful of math, he learned more than enough to launch rockets and predict their trajectories.
+
+He recalls the moment such ineptitude had to be overcome:
 
 ````{card}
 
-> I did the calculations, assuming our rocket reached maximum velocity ... The result equaled a velocity of ... 545.45 miles per hour. When I recalculated, I came up with the same result. ... I found it difficult to imagine ... our rockets could really go that fast... "This can’t be right."
+> I did the calculations, assuming our rocket reached maximum velocity ... The result equaled a velocity of ... 545.45 miles per hour. When I recalculated, I came up with the same result. ... I found it difficult to imagine ... our rockets could really go that fast... _This can’t be right._
 >
 > Quentin took a quick look and pushed the notebook back to me.
 >
-> "It is exactly correct. Keep going. Don’t lose your nerve."
+> _It is __exactly__ correct. Keep going. Don’t lose your nerve._
 >
-> "I haven’t lost my nerve!" I snapped. But I had. The next step was to do the equations for ... the De Laval nozzle, and privately I quaked at the thought of attempting [the equations] ... dozens of them, intricate, enmeshed, one building on the other — one wrong, all wrong.
+> ___I haven’t lost my nerve!___ I snapped. But I had. The next step was to do the equations for ... the De Laval nozzle, and privately I quaked at the thought of attempting [the equations] ... dozens of them, intricate, enmeshed, one building on the other — one wrong, all wrong.
 >
-> "You had the calculus class, Quentin. You work them."
+> _You had the calculus class, Quentin. You work them._
 >
-> "No," he said adamantly. "Miss Riley gave you the book. You know calculus as well as I do. Quit stalling!"
+> _No,_ he said adamantly. _Miss Riley gave you the book. You know calculus as well as I do. Quit stalling!_
 >
 > My confidence was gone. Doing those equations was like running a four-minute mile — something possible only for someone far greater than I.
 >
 > Quentin leaned forward and shook his finger at me.
 >
-> "Listen, old man, if you don’t work these equations, what will be the point of all we’ve done? We might end up building a good rocket that’ll fly just fine, and all the grown-ups and teachers will brag on us. Who knows? We might even be able to bluff our way past the judges at the science fair. But you’ll know and I’ll know — all the boys will know — what could have been done if you hadn’t lost your nerve. We could have built a great rocket."
+> _Listen, old man, if you don’t work these equations, what will be the point of all we’ve done? We might end up building a good rocket that’ll fly just fine, and all the grown-ups and teachers will brag on us. Who knows? We might even be able to bluff our way past the judges at the science fair. But you’ll know and I’ll know — all the boys will know — what could have been done if you hadn’t lost your nerve. We could have built a great rocket._
 
 ````
+
+Hickam and his friends would go on to win the gold and silver medal in the area of propulsion at the 1960 National Science Fair.  Instead of a coal mine, Hickam went to college, and worked as an engineer for NASA.
+
+Maybe a bit dramatic, but worth a pause.
+
+Hickam didn't
 
 The wannabe programmer often suffers hesitancy from the math that might be involved.  Either from prior experience or, beginning as this page did with Euclid, you might think a substantial amount of math is a prerequisite.
 

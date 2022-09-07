@@ -1,5 +1,3 @@
-# Building a Search Engine
-
 ```{admonition} You Are Here
 
 I want to know what good is a web search engine that returns 324,909,188 ‘matches’ to my keyword.  That’s like saying, _Good news, we’ve located the product you’re looking for. It’s on Earth._
@@ -7,6 +5,8 @@ I want to know what good is a web search engine that returns 324,909,188 ‘matc
 > __W. Bruce Cameron__
 
 ```
+
+# Building a Search Engine
 
 We all know the basic purpose and use of an internet search engine.  But can we build our own, even if rudimentary?
 

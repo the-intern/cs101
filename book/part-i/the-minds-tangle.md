@@ -1,6 +1,3 @@
-# In The Mind's Tangle
-
-
 ```{admonition} Man Made Code
 
 God made the angels to show him splendor, as he made animals for innocence and plants for their simplicity.  But __Man__ he made to serve him wittily, in the tangle of his mind.
@@ -9,7 +6,7 @@ God made the angels to show him splendor, as he made animals for innocence and p
 
 ```
 
-## Man Makes Code
+# The Mind's Tangle
 
 The story runs that above the entrance to ancient schools of philosophy a cautionary placard read: "Let no one enter who has not studied _The Elements_," the reference being to that work of Euclid, the ancient mathematician, consisting of geometric principles, theorems, and proofs.
 

@@ -1,5 +1,3 @@
-# Game Plan
-
 ```{admonition} Computers Means, Not Ends
 
 Computer science is no more about computers than astronomy is about telescopes.
@@ -7,6 +5,8 @@ Computer science is no more about computers than astronomy is about telescopes.
 > __Edsger Dijkstra__
 
 ```
+
+# Game Plan
 
 This is not a course in computer science; it is merely an introduction to coding, an enough of an introduction to give you the fundamentals found in almost all programming language and give you enough proficiency to strike out on your own.
 

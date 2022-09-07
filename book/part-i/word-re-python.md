@@ -1,14 +1,11 @@
-# Python
-
 ```{admonition} Python and Google
 
-True story: The first version of Google was written in Python. The reason: Python was the right language to express the original ideas that Larry Page and Sergey Brin had about how to index the web and organize search results. And they could run their ideas on a computer, too!
+_True story: The first version of Google was written in Python. The reason: Python was the right language to express the original ideas that Larry Page and Sergey Brin had about how to index the web and organize search results. And they could run their ideas on a computer, too!_
 
-> __Guido van Rossum__ cf {cite:p}`guido_originator_of_python`
+> __Guido van Rossum__, Python's creator
 ```
 
-
-## The Origin Story
+# Why Python
 
 Guido van Rossum began to toy with Python as an idea over Christmas break, 1989.  He explains:
 
