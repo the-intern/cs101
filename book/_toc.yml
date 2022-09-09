@@ -23,12 +23,13 @@ parts:
           sections:
           - file: part-ii/learn-to-type
           - file: part-ii/coding-env
+          - file: part-ii/light-speed
 
-  - caption: Addenda
-    numbered: false
-    chapters:
-      - file: addenda/index
-        sections:
-        - file: addenda/glossary/index
-        - file: addenda/bibliography/index
-        - file: addenda/quotes/index
+  # - caption: Addenda
+  #   numbered: false
+  #   chapters:
+  #     - file: addenda/index
+  #       sections:
+  #       - file: addenda/glossary/index
+  #       - file: addenda/bibliography/index
+  #       - file: addenda/quotes/index

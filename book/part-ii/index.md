@@ -6,4 +6,5 @@ _What the hand does, the mind remembers._
 > __Maria Montessori__
 ```
 
-Now we will get into coding, but first a word from __Smith-Corona__ ...
+```{tableofcontents}
+```

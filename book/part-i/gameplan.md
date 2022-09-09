@@ -1,4 +1,5 @@
-```{admonition} Computers Means, Not Ends
+
+```{admonition} Means, Not Ends
 
 Computer science is no more about computers than astronomy is about telescopes.
 
@@ -21,4 +22,4 @@ The _search engine_ will crawl the web, index pages, and returns ranked results 
 
 Along the way, you _will_ learn some computer science and, because the web is part of the over arching project, something of the workings of the internet.
 
-But, remember, whatever the particulars of any given programming, computer science, or coding curriculum, the very core is how problem solving, i.e., how to analyze issues, assemble the means to solve them, and put it altogether in a program.
+But, remember, whatever the particulars of any given programming, computer science, or coding curriculum, the very core is problem solving, i.e., how to analyze issues, assemble the means to solve them, and put it altogether in a program.
