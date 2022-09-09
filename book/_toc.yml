@@ -24,6 +24,8 @@ parts:
           - file: part-ii/learn-to-type
           - file: part-ii/coding-env
           - file: part-ii/light-speed
+          - file: part-ii/strings-i
+          - file: part-ii/strings-ii
 
   # - caption: Addenda
   #   numbered: false
