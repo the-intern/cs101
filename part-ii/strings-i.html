@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting Your Hands Dirty &#8212; Coding</title>
+    <title>String Introduction &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Almost a Prerequisite" href="learn-to-type.html" />
-    <link rel="prev" title="Building a Search Engine" href="../part-i/search-engines.html" />
+    <link rel="next" title="String Manipulation" href="strings-ii.html" />
+    <link rel="prev" title="Light Speed" href="light-speed.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Getting Your Hands Dirty
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -173,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="learn-to-type.html">
      Almost a Prerequisite
@@ -189,8 +189,8 @@ const thebe_selector_output = ".output, .cell_output"
      Light Speed
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="strings-i.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      String Introduction
     </a>
    </li>
@@ -274,7 +274,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-ii/index.md"
+        <a href="../_sources/part-ii/strings-i.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -311,23 +311,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-with-a-three-character-string">
+   Start with a three-character string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-containers">
+   Data Containers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-from-a-string">
+   Reading from a String
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-concatenation">
+   String Concatenation
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Getting Your Hands Dirty</h1>
+                <h1>String Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-with-a-three-character-string">
+   Start with a three-character string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-containers">
+   Data Containers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-from-a-string">
+   Reading from a String
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-concatenation">
+   String Concatenation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -335,25 +402,81 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-your-hands-dirty">
-<h1>Getting Your Hands Dirty<a class="headerlink" href="#getting-your-hands-dirty" title="Permalink to this headline">#</a></h1>
-<div class="admonition-coding-is-a-manual-labor admonition">
-<p class="admonition-title">Coding is A Manual Labor</p>
-<!-- :class: tip -->
-<p><em>What the hand does, the mind remembers.</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="string-introduction">
+<h1>String Introduction<a class="headerlink" href="#string-introduction" title="Permalink to this headline">#</a></h1>
+<section id="start-with-a-three-character-string">
+<h2>Start with a three-character string<a class="headerlink" href="#start-with-a-three-character-string" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cat&quot;</span>
+</pre></div>
+</div>
+<p>The conceptual mistake you might make is to think of this as the word <em>cat</em>.  True, it has that property.  But a <code class="docutils literal notranslate"><span class="pre">string</span></code> is merely a <strong><em>container</em></strong> of characters <em>strung</em> together.  That is, it <strong>contains</strong> characters, in this case <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<p>But it might as well contain a whole book: <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">the</span> <span class="pre">beginning,</span> <span class="pre">God</span> <span class="pre">created</span> <span class="pre">...</span></code></p>
+<p>What do we mean by <em>container</em>?</p>
+<p>Envision something like this:</p>
 <blockquote>
-<div><p><strong>Maria Montessori</strong></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">|</span> <span class="pre">[c]</span> <span class="pre">[a]</span> <span class="pre">[t]</span> <span class="pre">|</span></code></p>
 </div></blockquote>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="learn-to-type.html">Almost a Prerequisite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coding-env.html">Coding Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="light-speed.html">Light Speed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings-i.html">String Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings-ii.html">String Manipulation</a></li>
+<p>but defined and known by the syntax <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code>.</p>
+<p>In fact, either the double (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) or single (<code class="docutils literal notranslate"><span class="pre">''</span></code>) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.</p>
+</section>
+<section id="data-containers">
+<h2>Data Containers<a class="headerlink" href="#data-containers" title="Permalink to this headline">#</a></h2>
+<p>Python has several of container types. Right now we are focusing on <code class="docutils literal notranslate"><span class="pre">strings</span></code>. But it has <code class="docutils literal notranslate"><span class="pre">lists</span></code>, <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>, <code class="docutils literal notranslate"><span class="pre">sets</span></code>, <code class="docutils literal notranslate"><span class="pre">tuples</span></code>, and on and on. Each has advantages and each has peculiar features.</p>
+<p>In any given container type you look for basic things it can do.  Some give you the ability to perform all four basic operations on data:</p>
+<ul class="simple">
+<li><p><strong>C</strong> reate data</p></li>
+<li><p><strong>R</strong> ead data</p></li>
+<li><p><strong>U</strong> pdate data</p></li>
+<li><p><strong>D</strong> elete data</p></li>
 </ul>
+<p>or <code class="docutils literal notranslate"><span class="pre">CRUD</span></code> operations.</p>
+<p>Not all container types provide all four features. Nonetheless they <strong><em>all</em></strong> have the ability to <strong><em>create</em></strong> and <strong><em>read</em></strong> the data stored.</p>
+</section>
+<section id="reading-from-a-string">
+<h2>Reading from a String<a class="headerlink" href="#reading-from-a-string" title="Permalink to this headline">#</a></h2>
+<p>So how do you read from a string? That is, it’s one thing to get the whole <code class="docutils literal notranslate"><span class="pre">string</span></code>, but many times you want a particular character or range of characters, not the entire object.</p>
+<p>For that you need a <strong>window</strong> into the container.</p>
+<p>What does a window look like?</p>
+<p><strong>Well not …</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nope</span>
+<span class="s2">&quot;cat&quot;</span><span class="p">(</span> <span class="p">)</span>
+</pre></div>
 </div>
+<p><strong>Nor this …</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yeah, no</span>
+<span class="s2">&quot;cat&quot;</span><span class="p">{</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>But this</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cat&quot;</span><span class="p">[</span> <span class="p">]</span>
+<span class="c1"># where the &#39;window&#39; square brackets contain an integer</span>
+
+</pre></div>
+</div>
+<p>Within that window you put an <code class="docutils literal notranslate"><span class="pre">integer</span></code> – the index of the character’s location.</p>
+<p><img alt="" src="../_images/string-index.png" /></p>
+<p>For now, just think of getting one character at a time. Because the container’s index values begin with <code class="docutils literal notranslate"><span class="pre">0</span></code>, in the Python <code class="docutils literal notranslate"><span class="pre">shell</span></code> you might have:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">c</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">t</span>
+<span class="go">&gt;&gt;&gt;</span>
+
+</pre></div>
+</div>
+<p>That is, if you only want a single character, just use a single integer value. <strong>Only when you want more than a single character do you use the <code class="docutils literal notranslate"><span class="pre">[start:end]</span></code> notation with the <code class="docutils literal notranslate"><span class="pre">:</span></code> colon inserted.</strong></p>
+</section>
+<section id="string-concatenation">
+<h2>String Concatenation<a class="headerlink" href="#string-concatenation" title="Permalink to this headline">#</a></h2>
+<p>In Python, at least, strings can be “added” together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;black &#39;</span> <span class="o">+</span> <span class="s1">&#39;cat&#39;</span>
+<span class="go"># black cat</span>
+
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -383,17 +506,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-i/search-engines.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="light-speed.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Building a Search Engine</p>
+            <p class="prev-next-title">Light Speed</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="learn-to-type.html" title="next page">
+    <a class='right-next' id="next-link" href="strings-ii.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Almost a Prerequisite</p>
+        <p class="prev-next-title">String Manipulation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
