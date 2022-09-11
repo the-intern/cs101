@@ -1,4 +1,4 @@
-# String Manipulation
+# String Cheat Sheet
 
 ## Escape characters
 
@@ -176,10 +176,10 @@ Returns `True` or `False` after evaluating if a string is in upper or lower case
 
 ## The `isX` string methods
 
-| Method      | Description                                                                                                                    |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Method        | Description                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `isalpha()`   | returns `True` if the string consists only of letters.                                                                         |
-| `isalnum()`  | returns `True` if the string consists only of letters and numbers.                                                             |
+| `isalnum()`   | returns `True` if the string consists only of letters and numbers.                                                             |
 | `isdecimal()` | returns `True` if the string consists only of numbers.                                                                         |
 | `isspace()`   | returns `True` if the string consists only of spaces, tabs, and new-lines.                                                     |
 | `istitle()`   | returns `True` if the string consists only of words that begin with an uppercase letter followed by only lowercase characters. |
