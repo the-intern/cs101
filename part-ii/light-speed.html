@@ -537,7 +537,8 @@ title="Print to PDF"
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
 <p>Which, in a way, brings us to one of the other aspects of time limitations, that which is inherent in the human condition.</p>
-<p>Look at that expression above giving us the distance light travels during a cycle.  Well, a programmer cannot be expected to keep track of inputs such these or simply type them in anticipation of some problem.  He, being human, does not have the time or the memory space.  Moreover, he cannot anticipate all the uses to which it might be put.  Hence, <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
+<p>Look at that expression above giving us the distance light travels during a cycle.</p>
+<p>The programmer cannot be expected to keep track of inputs such these or simply type them in anticipation of some problem.  He, being human, does not have the time or the memory space.  Moreover, he cannot anticipate all the uses to which it might be put.  Hence, <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
 <section id="variable-naming-requirements-and-conventions">
 <h3>Variable Naming Requirements and Conventions<a class="headerlink" href="#variable-naming-requirements-and-conventions" title="Permalink to this headline">#</a></h3>
 <p>Variables are names given to expressions or values.  Python has strict rules for variables; not many, but strict:</p>
@@ -549,13 +550,44 @@ title="Print to PDF"
 <li><p>they should never, ever be the same as a <code class="docutils literal notranslate"><span class="pre">keyword</span></code> or <code class="docutils literal notranslate"><span class="pre">built-in</span> <span class="pre">type</span></code> in Python (more on that later)</p></li>
 </ul>
 <p>By convention, longer variable names are in <code class="docutils literal notranslate"><span class="pre">snake_case</span></code>.</p>
-<p>Below <code class="docutils literal notranslate"><span class="pre">assign</span></code> values to variables using memorable names:</p>
+<p>In the cell below values (on the right) are <code class="docutils literal notranslate"><span class="pre">assigned</span></code> to variables (on the left) using memorable names using the syntax:</p>
+<p><code class="docutils literal notranslate"><span class="pre">some_good_name</span> <span class="pre">=</span> <span class="pre">someValue</span></code></p>
+<p>Let’s say we want to determine the length of a <code class="docutils literal notranslate"><span class="pre">nanostick</span></code> — the distance light travels in a nanosecond.  We might do so this way placing values in variable names:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># speed_of_light = </span>
-<span class="c1"># centimeters_per_meter = </span>
-<span class="c1"># billionth = </span>
-<span class="c1"># distance_traveled = </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># speed of light in meters per second</span>
+<span class="n">speed_of_light</span> <span class="o">=</span> <span class="mi">299792458</span> 
+<span class="n">centimeters_per_meter</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1"># a convenience variable</span>
+<span class="n">billionth</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1000000000</span>
+
+<span class="c1"># a &#39;nanostick&#39; --- or the distance light travels in a nanosecond</span>
+<span class="n">nanostick</span> <span class="o">=</span> <span class="n">speed_of_light</span> <span class="o">*</span> <span class="n">billionth</span> <span class="o">*</span> <span class="n">centimeters_per_meter</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nanostack = </span><span class="si">{</span><span class="n">nanostick</span><span class="si">}</span><span class="s2"> cm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nanostack = 29.979245800000005 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s go back to the cell above in which we just used literal numbers to calculate the how far light travels in centimeters while our 3.6 GHz processor completes one cycle: <code class="docutils literal notranslate"><span class="pre">299792458</span> <span class="pre">*</span> <span class="pre">100</span> <span class="pre">*</span> <span class="pre">1/1000000000</span> <span class="pre">*</span> <span class="pre">1/3.6</span></code></p>
+<p>It makes far more sense to put these values in variables.  Thus, and relying on the cell immediately above, we can calculate it thus:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we need a variable for GHz per second</span>
+<span class="n">ghz</span> <span class="o">=</span> <span class="mf">3.6</span> 
+
+<span class="n">light_distance_per_cycle</span> <span class="o">=</span> <span class="n">speed_of_light</span> <span class="o">*</span> <span class="n">centimeters_per_meter</span> <span class="o">*</span> <span class="n">billionth</span> <span class="o">/</span> <span class="n">ghz</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Light travels </span><span class="si">{</span><span class="n">light_distance_per_cycle</span><span class="si">}</span><span class="s1"> centimeters per instruction&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Light travels 8.327568277777777 centimeters per instruction
 </pre></div>
 </div>
 </div>
