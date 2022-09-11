@@ -1,4 +1,3 @@
-
 # String Introduction
 
 ## Start with a three-character string
@@ -7,30 +6,26 @@
 "cat"
 ```
 
-The conceptual mistake you might make is to think of this as the word _cat_.  True, it has that property.  But a `string` is merely a **_container_** of characters _strung_ together.  That is, it **contains** characters, in this case `c` and `a` and `t`.
+The conceptual mistake you might make is to think of this as the word _cat_. True, it has that property. But a `string` is merely a **_container_** of characters _strung_ together. That is, it **contains** characters, in this case `c` and `a` and `t`.
 
 But it might as well contain a whole book: `In the beginning, God created ...`
 
 What do we mean by _container_?
 
-Envision something like this:
+Envision this 📦 containing this `c` `a` `t` but defined and known by the syntax `"cat"`.
 
-> `| [c] [a] [t] |`
+Either the double (`""`) or single (`''`) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.
 
-but defined and known by the syntax `"cat"`.
-
-In fact, either the double (`""`) or single (`''`) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.
-
-## Data Containers
+## Data Containers in General
 
 Python has several of container types. Right now we are focusing on `strings`. But it has `lists`, `dictionaries`, `sets`, `tuples`, and on and on. Each has advantages and each has peculiar features.
 
-In any given container type you look for basic things it can do.  Some give you the ability to perform all four basic operations on data:
+In any given container type you look for basic things it can do. Some give you the ability to perform all four basic operations on data:
 
-- __C__ reate data
-- __R__ ead data
-- __U__ pdate data
-- __D__ elete data
+- **C** reate data
+- **R** ead data
+- **U** pdate data
+- **D** elete data
 
 or `CRUD` operations.
 
@@ -79,20 +74,11 @@ c
 a
 >>> "cat"[2]
 t
->>>
+>>> "cat"[-1]
+t
+>>> "cat"[-2]
+a
 
 ```
 
-That is, if you only want a single character, just use a single integer value. **Only when you want more than a single character do you use the `[start:end]` notation with the `:` colon inserted.**
-
-## String Concatenation
-
-In Python, at least, strings can be "added" together using the `+` operator.
-
-```python
->>> 'black ' + 'cat'
-# black cat
-
-```
-
-
+That was the barebones basics. But strings consist of far, far more.

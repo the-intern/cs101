@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="String Manipulation" href="strings-ii.html" />
+    <link rel="next" title="Strings - Continued" href="strings-cont.html" />
     <link rel="prev" title="Light Speed" href="light-speed.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -116,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part I: Introduction
+  Part I • Introduction
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -170,13 +170,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part II: Getting Your Hands Dirty
+  Part II • Numbers, Strings, Operators, and Methods
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Getting Your Hands Dirty
+   Numbers, Strings, Operators, and Methods
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -195,7 +195,12 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="strings-ii.html">
+    <a class="reference internal" href="strings-cont.html">
+     Strings - Continued
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings-cheat-sheet.html">
      String Manipulation
     </a>
    </li>
@@ -252,6 +257,17 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -274,7 +290,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-ii/strings-i.md"
+        <a href="../_sources/part-ii/strings-i.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -285,7 +301,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -339,18 +355,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-containers">
-   Data Containers
+  <a class="reference internal nav-link" href="#data-containers-in-general">
+   Data Containers in General
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-from-a-string">
    Reading from a String
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-concatenation">
-   String Concatenation
   </a>
  </li>
 </ul>
@@ -378,18 +389,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-containers">
-   Data Containers
+  <a class="reference internal nav-link" href="#data-containers-in-general">
+   Data Containers in General
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-from-a-string">
    Reading from a String
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-concatenation">
-   String Concatenation
   </a>
  </li>
 </ul>
@@ -409,20 +415,16 @@ title="Print to PDF"
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;cat&quot;</span>
 </pre></div>
 </div>
-<p>The conceptual mistake you might make is to think of this as the word <em>cat</em>.  True, it has that property.  But a <code class="docutils literal notranslate"><span class="pre">string</span></code> is merely a <strong><em>container</em></strong> of characters <em>strung</em> together.  That is, it <strong>contains</strong> characters, in this case <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<p>The conceptual mistake you might make is to think of this as the word <em>cat</em>. True, it has that property. But a <code class="docutils literal notranslate"><span class="pre">string</span></code> is merely a <strong><em>container</em></strong> of characters <em>strung</em> together. That is, it <strong>contains</strong> characters, in this case <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
 <p>But it might as well contain a whole book: <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">the</span> <span class="pre">beginning,</span> <span class="pre">God</span> <span class="pre">created</span> <span class="pre">...</span></code></p>
 <p>What do we mean by <em>container</em>?</p>
-<p>Envision something like this:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">|</span> <span class="pre">[c]</span> <span class="pre">[a]</span> <span class="pre">[t]</span> <span class="pre">|</span></code></p>
-</div></blockquote>
-<p>but defined and known by the syntax <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code>.</p>
-<p>In fact, either the double (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) or single (<code class="docutils literal notranslate"><span class="pre">''</span></code>) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.</p>
+<p>Envision this 📦 containing this <code class="docutils literal notranslate"><span class="pre">c</span></code> <code class="docutils literal notranslate"><span class="pre">a</span></code> <code class="docutils literal notranslate"><span class="pre">t</span></code> but defined and known by the syntax <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code>.</p>
+<p>Either the double (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) or single (<code class="docutils literal notranslate"><span class="pre">''</span></code>) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.</p>
 </section>
-<section id="data-containers">
-<h2>Data Containers<a class="headerlink" href="#data-containers" title="Permalink to this headline">#</a></h2>
+<section id="data-containers-in-general">
+<h2>Data Containers in General<a class="headerlink" href="#data-containers-in-general" title="Permalink to this headline">#</a></h2>
 <p>Python has several of container types. Right now we are focusing on <code class="docutils literal notranslate"><span class="pre">strings</span></code>. But it has <code class="docutils literal notranslate"><span class="pre">lists</span></code>, <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>, <code class="docutils literal notranslate"><span class="pre">sets</span></code>, <code class="docutils literal notranslate"><span class="pre">tuples</span></code>, and on and on. Each has advantages and each has peculiar features.</p>
-<p>In any given container type you look for basic things it can do.  Some give you the ability to perform all four basic operations on data:</p>
+<p>In any given container type you look for basic things it can do. Some give you the ability to perform all four basic operations on data:</p>
 <ul class="simple">
 <li><p><strong>C</strong> reate data</p></li>
 <li><p><strong>R</strong> ead data</p></li>
@@ -456,26 +458,28 @@ title="Print to PDF"
 <p>Within that window you put an <code class="docutils literal notranslate"><span class="pre">integer</span></code> – the index of the character’s location.</p>
 <p><img alt="" src="../_images/string-index.png" /></p>
 <p>For now, just think of getting one character at a time. Because the container’s index values begin with <code class="docutils literal notranslate"><span class="pre">0</span></code>, in the Python <code class="docutils literal notranslate"><span class="pre">shell</span></code> you might have:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">c</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="go">a</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;cat&quot;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="go">t</span>
-<span class="go">&gt;&gt;&gt;</span>
-
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># &#39;c&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># &#39;a&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># &#39;t&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># &#39;t&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># &#39;a&#39;</span>
 </pre></div>
 </div>
-<p>That is, if you only want a single character, just use a single integer value. <strong>Only when you want more than a single character do you use the <code class="docutils literal notranslate"><span class="pre">[start:end]</span></code> notation with the <code class="docutils literal notranslate"><span class="pre">:</span></code> colon inserted.</strong></p>
-</section>
-<section id="string-concatenation">
-<h2>String Concatenation<a class="headerlink" href="#string-concatenation" title="Permalink to this headline">#</a></h2>
-<p>In Python, at least, strings can be “added” together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;black &#39;</span> <span class="o">+</span> <span class="s1">&#39;cat&#39;</span>
-<span class="go"># black cat</span>
-
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c
+a
+t
+t
+a
 </pre></div>
 </div>
+</div>
+</div>
+<p>That was the barebones basics. But strings consist of far, far more.</p>
 </section>
 </section>
 
@@ -513,10 +517,10 @@ title="Print to PDF"
             <p class="prev-next-title">Light Speed</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="strings-ii.html" title="next page">
+    <a class='right-next' id="next-link" href="strings-cont.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">String Manipulation</p>
+        <p class="prev-next-title">Strings - Continued</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
