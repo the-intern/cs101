@@ -5,7 +5,7 @@ root: home
 # titlesonly: true
 
 parts:
-  - caption: "Part I: Introduction"
+  - caption: "Part I • Introduction"
     numbered: false
     chapters:
       - file: part-i/index
@@ -18,14 +18,15 @@ parts:
           - file: part-i/learn-to-type
           - file: part-i/coding-env
 
-  - caption: "Part II: Getting Your Hands Dirty"
+  - caption: "Part II • Numbers, Strings, Operators, and Methods"
     numbered: false
     chapters:
       - file: part-ii/index
         sections:
           - file: part-ii/light-speed
           - file: part-ii/strings-i
-          - file: part-ii/strings-ii
+          - file: part-ii/strings-cont
+          - file: part-ii/strings-cheat-sheet
 
   # - caption: Addenda
   #   numbered: false
