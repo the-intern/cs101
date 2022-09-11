@@ -5,7 +5,7 @@ root: home
 # titlesonly: true
 
 parts:
-  - caption: Introduction
+  - caption: "Part I: Introduction"
     numbered: false
     chapters:
       - file: part-i/index
@@ -18,7 +18,7 @@ parts:
           - file: part-i/learn-to-type
           - file: part-i/coding-env
 
-  - caption: Getting Hands Dirty
+  - caption: "Part II: Getting Your Hands Dirty"
     numbered: false
     chapters:
       - file: part-ii/index
