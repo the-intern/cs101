@@ -2,27 +2,27 @@ format: jb-book
 root: home
 # The defaults key will be applied to all chapters and sub-sections
 # defaults:
-  # titlesonly: true
+# titlesonly: true
 
 parts:
   - caption: Introduction
     numbered: false
     chapters:
-        - file: part-i/index
-          sections:
+      - file: part-i/index
+        sections:
           - file: part-i/the-minds-tangle
           - file: part-i/only-thing-necessary
           - file: part-i/gameplan
           - file: part-i/word-re-python
           - file: part-i/search-engines
+          - file: part-i/learn-to-type
+          - file: part-i/coding-env
 
   - caption: Getting Hands Dirty
     numbered: false
     chapters:
-        - file: part-ii/index
-          sections:
-          - file: part-ii/learn-to-type
-          - file: part-ii/coding-env
+      - file: part-ii/index
+        sections:
           - file: part-ii/light-speed
           - file: part-ii/strings-i
           - file: part-ii/strings-ii
