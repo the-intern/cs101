@@ -359,6 +359,52 @@ title="Print to PDF"
    Variables Are Not Strings
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-operators-on-strings">
+   Using Operators on Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-matters-when-using-operator">
+     Type Matters When Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       +
+      </span>
+     </code>
+     Operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#but-you-can-multiply-strings-with-and-integers">
+     But You Can Multiply Strings with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       *
+      </span>
+     </code>
+     and Integers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-strings">
+   Indexing Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quiz-yourself">
+     Quiz Yourself
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selecting-sub-sequences-from-strings">
+     Selecting Sub-Sequences from Strings
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -387,6 +433,52 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#variables-are-not-strings">
    Variables Are Not Strings
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-operators-on-strings">
+   Using Operators on Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-matters-when-using-operator">
+     Type Matters When Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       +
+      </span>
+     </code>
+     Operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#but-you-can-multiply-strings-with-and-integers">
+     But You Can Multiply Strings with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       *
+      </span>
+     </code>
+     and Integers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-strings">
+   Indexing Strings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quiz-yourself">
+     Quiz Yourself
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selecting-sub-sequences-from-strings">
+     Selecting Sub-Sequences from Strings
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -450,7 +542,123 @@ title="Print to PDF"
 <p>c. <code class="docutils literal notranslate"><span class="pre">&quot;Burger</span> </code></p>
 <p>d. <code class="docutils literal notranslate"><span class="pre">Burger</span></code></p>
 <p>e. <code class="docutils literal notranslate"><span class="pre">'&quot;Burger'</span></code></p>
-<p>Try them out below:</p>
+</section>
+<section id="using-operators-on-strings">
+<h2>Using Operators on Strings<a class="headerlink" href="#using-operators-on-strings" title="Permalink to this headline">#</a></h2>
+<p>We can also use the plus operator <code class="docutils literal notranslate"><span class="pre">+</span></code> on strings, but with a different opoeration than on numbers.</p>
+<p>With string, plus <code class="docutils literal notranslate"><span class="pre">+</span></code> means <code class="docutils literal notranslate"><span class="pre">concatenation</span></code>, i.e., chaining together strings.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">string&gt;</span> <span class="pre">+</span> <span class="pre">&lt;some</span> <span class="pre">string&gt;</span></code> outputs the concatenation of the two strings</p>
+<p>Try concatenating the strings below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
+<span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can create a space between the strings by adding a space to one of the strings.</p>
+<p>You can also continue to add strings as many times as you need.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Betty&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> 
+<span class="go">Hello Betty!!!</span>
+</pre></div>
+</div>
+<section id="type-matters-when-using-operator">
+<h3>Type Matters When Using <code class="docutils literal notranslate"><span class="pre">+</span></code> Operator<a class="headerlink" href="#type-matters-when-using-operator" title="Permalink to this headline">#</a></h3>
+<p>You cannot concatenate a string with a number type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="mi">2023</span>
+<span class="gp">...</span>
+<span class="go">TypeError: can only concatenate str (not &quot;int&quot;) to str</span>
+</pre></div>
+</div>
+<p>Thus, you need to <code class="docutils literal notranslate"><span class="pre">convert</span></code> the integer to a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">2023</span><span class="p">)</span>
+<span class="go">&#39;Hello 2023&#39;</span>
+
+</pre></div>
+</div>
+</section>
+<section id="but-you-can-multiply-strings-with-and-integers">
+<h3>But You Can Multiply Strings with <code class="docutils literal notranslate"><span class="pre">*</span></code> and Integers<a class="headerlink" href="#but-you-can-multiply-strings-with-and-integers" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="s1">&#39;HelloHelloHello&#39;</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="indexing-strings">
+<h2>Indexing Strings<a class="headerlink" href="#indexing-strings" title="Permalink to this headline">#</a></h2>
+<p>Because strings are <strong>sequences</strong>, they are ordered and that means you can retrieve them by indexes and slices.</p>
+<p>As noted earlier, when you want to select sub-sequences use the square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> to specify which part of the string you want to select.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;string&gt;[&lt;expression&gt;]</span></code></p>
+<p>remembering that sequences are indexed beginning at zero:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;The quick brown fox jumps over the lazy dog&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># prints &#39;T&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once again here is the index mapping:</p>
+<p><img alt="index map" src="../_images/string-index.png" /></p>
+<p>Beware of the index range.  If you choose a index value that doesn’t exist, Python will crash you program:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Yuri&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">name</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">IndexError: string index out of range</span>
+</pre></div>
+</div>
+<section id="quiz-yourself">
+<h3>Quiz Yourself<a class="headerlink" href="#quiz-yourself" title="Permalink to this headline">#</a></h3>
+<p>Given the variable,
+s = ‘<anystring>’
+which of these pairs are two things with the exact same value?</p>
+<p>[ ] a. s[3] &lt;-&gt; s[1+1+1]</p>
+<p>[ ] b. s[0] &lt;-&gt; (s+s)[0]</p>
+<p>[ ] c. s[0] + s[1] &lt;-&gt; s[0+1]</p>
+<p>[ ] d. s[1] &lt;-&gt; (s + ‘aei’) [1]</p>
+<p>[ ] e. s[-1] &lt;-&gt; (s + s)[-1]</p>
+</section>
+<section id="selecting-sub-sequences-from-strings">
+<h3>Selecting Sub-Sequences from Strings<a class="headerlink" href="#selecting-sub-sequences-from-strings" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">one</span><span class="o">-</span><span class="n">character</span> <span class="n">string</span>
+
+<span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">start</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">stop</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">string</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">of</span> <span class="n">the</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">string</span><span class="p">,</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">start</span> <span class="n">position</span> <span class="n">up</span> <span class="n">to</span> <span class="n">the</span> <span class="n">character</span> <span class="n">before</span> <span class="n">the</span> <span class="n">stop</span> <span class="n">position</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">start</span> <span class="n">expression</span> <span class="ow">is</span> <span class="n">missing</span><span class="p">,</span> <span class="n">the</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">starts</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">beginning</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span><span class="p">;</span> <span class="k">if</span> <span class="n">the</span> <span class="n">stop</span> <span class="n">expression</span> <span class="ow">is</span> <span class="n">missing</span><span class="p">,</span> <span class="n">the</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">goes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;assume&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">u</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">me</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+<span class="n">me</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">as</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:])</span>
+<span class="n">assume</span>
+</pre></div>
+</div>
+<p>Try this out:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;assume&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 

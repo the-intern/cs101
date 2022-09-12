@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Strings - Continued &#8212; Coding</title>
+    <title>String Methods &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="String Manipulation" href="strings-cheat-sheet.html" />
-    <link rel="prev" title="String Introduction" href="strings-i.html" />
+    <link rel="next" title="String Cheat Sheet" href="string-cheat-sheet.html" />
+    <link rel="prev" title="Strings - Continued" href="strings-ii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -194,14 +194,19 @@ const thebe_selector_output = ".output, .cell_output"
      String Introduction
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings-ii.html">
      Strings - Continued
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     String Methods
+    </a>
+   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="strings-cheat-sheet.html">
-     String Manipulation
+    <a class="reference internal" href="string-cheat-sheet.html">
+     String Cheat Sheet
     </a>
    </li>
   </ul>
@@ -279,7 +284,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-ii/strings-cont.md"
+        <a href="../_sources/part-ii/string-methods.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -290,7 +295,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -339,13 +344,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-are-not-strings">
-   Variables Are Not Strings
+  <a class="reference internal nav-link" href="#finding-strings-in-strings">
+   Finding Strings in Strings
   </a>
  </li>
 </ul>
@@ -357,7 +357,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Strings - Continued</h1>
+                <h1>String Methods</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -368,13 +368,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-are-not-strings">
-   Variables Are Not Strings
+  <a class="reference internal nav-link" href="#finding-strings-in-strings">
+   Finding Strings in Strings
   </a>
  </li>
 </ul>
@@ -387,43 +382,36 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="strings-continued">
-<h1>Strings - Continued<a class="headerlink" href="#strings-continued" title="Permalink to this headline">#</a></h1>
-<section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>A string is a sequence (ordered) of characters surrounded by either single or double quotes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;I am a string!&#39;</span>
-<span class="c1"># or</span>
-<span class="s2">&quot;I am a string!&quot;</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="string-methods">
+<h1>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">#</a></h1>
+<p>Strings, as is true of all objects in Python, come with <code class="docutils literal notranslate"><span class="pre">methods</span></code> or <strong>procedures</strong> of various kinds that operate on the string itself.</p>
+<p>What does that mean?  Let’s use an example.</p>
+<section id="finding-strings-in-strings">
+<h2>Finding Strings in Strings<a class="headerlink" href="#finding-strings-in-strings" title="Permalink to this headline">#</a></h2>
+<p>Before we go too far, it’s important to understand what procedures or functions or methods do.  <code class="docutils literal notranslate"><span class="pre">Procedure</span></code> is the more generic term and let’s use that for now.</p>
+<p>You’ve seen at least two procedures:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> procedure does just that.  However, <code class="docutils literal notranslate"><span class="pre">str()</span></code> takes in an integer and <code class="docutils literal notranslate"><span class="pre">returns</span></code> a string.</p>
+<p>Now think about that. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> procedure returns nothing; it simply carries out the procedure of printing to the console and stops.</p>
+<p>But <code class="docutils literal notranslate"><span class="pre">str()</span></code> <strong>returns</strong> something.</p>
+<p>That means you can <strong>assign</strong> a variable to the return value.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">num</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="go"># store the string &#39;200&#39; in variable num_converted</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num_converted</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">num_converted</span><span class="p">)</span>
+<span class="go">&#39;200&#39;</span>
+<span class="go"># type of num_converted</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">num_converted</span><span class="p">))</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
 
 </pre></div>
 </div>
-<p>Just remember, however, whatever kind of quotation mark <strong>starts</strong> the string must also <strong>end</strong> the string.</p>
-<p>When you use which is not always important, but sometimes it determines what you might do within it.</p>
-<p>For example, double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> allows you to include apostrophes (e.g., for contractions or possessives) inside of quotes as a character in the string.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;I&#39;m glad to know ya.&quot;</span>
-
-</pre></div>
-</div>
-<p>In the case of that contraction above, were you to have started the string with single quotes, you would have had to <code class="docutils literal notranslate"><span class="pre">escape</span></code> the apostrophe:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;I</span><span class="se">\&#39;</span><span class="s1">m glad to know ya.`</span>
-</pre></div>
-</div>
-<p>The backslash <code class="docutils literal notranslate"><span class="pre">\</span></code> just before the apostrophe ‘escapes’ it, i.e., it is read literally and not interpreted as the end of the string.</p>
-</section>
-<section id="variables-are-not-strings">
-<h2>Variables Are Not Strings<a class="headerlink" href="#variables-are-not-strings" title="Permalink to this headline">#</a></h2>
-<p>Using the interpreter, notice how the color of the input changes before and after you put quotes on
-both sides of the string.
-What happens when you do not include any quotes:
-print Hello
-Without the quotes, Python reads Hello as a variable that is undefined:
-NameError: name ‘Hello’ is not defined
-As we saw above, Python will not print an undefined variable, which is why we get the name error.
-Quiz (Video: Valid Strings)
-Which of the following are valid strings in Python?
-a. “Ada” b. ‘Ada” c. “Ada d. Ada
-e. ‘”Ada’</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">find()</span></code> method is a built-in procedure, or method, provided by Python, and <strong>operates on</strong> strings.  That is, it is a string method.  Moreover, and importantly, it <strong>returns</strong> a value.</p>
+<p>The return value or output of <code class="docutils literal notranslate"><span class="pre">find()</span></code> is the position of the string where the specified sub-string is found.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;search</span> <span class="pre">string&gt;.find(&lt;target</span> <span class="pre">string&gt;)</span></code></p>
 </section>
 </section>
 
@@ -454,17 +442,17 @@ e. ‘”Ada’</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="strings-i.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="strings-ii.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">String Introduction</p>
+            <p class="prev-next-title">Strings - Continued</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="strings-cheat-sheet.html" title="next page">
+    <a class='right-next' id="next-link" href="string-cheat-sheet.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">String Manipulation</p>
+        <p class="prev-next-title">String Cheat Sheet</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
