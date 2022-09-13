@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="String Cheat Sheet" href="string-cheat-sheet.html" />
+    <link rel="next" title="String Methods" href="string-methods.html" />
     <link rel="prev" title="String Introduction" href="strings-i.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -197,6 +197,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Strings - Continued
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string-methods.html">
+     String Methods
     </a>
    </li>
    <li class="toctree-l2">
@@ -531,12 +536,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>you’ll get an error — <code class="docutils literal notranslate"><span class="pre">NameError:</span> <span class="pre">name</span> <span class="pre">'Hello'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined</span></code></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">NameError</span></code> typically means you used a variable-like term, but you’ve used it before you defined it, by which we mean something like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
-
-</pre></div>
-</div>
-<p>Which of the following are valid strings in Python?</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">NameError</span></code> typically means you used a variable-like term, but you’ve used it before you defined it.</p>
+<p>Consider which of the following are valid strings in Python and try them out in a code cell:</p>
 <p>a. <code class="docutils literal notranslate"><span class="pre">&quot;Burger&quot;</span> </code></p>
 <p>b. <code class="docutils literal notranslate"><span class="pre">'Burger&quot;</span></code></p>
 <p>c. <code class="docutils literal notranslate"><span class="pre">&quot;Burger</span> </code></p>
@@ -581,10 +582,8 @@ title="Print to PDF"
 </section>
 <section id="but-you-can-multiply-strings-with-and-integers">
 <h3>But You Can Multiply Strings with <code class="docutils literal notranslate"><span class="pre">*</span></code> and Integers<a class="headerlink" href="#but-you-can-multiply-strings-with-and-integers" title="Permalink to this headline">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="s1">&#39;HelloHelloHello&#39;</span>
-
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="go">&#39;HelloHelloHello&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -650,7 +649,7 @@ which of these pairs are two things with the exact same value?</p>
 <span class="n">assume</span>
 </pre></div>
 </div>
-<p>Try this out:</p>
+<p>Try out the sub-sequnces above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;assume&#39;</span>
@@ -696,10 +695,10 @@ which of these pairs are two things with the exact same value?</p>
             <p class="prev-next-title">String Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="string-cheat-sheet.html" title="next page">
+    <a class='right-next' id="next-link" href="string-methods.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">String Cheat Sheet</p>
+        <p class="prev-next-title">String Methods</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
