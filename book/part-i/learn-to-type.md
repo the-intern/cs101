@@ -11,7 +11,7 @@ _I often end up rewriting. Sometimes I do that without ever finding the bug. I g
 
 Below is, with some slight differences, the typewriter I purchased in high school and used for almost a decade. (Mine used a manual carriage return. Electric return was, to my thinking, far too advanced.)
 
-```{image} ../images/part-ii/smith-corona.jpeg
+```{image} images/smith-corona.jpeg
 :alt: typewriter
 :class: bg-primary
 :align: center

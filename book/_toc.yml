@@ -29,11 +29,11 @@ parts:
           - file: part-ii/string-methods
           - file: part-ii/string-cheat-sheet
 
-  # - caption: Addenda
-  #   numbered: false
-  #   chapters:
-  #     - file: addenda/index
-  #       sections:
-  #       - file: addenda/glossary/index
-  #       - file: addenda/bibliography/index
+  - caption: Addenda
+    numbered: false
+    chapters:
+      - file: addenda/index
+        sections:
+          - file: addenda/glossary/index
+          - file: addenda/bibliography/index
   #       - file: addenda/quotes/index

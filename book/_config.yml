@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: "Coding"
-author: The Intern
+author: "Barley-Benincasa Lab & Studios ✏️ in cooperation with The Intern"
 copyright: "2022-2023"
 logo: images/intern.jpeg
 
@@ -13,8 +13,8 @@ execute:
   execute_notebooks: force
   # ! placeholder for use later on
   exclude_patterns:
-    - 'pattern2'
-    - '*pattern3withwildcard'
+    - "pattern2"
+    - "*pattern3withwildcard"
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -30,13 +30,13 @@ repository:
   # Online location of your book
   url: https://github.com/the-intern/cs101-deployment
   # path_to_book: _build  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  branch: main # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   # A path to a favicon
-  favicon                   : "images/_logo.svg"
+  favicon: "images/_logo.svg"
   use_issues_button: false
   use_repository_button: false
   use_multitoc_numbering: true
@@ -44,13 +44,24 @@ html:
   # url: https://the-intern.github.io/cs101/intro
   url: https://github.com/the-intern/cs101-deployment/_build/html/intro
 
-
 # +----------------------------------------+
 # +----------------------------------------+
 # exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
-exclude_patterns: [.vscode, "*.sh", .env, templates, drafts, outline, .DS_Store, __ignore, _build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
-
-
+exclude_patterns:
+  [
+    .vscode,
+    "*.sh",
+    .env,
+    templates,
+    drafts,
+    outline,
+    .DS_Store,
+    __ignore,
+    _build,
+    Thumbs.db,
+    .DS_Store,
+    "**.ipynb_checkpoints",
+  ]
 
 only_build_toc_files: false
 
@@ -79,7 +90,6 @@ parse:
     # - fieldlist
     # - strikethrough
 
-
 # ! +------theme test ---------------------+
 # launch buttons not supported nor much else
 #     html_theme: pydata_sphinx_theme
@@ -92,8 +102,7 @@ sphinx:
         macros:
           "N": "\\mathbb{N}"
           "floor": ["\\lfloor#1\\rfloor", 1]
-          "bmat" : ["\\left[\\begin{array}"]
-          "emat" : ["\\end{array}\\right]"]
-
+          "bmat": ["\\left[\\begin{array}"]
+          "emat": ["\\end{array}\\right]"]
 # +----------------------------------------+
 
