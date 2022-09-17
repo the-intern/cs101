@@ -53,7 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Strings - Continued" href="strings-ii.html" />
+    <link rel="next" title="Addenda" href="../addenda/index.html" />
+    <link rel="prev" title="Procedures: Built-in Functions and String Methods" href="string-methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -198,9 +199,38 @@ const thebe_selector_output = ".output, .cell_output"
      Strings - Continued
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string-methods.html">
+     Procedures: Built-in Functions and String Methods
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      String Cheat Sheet
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Addenda
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../addenda/index.html">
+   Addenda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/glossary/index.html">
+     Glossary
     </a>
    </li>
   </ul>
@@ -856,7 +886,7 @@ title="Print to PDF"
 0   1   2   3   4   5   6   7   8   9   10   11
 </pre></div>
 </div>
-<p><img alt="string indexing" src="../_images/string-index.png" /></p>
+<p><img alt="string indexing" src="../_images/string-index1.png" /></p>
 <section id="indexing">
 <h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spam</span> <span class="o">=</span> <span class="s1">&#39;Hello world!&#39;</span>
@@ -986,10 +1016,13 @@ title="Print to PDF"
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isdecimal()</span></code></p></td>
 <td><p>returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the string consists only of numbers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isspace()</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isdigit()</span></code></p></td>
+<td><p>returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the string consists only of digits.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isspace()</span></code></p></td>
 <td><p>returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the string consists only of spaces, tabs, and new-lines.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">istitle()</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">istitle()</span></code></p></td>
 <td><p>returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the string consists only of words that begin with an uppercase letter followed by only lowercase characters.</p></td>
 </tr>
 </tbody>
@@ -1135,12 +1168,19 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="strings-ii.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="string-methods.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Strings - Continued</p>
+            <p class="prev-next-title">Procedures: Built-in Functions and String Methods</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../addenda/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Addenda</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
@@ -1149,7 +1189,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Intern<br/>
+    By Barley-Benincasa Lab & Studios ✏️ in cooperation with The Intern<br/>
   
       &copy; Copyright 2022-2023.<br/>
 </p>

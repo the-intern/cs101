@@ -60,7 +60,7 @@ A raw string entirely ignores all escape characters and prints any backslash tha
     H   e   l   l   o       w   o   r   l   d    !
     0   1   2   3   4   5   6   7   8   9   10   11
 
-![string indexing](../images/part-ii/string-index.png)
+![string indexing](images/string-index.png)
 
 ### Indexing
 
@@ -181,6 +181,7 @@ Returns `True` or `False` after evaluating if a string is in upper or lower case
 | `isalpha()`   | returns `True` if the string consists only of letters.                                                                         |
 | `isalnum()`   | returns `True` if the string consists only of letters and numbers.                                                             |
 | `isdecimal()` | returns `True` if the string consists only of numbers.                                                                         |
+| `isdigit()`   | returns `True` if the string consists only of digits.                                                                          |
 | `isspace()`   | returns `True` if the string consists only of spaces, tabs, and new-lines.                                                     |
 | `istitle()`   | returns `True` if the string consists only of words that begin with an uppercase letter followed by only lowercase characters. |
 
