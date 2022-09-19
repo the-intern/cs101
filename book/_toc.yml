@@ -27,6 +27,7 @@ parts:
           - file: part-ii/strings-i
           - file: part-ii/strings-ii
           - file: part-ii/string-methods
+          - file: part-ii/string-methods-ii
           - file: part-ii/string-cheat-sheet
 
   - caption: Addenda
