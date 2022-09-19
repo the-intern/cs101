@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Procedures: Built-in Functions and String Methods &#8212; Coding</title>
+    <title>String Procedures - Extracting a url &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="String Procedures - Extracting a url" href="string-methods-ii.html" />
-    <link rel="prev" title="Strings - Continued" href="strings-ii.html" />
+    <link rel="next" title="String Cheat Sheet" href="string-cheat-sheet.html" />
+    <link rel="prev" title="Procedures: Built-in Functions and String Methods" href="string-methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -199,13 +201,13 @@ const thebe_selector_output = ".output, .cell_output"
      Strings - Continued
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="string-methods.html">
      Procedures: Built-in Functions and String Methods
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string-methods-ii.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      String Procedures - Extracting a
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -334,7 +336,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-ii/string-methods.ipynb"
+        <a href="../_sources/part-ii/string-methods-ii.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,32 +396,38 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#procedures">
-   Procedures
+  <a class="reference internal nav-link" href="#what-is-a-uniform-resource-locator-anyway">
+   What
+   <em>
+    <strong>
+     Is
+    </strong>
+   </em>
+   a
+   <em>
+    Uniform Resource Locator
+   </em>
+   Anyway?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-parsing-an-ipv6-address">
+   Practice Parsing an IPv6 Address
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-procedures-in-python">
-     Built In Procedures in Python
+    <a class="reference internal nav-link" href="#background">
+     Background
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-is-a-method-all-strings-carry">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       find
-      </span>
-      <span class="pre">
-       ()
-      </span>
-     </code>
-     is a
-     <em>
-      <strong>
-       Method
-      </strong>
-     </em>
-     All Strings Carry
+    <a class="reference internal nav-link" href="#colon-hexa-representation-in-ipv6">
+     Colon-Hexa Representation in IPv6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#returning-to-the-url-and-anchor-tag">
+     Returning to the URL and Anchor Tag
     </a>
    </li>
   </ul>
@@ -433,7 +441,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Procedures: Built-in Functions and String Methods</h1>
+                <h1>String Procedures - Extracting a url</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -444,32 +452,38 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#procedures">
-   Procedures
+  <a class="reference internal nav-link" href="#what-is-a-uniform-resource-locator-anyway">
+   What
+   <em>
+    <strong>
+     Is
+    </strong>
+   </em>
+   a
+   <em>
+    Uniform Resource Locator
+   </em>
+   Anyway?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-parsing-an-ipv6-address">
+   Practice Parsing an IPv6 Address
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-procedures-in-python">
-     Built In Procedures in Python
+    <a class="reference internal nav-link" href="#background">
+     Background
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-is-a-method-all-strings-carry">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       find
-      </span>
-      <span class="pre">
-       ()
-      </span>
-     </code>
-     is a
-     <em>
-      <strong>
-       Method
-      </strong>
-     </em>
-     All Strings Carry
+    <a class="reference internal nav-link" href="#colon-hexa-representation-in-ipv6">
+     Colon-Hexa Representation in IPv6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#returning-to-the-url-and-anchor-tag">
+     Returning to the URL and Anchor Tag
     </a>
    </li>
   </ul>
@@ -484,111 +498,66 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="procedures-built-in-functions-and-string-methods">
-<h1>Procedures: Built-in Functions and String Methods<a class="headerlink" href="#procedures-built-in-functions-and-string-methods" title="Permalink to this headline">#</a></h1>
-<p>Strings, as is true of all objects in Python, come with <code class="docutils literal notranslate"><span class="pre">methods</span></code> or <strong>procedures</strong> of various kinds that operate on the string itself.</p>
-<section id="procedures">
-<h2>Procedures<a class="headerlink" href="#procedures" title="Permalink to this headline">#</a></h2>
-<p>Before we go too far, it’s important to understand what procedures do.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<blockquote>
-<div><p>A procedure is a description of a process. A simple process can be described
-just by listing the steps. The list of steps is the procedure; the act of following
-them is the process. A procedure that can be followed without any thought is called a mechanical procedure.</p>
-</div></blockquote>
-<p><span id="id1">[<a class="reference internal" href="../addenda/bibliography/index.html#id3" title="David Evans. Introduction to Computing Explorations in Language, Logic, and Machines. CreateSpace Independent Publishing Platform, 2011. URL: https://computingbook.org/.">Evans, 2011</a>]</span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="string-procedures-extracting-a-url">
+<h1>String Procedures - Extracting a <code class="docutils literal notranslate"><span class="pre">url</span></code><a class="headerlink" href="#string-procedures-extracting-a-url" title="Permalink to this headline">#</a></h1>
+<p>Now let’s apply what has gone before to our ultimate project - searching the web.</p>
+<section id="what-is-a-uniform-resource-locator-anyway">
+<h2>What <em><strong>Is</strong></em> a <em>Uniform Resource Locator</em> Anyway?<a class="headerlink" href="#what-is-a-uniform-resource-locator-anyway" title="Permalink to this headline">#</a></h2>
+<p><em>Uniform Resource Locator (URL) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.</em>  <span id="id1">[<a class="reference internal" href="../addenda/bibliography/index.html#id4" title="MDN. URL. MDN, 2022. URL: https://developer.mozilla.org/en-US/docs/Glossary/URL.">MDN, 2022</a>]</span></p>
+<p>But the <code class="docutils literal notranslate"><span class="pre">url</span></code> is embedded in an <code class="docutils literal notranslate"><span class="pre">html</span></code> element called the <code class="docutils literal notranslate"><span class="pre">anchor</span></code> element with the syntax</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://example.com&quot;</span><span class="p">&gt;</span>Website<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
 </div>
-<p>Methods and functions are two types of procedures.  The distinction is not important right now — for our intents and purposes, they operate the same way.  <em><strong>Procedure</strong></em> is the more generic term and let’s use that for now.</p>
-<section id="built-in-procedures-in-python">
-<h3>Built In Procedures in Python<a class="headerlink" href="#built-in-procedures-in-python" title="Permalink to this headline">#</a></h3>
-<p>In the next part, we’ll build our own procedures.  First, let’s note just a small sample of procedures Python itself supplies.</p>
-<p>You’ve seen at least two Python procedures:</p>
+<p>and the following structure</p>
+<p><img alt="a tag" src="../_images/anchor-tag.png" /></p>
+<p>Our task will be to find the links on the page and use their url attributes.</p>
+<p>But before we tackle that, let’s come up with a method that combines the string-related tools we’ve covered so far and allows us to extract a substring such as the url embedded in a link.</p>
+</section>
+<section id="practice-parsing-an-ipv6-address">
+<h2>Practice Parsing an IPv6 Address<a class="headerlink" href="#practice-parsing-an-ipv6-address" title="Permalink to this headline">#</a></h2>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h3>
+<p>When you visit a web site, the url goes by a name — e.g., <code class="docutils literal notranslate"><span class="pre">google.com</span></code>, <code class="docutils literal notranslate"><span class="pre">brave.com</span></code>, <code class="docutils literal notranslate"><span class="pre">youtube.com</span></code>.  However, underlying those names is a numbered address recognized by domain name servers around the world.</p>
+<p>Currently, all computers accessing the internet, whether as client or server, have an IP address that is associated with the name address.</p>
+<p>Thus, one of IP addresses associated with <code class="docutils literal notranslate"><span class="pre">google.com</span></code> is <code class="docutils literal notranslate"><span class="pre">142.250.191.132</span></code>.  In fact, you can enter that address in your browser instead of <code class="docutils literal notranslate"><span class="pre">google.com</span></code>, and you’ll be directed to the latter.</p>
+<p>The current dominant protocol is IPv4 (internet protocol version 4) but the world is trying to move to IPv6 for a number of reasons, not least of which the IPv4 addressing system is exhausted.  Whereas IPv4, with a 32-bit space, provides 4,294,967,296 addresses, IPv6, weighing in at 128 bits, provides an address space of about 3.4 x 10<span class="math notranslate nohighlight">\(^{38}\)</span> addresses.</p>
+</section>
+<section id="colon-hexa-representation-in-ipv6">
+<h3>Colon-Hexa Representation in IPv6<a class="headerlink" href="#colon-hexa-representation-in-ipv6" title="Permalink to this headline">#</a></h3>
+<p>To be more precise, an IPv4 address is 4 8-bit numbers separated by <code class="docutils literal notranslate"><span class="pre">.</span></code> periods (e.g., 188<code class="docutils literal notranslate"><span class="pre">.</span></code>22<code class="docutils literal notranslate"><span class="pre">.</span></code>33<code class="docutils literal notranslate"><span class="pre">.</span></code>23), IPv6 addresses consist of 8 groups of 2-byte <a class="reference external" href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> (i.e., base 16) numbers separated by <code class="docutils literal notranslate"><span class="pre">:</span></code> colons.  Each 2-byte set is called a <code class="docutils literal notranslate"><span class="pre">hextet</span></code>.</p>
+<p>IPv6 address examples might be:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">684D:1111:222:3333:4444:5555:6:77</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2001:0db8:0001:0000:0000:0ab9:C0A8:0102</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2345:0425:2CA1:0000:0000:0567:5673:23b5</span></code></p></li>
 </ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> procedure does just that.  However, <code class="docutils literal notranslate"><span class="pre">str()</span></code> takes in an integer and <code class="docutils literal notranslate"><span class="pre">returns</span></code> a string.</p>
-<p>Now think about that.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> procedure returns nothing (or <code class="docutils literal notranslate"><span class="pre">None</span></code> being the keyword in Python); it simply carries out the procedure of printing to the console and stops.</p>
-<p>But <code class="docutils literal notranslate"><span class="pre">str()</span></code> <em><strong>returns</strong></em> something, i.e., a value that can be used immediately or later on.</p>
-<p><em><strong>That means you can <u>assign</u> a variable to the return value.</strong></em></p>
-<p>For example:</p>
+<p>We’ve said that each address has 8 groups of 2 bytes each using hexadecimal numbering (0 through F).  But you’ll note that some of the example addresses only have one or two hexadigits.  That’s because the address can be abbreviated when the hextet begins with one or more zeros.  Thus, a hextet of <code class="docutils literal notranslate"><span class="pre">004A</span></code> can be reduced to <code class="docutils literal notranslate"><span class="pre">4A</span></code>.</p>
+<p>That’s all by way of saying that when a protocol program (one used to route traffic to and from an IPv6 address location) parses the digits, it must use the colons <code class="docutils literal notranslate"><span class="pre">:</span></code> to <em>delimit</em> or separate one hextet for another.</p>
+<p>A perfect job for Python’s string <code class="docutils literal notranslate"><span class="pre">find()</span></code> method and string slicing.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">:</span></code> colons as delimiters, we find the first colon, then the second, then the third.  We know that between the second and third colons our desired hextet (or slice of the address) falls.  Having the second and third colon index positions, we simply slice between the two as shown below.</p>
+<p><img alt="extract hextet" src="../_images/extract_hextet.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="c1"># store the string &#39;200&#39; in variable num_converted</span>
-<span class="n">num_converted</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="c1"># value of variable &#39;num_converted&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Value of num_converted is </span><span class="si">{</span><span class="n">num_converted</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="c1"># type of num_converted</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;But num_coverted is not an integer; rather now it is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">num_converted</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">addr</span> <span class="o">=</span> <span class="s2">&quot;684D:1111:2220:33A3:4F9E:2CA1:6:91&quot;</span>
+<span class="n">first_idx</span> <span class="o">=</span> <span class="n">addr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">second_idx</span> <span class="o">=</span> <span class="n">addr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">first_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">third_idx</span> <span class="o">=</span> <span class="n">addr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">second_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">extracted_hextet</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="n">second_idx</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">third_idx</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">extracted_hextet</span><span class="p">,</span> <span class="n">extracted_hextet</span> <span class="o">==</span> <span class="s1">&#39;2220&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value of num_converted is 200
-But num_coverted is not an integer; rather now it is of type &lt;class &#39;str&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2220 True
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="find-is-a-method-all-strings-carry">
-<h3><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">()</span></code> is a <em><strong>Method</strong></em> All Strings Carry<a class="headerlink" href="#find-is-a-method-all-strings-carry" title="Permalink to this headline">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">find()</span></code> method is a procedure with which all strings in Python come.  Importantly, <code class="docutils literal notranslate"><span class="pre">find()</span></code> <em><strong>returns</strong></em> a value.</p>
-<p><code class="docutils literal notranslate"><span class="pre">find()</span></code> is used to find the starting index value of a sub-string within the string itself.  The return value or output of <code class="docutils literal notranslate"><span class="pre">find()</span></code> is the position of the string where the specified sub-string is found.</p>
-<p>For example, if you have the string:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman.&quot;</span>
-</pre></div>
-</div>
-<p>and you want to find the _<strong>first</strong> appeareance of the of the substring <code class="docutils literal notranslate"><span class="pre">thanks</span></code>, you can retrieve the index value of that substring’s start using <code class="docutils literal notranslate"><span class="pre">find()</span></code> this way:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman.&quot;</span>
-
-<span class="n">where_the_thanks</span> <span class="o">=</span> <span class="n">common_sense</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;thanks&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">where_the_thanks</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>202
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">common_sense.find('thanks')</span></code> returns the value, an integer value, 202.  That means that the substring <code class="docutils literal notranslate"><span class="pre">thanks</span></code> begins at index 202 in the string <code class="docutils literal notranslate"><span class="pre">common_sense</span></code>.</p>
-<p>Another example, from the world of DNA sequencing.</p>
-<p>DNA sequencing determines the nucleic acid sequence or order of nucleotides in DNA. In mammalian DNA, the four nucleotide bases are adenine, guanine, cytosine, and thymine — or A, G, C, T by conventional abbreviation.</p>
-<p>Thus, were you to have a DNA sequence which reads, at the start</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span> <span class="o">=</span> <span class="s1">&#39;ATGCTCGAAT ...&#39;</span>
-</pre></div>
-</div>
-<p>and you want to find where in the sequence the sub-sequence <code class="docutils literal notranslate"><span class="pre">GCT</span></code> is found.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">index_of_gtc</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;GCT&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>would return, in our example string, <code class="docutils literal notranslate"><span class="pre">2</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span> <span class="o">=</span> <span class="s1">&#39;ATGCTCGAAT ...&#39;</span>
-<span class="n">index_of_gtc</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;GCT&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">index_of_gtc</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can visualize how <code class="docutils literal notranslate"><span class="pre">find()</span></code> operates below.  It begins at index value <code class="docutils literal notranslate"><span class="pre">0</span></code> and iterates over the sequence.  When it finds <code class="docutils literal notranslate"><span class="pre">G</span></code> it records it.  If <code class="docutils literal notranslate"><span class="pre">C</span></code> is the next value, it keeps track of the indexes <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3]</span></code>.  (Were <code class="docutils literal notranslate"><span class="pre">G</span></code> followed immediately by any other character/nucleotide, the list begun would be cleared out and begin the search on index value 4).</p>
-<p>But once <code class="docutils literal notranslate"><span class="pre">find()</span></code> uncovers (<code class="docutils literal notranslate"><span class="pre">GCT</span></code>) in order, it returns the index value of the start of that sub-sequence <code class="docutils literal notranslate"><span class="pre">[2,3,4]</span></code>.</p>
-<p><img alt="DNA" src="../_images/dna-seq-with-find.gif" /></p>
+<section id="returning-to-the-url-and-anchor-tag">
+<h3>Returning to the URL and Anchor Tag<a class="headerlink" href="#returning-to-the-url-and-anchor-tag" title="Permalink to this headline">#</a></h3>
+<p>In order to extract the url, we use the same technique or method.  We find delimiters and find our way along the string so that we are positioned, using those delimiters, on one side and then the other of the url.</p>
 </section>
 </section>
 </section>
@@ -620,17 +589,17 @@ But num_coverted is not an integer; rather now it is of type &lt;class &#39;str&
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="strings-ii.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="string-methods.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Strings - Continued</p>
+            <p class="prev-next-title">Procedures: Built-in Functions and String Methods</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="string-methods-ii.html" title="next page">
+    <a class='right-next' id="next-link" href="string-cheat-sheet.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">String Procedures - Extracting a <code class="docutils literal notranslate"><span class="pre">url</span></code></p>
+        <p class="prev-next-title">String Cheat Sheet</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
