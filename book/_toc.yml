@@ -28,7 +28,16 @@ parts:
           - file: part-ii/strings-ii
           - file: part-ii/string-methods
           - file: part-ii/string-methods-ii
+          - file: part-ii/exer-extract-link
+          - file: part-ii/assign-extract-url
           - file: part-ii/string-cheat-sheet
+
+  - caption: "Part II • Procedures & Contro"
+    numbered: false
+    chapters:
+      - file: part-iii/index
+        sections:
+          - file: part-iii/intro-to-browsers
 
   - caption: Addenda
     numbered: false
