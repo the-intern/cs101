@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Procedures: Built-in Functions and String Methods" href="string-methods.html" />
+    <link rel="next" title="String Methods" href="string-methods.html" />
     <link rel="prev" title="String Introduction" href="strings-i.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -201,46 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="string-methods.html">
-     Procedures: Built-in Functions and String Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string-methods-ii.html">
-     String Procedures - Continued
+     String Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="string-cheat-sheet.html">
      String Cheat Sheet
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Addenda
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../addenda/index.html">
-   Addenda
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../addenda/glossary/index.html">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../addenda/bibliography/index.html">
-     Bibliography
     </a>
    </li>
   </ul>
@@ -533,21 +499,10 @@ title="Print to PDF"
 <h1>Strings - Continued<a class="headerlink" href="#strings-continued" title="Permalink to this headline">#</a></h1>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>To repeat, a <strong>string</strong> is a <strong>sequence</strong> (i.e.,  it is ordered) of characters surrounded by either single, double, or even triple quotes.</p>
+<p>A string is a sequence (ordered) of characters surrounded by either single or double quotes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;I am a string!&#39;</span>
-
 <span class="c1"># or</span>
-
 <span class="s2">&quot;I am a string!&quot;</span>
-
-<span class="c1"># or even</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">You can use these </span>
-<span class="sd">triple quotes</span>
-<span class="sd">for multiline strings</span>
-<span class="sd">    and even literal formatting</span>
-<span class="sd"> &#39;&#39;&#39;</span>
 
 </pre></div>
 </div>
@@ -599,13 +554,6 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
 <span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
-
-<span class="n">name</span> <span class="o">+</span> <span class="n">hello</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;FredHello&#39;
 </pre></div>
 </div>
 </div>
@@ -660,10 +608,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Another way to think of this is comparing a string to a series of <strong>vectors</strong>, i.e., each character in the string is a 2-dimensional <em>vector</em> containing both an index position and a character value.</p>
 <p>Once again here is the index mapping:</p>
 <p><img alt="index map" src="../_images/string-index.png" /></p>
-<p>Beware of the index range.  If you choose a index value that doesn’t exist, Python will crash the program:</p>
+<p>Beware of the index range.  If you choose a index value that doesn’t exist, Python will crash you program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Yuri&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">name</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 <span class="go">IndexError: string index out of range</span>
@@ -674,11 +621,11 @@ title="Print to PDF"
 <p>Given the variable,
 s = ‘<anystring>’
 which of these pairs are two things with the exact same value?</p>
-<p>a. <code class="docutils literal notranslate"><span class="pre">s[3]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">s[1+1+1]</span></code></p>
-<p>b. <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">(s+s)[0]</span></code></p>
-<p>c. <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">+</span> <span class="pre">s[1]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">s[0+1]</span></code></p>
-<p>d. <code class="docutils literal notranslate"><span class="pre">s[1]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">(s</span> <span class="pre">+</span> <span class="pre">'aei')</span> <span class="pre">[1]</span></code></p>
-<p>e. <code class="docutils literal notranslate"><span class="pre">s[-1]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">(s</span> <span class="pre">+</span> <span class="pre">s)[-1]</span></code></p>
+<p>[ ] a. s[3] &lt;-&gt; s[1+1+1]</p>
+<p>[ ] b. s[0] &lt;-&gt; (s+s)[0]</p>
+<p>[ ] c. s[0] + s[1] &lt;-&gt; s[0+1]</p>
+<p>[ ] d. s[1] &lt;-&gt; (s + ‘aei’) [1]</p>
+<p>[ ] e. s[-1] &lt;-&gt; (s + s)[-1]</p>
 </section>
 <section id="selecting-sub-sequences-from-strings">
 <h3>Selecting Sub-Sequences from Strings<a class="headerlink" href="#selecting-sub-sequences-from-strings" title="Permalink to this headline">#</a></h3>
@@ -751,7 +698,7 @@ which of these pairs are two things with the exact same value?</p>
     <a class='right-next' id="next-link" href="string-methods.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Procedures: Built-in Functions and String Methods</p>
+        <p class="prev-next-title">String Methods</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -762,7 +709,7 @@ which of these pairs are two things with the exact same value?</p>
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Barley-Benincasa Lab & Studios ✏️ in cooperation with The Intern<br/>
+    By The Intern<br/>
   
       &copy; Copyright 2022-2023.<br/>
 </p>

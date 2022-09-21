@@ -8,9 +8,9 @@ I want to know what good is a web search engine that returns 324,909,188 ‘matc
 
 # Building a Search Engine
 
-We all know the basic purpose and use of an internet search engine. But can we build our own, even if rudimentary?
+We all know the basic purpose and use of an internet search engine.  But can we build our own, even if rudimentary?
 
-We can. It won't compete with Google's, DuckDuckGo, or Brave. But we can, with some Python, build out an engine that uses the first implementation of the Google search engine circa 1998.
+We can.  It won't compete with Google's, DuckDuckGo, or Brave.  But we can, with some Python, build out an engine that uses the first implementation of the Google search engine circa 1998.
 
 We'll roughly follow the recipe laid out by Larry Page and Sergey Brin in their 1998 paper [The PageRank Citation Ranking: Bringing Order to the Web](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf)
 
@@ -20,7 +20,7 @@ Using a simple form of _PageRank_, we'll:
 - build an index, i.e., creating a database of the documents or pages found and mapping content to their _urls_
 - use that index, find pages - ranked by relevance - to any given search query
 
-```{figure} images/searchengine.png
+```{figure} ../images/part-i/searchengine.png
 :height: 250px
 :name: SEParts
 
