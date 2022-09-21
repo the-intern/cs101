@@ -30,9 +30,4 @@ end_quote = None
 # now we use string slicing for extraction
 url = None
 
-# if it works, this will open the web page:
-
-import webbrowser
-webbrowser.open(url)
-
 ```
