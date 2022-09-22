@@ -12,9 +12,8 @@ kernelspec:
 
 # CS 101 - An Introduction to Programming in Python
 
+```{warning}
 
-````{card} An Introduction to Python, CS, and the Web
+__This site is updated approximately every two days.  Clear your browser's cache when visiting so that it loads the updates.__
 
-This is a tour through programming in Python and, along the way, a way to learn some of the first elements of computer science.
-
-````
+```

@@ -10,8 +10,6 @@ _What the hand does, the mind remembers._
 
 ```
 
-|                     |                                                                                                                                                                      |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Launch 🚀 notebooks | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-ii-strings?labpath=%2Fsrc%2Fpart-ii-strings) |
+**Launch 🚀 notebooks by clicking below**
 
----
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-ii-strings?labpath=src%2Fpart-ii-strings%2F)
