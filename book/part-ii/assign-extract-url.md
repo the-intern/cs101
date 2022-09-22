@@ -1,4 +1,4 @@
-# Challenge
+# Try It Yourself
 
 Applying the same methodology for extracting a hextet, we can extract the url from an html anchor tag. The steps can be enumerated:
 
@@ -31,3 +31,7 @@ end_quote = None
 url = None
 
 ```
+
+You can try it here:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-ii-strings?labpath=src%2Fpart-ii-strings%2F07-try-it-yourself.ipynb)
