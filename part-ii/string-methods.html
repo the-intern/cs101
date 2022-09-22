@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part II • Procedures &amp; Contro
+  Part III • Procedures &amp; Contro
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -528,7 +528,7 @@ them is the process. A procedure that can be followed without any thought is cal
 </div></blockquote>
 <p><span id="id1">[<a class="reference internal" href="../addenda/bibliography/index.html#id3" title="David Evans. Introduction to Computing Explorations in Language, Logic, and Machines. CreateSpace Independent Publishing Platform, 2011. URL: https://computingbook.org/.">Evans, 2011</a>]</span></p>
 </div>
-<p>Methods and functions are two types of procedures.  The distinction is not important right now — for our intents and purposes, they operate the same way.  <em><strong>Procedure</strong></em> is the more generic term and let’s use that for now.</p>
+<p>Methods and functions are two types of procedures.  The distinction is not important right now — for our immediate intents and purposes, they operate the same way.  <em><strong>Procedure</strong></em> is the more generic term and let’s use that for now.</p>
 <section id="built-in-procedures-in-python">
 <h3>Built In Procedures in Python<a class="headerlink" href="#built-in-procedures-in-python" title="Permalink to this headline">#</a></h3>
 <p>In the next part, we’ll build our own procedures.  First, let’s note just a small sample of procedures Python itself supplies.</p>
@@ -551,13 +551,13 @@ them is the process. A procedure that can be followed without any thought is cal
 <span class="c1"># value of variable &#39;num_converted&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Value of num_converted is </span><span class="si">{</span><span class="n">num_converted</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="c1"># type of num_converted</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;But num_coverted is not an integer; rather now it is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">num_converted</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;But num_coverted is not an integer; rather it is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">num_converted</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value of num_converted is 200
-But num_coverted is not an integer; rather now it is of type &lt;class &#39;str&#39;&gt;
+But num_coverted is not an integer; rather it is of type &lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -565,30 +565,32 @@ But num_coverted is not an integer; rather now it is of type &lt;class &#39;str&
 </section>
 <section id="find-is-a-method-all-strings-carry">
 <h3><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">()</span></code> is a <em><strong>Method</strong></em> All Strings Carry<a class="headerlink" href="#find-is-a-method-all-strings-carry" title="Permalink to this headline">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">find()</span></code> method is a procedure with which all strings in Python come.  Importantly, <code class="docutils literal notranslate"><span class="pre">find()</span></code> <em><strong>returns</strong></em> a value.</p>
-<p><code class="docutils literal notranslate"><span class="pre">find()</span></code> is used to find the starting index value of a sub-string within the string itself.  The return value or output of <code class="docutils literal notranslate"><span class="pre">find()</span></code> is the position of the string where the specified sub-string is found.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">find()</span></code> method is a procedure with which all strings come equipped.</p>
+<p>Importantly, <code class="docutils literal notranslate"><span class="pre">find()</span></code> <em><strong>returns</strong></em> a value.</p>
+<p><code class="docutils literal notranslate"><span class="pre">find()</span></code> is used to find the starting index value of a sub-string within the string itself.  The return value or output of <code class="docutils literal notranslate"><span class="pre">find()</span></code> is the position of the string where the specified sub-string is found, i.e., <em><strong>the return value is an integer</strong></em>.</p>
 <p>For example, if you have the string:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman.&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls.&quot;</span>
 </pre></div>
 </div>
-<p>and you want to find the _<strong>first</strong> appeareance of the of the substring <code class="docutils literal notranslate"><span class="pre">thanks</span></code>, you can retrieve the index value of that substring’s start using <code class="docutils literal notranslate"><span class="pre">find()</span></code> this way:</p>
+<p>and you want to find the _<strong>first</strong> appeareance of the of the substring <code class="docutils literal notranslate"><span class="pre">times</span></code>, you can retrieve the index value of that substring’s start using <code class="docutils literal notranslate"><span class="pre">find()</span></code> this way:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">common_sense</span> <span class="o">=</span> <span class="s2">&quot;These are the times that try men&#39;s souls.&quot;</span>
 
-<span class="n">where_the_thanks</span> <span class="o">=</span> <span class="n">common_sense</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;thanks&#39;</span><span class="p">)</span>
+<span class="n">the_times</span> <span class="o">=</span> <span class="n">common_sense</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;times&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">where_the_thanks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">the_times</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>202
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">common_sense.find('thanks')</span></code> returns the value, an integer value, 202.  That means that the substring <code class="docutils literal notranslate"><span class="pre">thanks</span></code> begins at index 202 in the string <code class="docutils literal notranslate"><span class="pre">common_sense</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">common_sense.find('times')</span></code> returns the value, an integer value, 14.</p>
+<p>That means that the substring <code class="docutils literal notranslate"><span class="pre">times</span></code> <em><strong>begins</strong></em> at index 14 in the string <code class="docutils literal notranslate"><span class="pre">common_sense</span></code>.</p>
 <p>Another example, from the world of DNA sequencing.</p>
 <p>DNA sequencing determines the nucleic acid sequence or order of nucleotides in DNA. In mammalian DNA, the four nucleotide bases are adenine, guanine, cytosine, and thymine — or A, G, C, T by conventional abbreviation.</p>
 <p>Thus, were you to have a DNA sequence which reads, at the start</p>
@@ -618,6 +620,10 @@ But num_coverted is not an integer; rather now it is of type &lt;class &#39;str&
 <p>You can visualize how <code class="docutils literal notranslate"><span class="pre">find()</span></code> operates below.  It begins at index value <code class="docutils literal notranslate"><span class="pre">0</span></code> and iterates over the sequence.  When it finds <code class="docutils literal notranslate"><span class="pre">G</span></code> it records it.  If <code class="docutils literal notranslate"><span class="pre">C</span></code> is the next value, it keeps track of the indexes <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3]</span></code>.  (Were <code class="docutils literal notranslate"><span class="pre">G</span></code> followed immediately by any other character/nucleotide, the list begun would be cleared out and begin the search on index value 4).</p>
 <p>But once <code class="docutils literal notranslate"><span class="pre">find()</span></code> uncovers (<code class="docutils literal notranslate"><span class="pre">GCT</span></code>) in order, it returns the index value of the start of that sub-sequence <code class="docutils literal notranslate"><span class="pre">[2,3,4]</span></code>.</p>
 <p><img alt="DNA" src="../_images/dna-seq-with-find.gif" /></p>
+<p><mark>It is essential that you try these things out for yourself.  You cannot — absolute cannot — learn to code without getting your hands dirty.</mark></p>
+<blockquote>
+<div><p><em>What the hand does, the mind remembers.</em></p>
+</div></blockquote>
 </section>
 </section>
 </section>

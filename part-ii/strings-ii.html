@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part II • Procedures &amp; Contro
+  Part III • Procedures &amp; Contro
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -585,9 +585,8 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-<p>Just remember, however, whatever kind of quotation mark <strong>starts</strong> the string must also <strong>end</strong> the string.</p>
-<p>When you use which is not always important, but sometimes it determines what you might do within it.</p>
-<p>For example, double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> allows you to include apostrophes (e.g., for contractions or possessives) inside of quotes as a character in the string.</p>
+<p>Just remember, however, that whatever kind of quotation mark <strong>starts</strong> the string, it must also <strong>end</strong> the string.  That is, you cannot start a string with <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> and end with <code class="docutils literal notranslate"><span class="pre">'</span></code> and vice versa.</p>
+<p>When you use which is not always important, but sometimes what you might do within the string helps drive your decision.  For example, double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> allows you to include apostrophes (e.g., for contractions or possessives) inside of quotes as a character in the string.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;I&#39;m glad to know ya.&quot;</span>
 
 </pre></div>
@@ -606,7 +605,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The backslash <code class="docutils literal notranslate"><span class="pre">\</span></code> just before the apostrophe ‘escapes’ it, i.e., it is read literally and not interpreted as the end of the string.</p>
+<p>(The backslash <code class="docutils literal notranslate"><span class="pre">\</span></code> just before the apostrophe ‘escapes’ it, i.e., it is read literally and not interpreted as the end of the string.)</p>
 </section>
 <section id="variables-are-not-strings">
 <h2>Variables Are Not Strings<a class="headerlink" href="#variables-are-not-strings" title="Permalink to this headline">#</a></h2>
@@ -626,30 +625,36 @@ title="Print to PDF"
 <section id="using-operators-on-strings">
 <h2>Using Operators on Strings<a class="headerlink" href="#using-operators-on-strings" title="Permalink to this headline">#</a></h2>
 <p>We can also use the plus operator <code class="docutils literal notranslate"><span class="pre">+</span></code> on strings, but with a different opoeration than on numbers.</p>
-<p>With string, plus <code class="docutils literal notranslate"><span class="pre">+</span></code> means <code class="docutils literal notranslate"><span class="pre">concatenation</span></code>, i.e., chaining together strings.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">string&gt;</span> <span class="pre">+</span> <span class="pre">&lt;some</span> <span class="pre">string&gt;</span></code> outputs the concatenation of the two strings</p>
-<p>Try concatenating the strings below:</p>
+<p>With string, plus <code class="docutils literal notranslate"><span class="pre">+</span></code> means <code class="docutils literal notranslate"><span class="pre">concatenation</span></code>, i.e., chaining strings together.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;Fred&quot;</span> <span class="pre">+</span> <span class="pre">&quot;Wilma&quot;</span></code> outputs the concatenation of the two strings as <code class="docutils literal notranslate"><span class="pre">FredWilma</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
-<span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fred</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
+<span class="n">wilma</span> <span class="o">=</span> <span class="s2">&quot;Wilma&quot;</span>
 
-<span class="n">name</span> <span class="o">+</span> <span class="n">hello</span>
+<span class="n">fred</span> <span class="o">+</span> <span class="n">wilma</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;FredHello&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;FredWilma&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can create a space between the strings by adding a space to one of the strings.</p>
-<p>You can also continue to add strings as many times as you need.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Betty&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> 
-<span class="go">Hello Betty!!!</span>
+<p>You can create a space between the strings by adding a space to one of the strings. You can also continue to add strings as many times as you need.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Betty&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Betty!!!
+</pre></div>
+</div>
+</div>
 </div>
 <section id="type-matters-when-using-operator">
 <h3>Type Matters When Using <code class="docutils literal notranslate"><span class="pre">+</span></code> Operator<a class="headerlink" href="#type-matters-when-using-operator" title="Permalink to this headline">#</a></h3>
@@ -676,9 +681,9 @@ title="Print to PDF"
 </section>
 <section id="indexing-strings">
 <h2>Indexing Strings<a class="headerlink" href="#indexing-strings" title="Permalink to this headline">#</a></h2>
-<p>Because strings are <strong>sequences</strong>, they are ordered and that means you can retrieve them by indexes and slices.</p>
+<p>Because strings are <strong>sequences</strong>, they are <strong>ordered</strong> — meaning you can retrieve them by indexes and slices.</p>
 <p>As noted earlier, when you want to select sub-sequences use the square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> to specify which part of the string you want to select.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;string&gt;[&lt;expression&gt;]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">string[&lt;integer</span> <span class="pre">value&gt;]</span></code></p>
 <p>remembering that sequences are indexed beginning at zero:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,7 +701,7 @@ title="Print to PDF"
 </div>
 <p>Another way to think of this is comparing a string to a series of <strong>vectors</strong>, i.e., each character in the string is a 2-dimensional <em>vector</em> containing both an index position and a character value.</p>
 <p>Once again here is the index mapping:</p>
-<p><img alt="index map" src="../_images/string-index1.png" /></p>
+<p><img alt="index map" src="../_images/string-index.png" /></p>
 <p>Beware of the index range.  If you choose a index value that doesn’t exist, Python will crash the program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Yuri&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">name</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
@@ -705,9 +710,13 @@ title="Print to PDF"
 </div>
 <section id="quiz-yourself">
 <h3>Quiz Yourself<a class="headerlink" href="#quiz-yourself" title="Permalink to this headline">#</a></h3>
-<p>Given the variable,
-s = ‘<anystring>’
-which of these pairs are two things with the exact same value?</p>
+<p>Given the variable</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;elephant&#39;</span>
+
+</pre></div>
+</div>
+<p>which of these pairs are two things with the exact same value?</p>
 <p>a. <code class="docutils literal notranslate"><span class="pre">s[3]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">s[1+1+1]</span></code></p>
 <p>b. <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">(s+s)[0]</span></code></p>
 <p>c. <code class="docutils literal notranslate"><span class="pre">s[0]</span> <span class="pre">+</span> <span class="pre">s[1]</span> <span class="pre">&lt;-&gt;</span> <span class="pre">s[0+1]</span></code></p>
@@ -716,30 +725,35 @@ which of these pairs are two things with the exact same value?</p>
 </section>
 <section id="selecting-sub-sequences-from-strings">
 <h3>Selecting Sub-Sequences from Strings<a class="headerlink" href="#selecting-sub-sequences-from-strings" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">one</span><span class="o">-</span><span class="n">character</span> <span class="n">string</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;some string&quot;</span><span class="p">[</span><span class="n">integer</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">one</span><span class="o">-</span><span class="n">character</span> <span class="n">string</span>
 
-<span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">start</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">stop</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">string</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">of</span> <span class="n">the</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">string</span><span class="p">,</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">start</span> <span class="n">position</span> <span class="n">up</span> <span class="n">to</span> <span class="n">the</span> <span class="n">character</span> <span class="n">before</span> <span class="n">the</span> <span class="n">stop</span> <span class="n">position</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">start</span> <span class="n">expression</span> <span class="ow">is</span> <span class="n">missing</span><span class="p">,</span> <span class="n">the</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">starts</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">beginning</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span><span class="p">;</span> <span class="k">if</span> <span class="n">the</span> <span class="n">stop</span> <span class="n">expression</span> <span class="ow">is</span> <span class="n">missing</span><span class="p">,</span> <span class="n">the</span> <span class="n">sub</span><span class="o">-</span><span class="n">sequence</span> <span class="n">goes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span><span class="o">.</span>
+<span class="s2">&quot;some string&quot;</span><span class="p">[</span><span class="n">integer</span><span class="p">:</span><span class="n">another</span> <span class="n">integer</span><span class="p">]</span> <span class="o">--&gt;</span> <span class="n">a</span> <span class="n">substring</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span>
 </pre></div>
 </div>
-<p>Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;assume&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">u</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">me</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
-<span class="n">me</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">as</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:])</span>
-<span class="n">assume</span>
-</pre></div>
-</div>
-<p>Try out the sub-sequnces above.</p>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;assume&#39;</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="c1"># u</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+<span class="c1"># me</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+<span class="c1"># me</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># as</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">word</span><span class="p">[:])</span>
+<span class="c1"># assume</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>u
+me
+me
+as
+assume
 </pre></div>
 </div>
 </div>

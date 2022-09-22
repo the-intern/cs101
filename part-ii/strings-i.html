@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part II • Procedures &amp; Contro
+  Part III • Procedures &amp; Contro
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -489,14 +489,14 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>The conceptual mistake you might make is to think of this as the word <em>cat</em>. True, it has that property. But a <code class="docutils literal notranslate"><span class="pre">string</span></code> is merely a <strong><em>container</em></strong> of characters <em>strung</em> together. That is, it <strong>contains</strong> characters, in this case <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
-<p>But it might as well contain a whole book: <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">the</span> <span class="pre">beginning,</span> <span class="pre">God</span> <span class="pre">created</span> <span class="pre">...</span></code></p>
+<p>But it might as well contain a whole book: <code class="docutils literal notranslate"><span class="pre">&quot;In</span> <span class="pre">the</span> <span class="pre">beginning,</span> <span class="pre">God</span> <span class="pre">created</span> <span class="pre">...&quot;</span></code> leading eventually to <code class="docutils literal notranslate"><span class="pre">&quot;...</span> <span class="pre">Amen.&quot;</span></code> — a long string indeed.</p>
 <p>What do we mean by <em>container</em>?</p>
 <p>Envision this 📦 containing this <code class="docutils literal notranslate"><span class="pre">c</span></code> <code class="docutils literal notranslate"><span class="pre">a</span></code> <code class="docutils literal notranslate"><span class="pre">t</span></code> but defined and known by the syntax <code class="docutils literal notranslate"><span class="pre">&quot;cat&quot;</span></code>.</p>
 <p>Either the double (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) or single (<code class="docutils literal notranslate"><span class="pre">''</span></code>) quotation marks act as a sort of wall that instructs the Python interpreter to treat these characters as the contents of a string.</p>
 </section>
 <section id="data-containers-in-general">
 <h2>Data Containers in General<a class="headerlink" href="#data-containers-in-general" title="Permalink to this headline">#</a></h2>
-<p>Python has several of container types. Right now we are focusing on <code class="docutils literal notranslate"><span class="pre">strings</span></code>. But it has <code class="docutils literal notranslate"><span class="pre">lists</span></code>, <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>, <code class="docutils literal notranslate"><span class="pre">sets</span></code>, <code class="docutils literal notranslate"><span class="pre">tuples</span></code>, and on and on. Each has advantages and each has peculiar features.</p>
+<p>Python has several of container types. Right now we are focusing on <code class="docutils literal notranslate"><span class="pre">strings</span></code>. But it has <code class="docutils literal notranslate"><span class="pre">lists</span></code>, <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>, <code class="docutils literal notranslate"><span class="pre">sets</span></code>, <code class="docutils literal notranslate"><span class="pre">tuples</span></code>, and several others we will not get to. Each has advantages and each has peculiar features.</p>
 <p>In any given container type you look for basic things it can do. Some give you the ability to perform all four basic operations on data:</p>
 <ul class="simple">
 <li><p><strong>C</strong> reate data</p></li>
@@ -529,8 +529,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Within that window you put an <code class="docutils literal notranslate"><span class="pre">integer</span></code> – the index of the character’s location.</p>
-<p><img alt="" src="../_images/string-index1.png" /></p>
-<p>For now, just think of getting one character at a time. Because the container’s index values begin with <code class="docutils literal notranslate"><span class="pre">0</span></code>, in the Python <code class="docutils literal notranslate"><span class="pre">shell</span></code> you might have:</p>
+<p><img alt="" src="../_images/string-index.png" /></p>
+<p>For now, just think of getting one character at a time. Because the container’s index values begin with <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
