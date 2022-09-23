@@ -1,5 +1,9 @@
 # String Cheat Sheet
 
+**You can run this cheat sheet and experiment with the code by launching this button**:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-ii-strings?labpath=src%2Fpart-ii-strings%2F08-string-cheat-sheet.ipynb)
+
 ## Escape characters
 
 An escape character is created by typing a backslash `\` followed by the character you want to insert.
