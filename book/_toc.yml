@@ -46,4 +46,5 @@ parts:
         sections:
           - file: addenda/glossary/index
           - file: addenda/bibliography/index
+          - file: addenda/example-assignments/index
   #       - file: addenda/quotes/index
