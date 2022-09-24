@@ -15,12 +15,14 @@ Some things to note about what we did:
 
 ```
 
-We are on to the next step towards building a search engine. In this unit we will extract **all** links from a full web page and, perhaps, from a various number of like pages.
+## We are on to our next single step towards building a search engine
+
+In this unit we will extract **all** links from a full web page and, perhaps, from a various number of like pages.
 
 But, in order to accomplish that, we have some prerequisites:
 
-1. Be able to write (i.e., **_implement_**) and call on our very own custom _procedures_.
-2. Be able to _control_ our program in such a way that, depending on the data (e.g., how many links on a page), the program will operate appropriately
+1. Be able to write (i.e., **_implement_**) and call on our very own custom **_procedures_**.
+2. Be able to **_control_** our program in such a way that, depending on the data (e.g., how many links on a page), the program will operate appropriately
 
 Procedures will package code so it can be reused with different inputs.
 

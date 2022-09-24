@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Procedures &amp; Control &#8212; Coding</title>
+    <title>Modules in Python &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
-    <link rel="prev" title="String Cheat Sheet" href="../part-ii/string-cheat-sheet.html" />
+    <link rel="next" title="Procedures Redux" href="procedures-redux.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -234,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Procedures &amp; Control
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -242,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="introduction.html">
      Introduction
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="what-are-modules.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Modules in Python
     </a>
    </li>
@@ -367,7 +367,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-iii/index.md"
+        <a href="../_sources/part-iii/what-are-modules.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -416,7 +416,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Procedures & Control</h1>
+                <h1>Modules in Python</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -428,21 +428,29 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="procedures-control">
-<h1>Procedures &amp; Control<a class="headerlink" href="#procedures-control" title="Permalink to this headline">#</a></h1>
-<div class="admonition-a-first-brain admonition">
-<p class="admonition-title">A First Brain</p>
-<p>We have now considered the elements of programming: We have used primitive arithmetic operations, we have combined these operations, and we have abstracted these composite operations by defining them as compound procedures. But that is not enough to enable us to say that we know how to program. Our situation is analogous to that of someone who has learned the rules for how the pieces move in chess but knows nothing of typical openings, tactics, or strategy. Like the novice chess player, we don’t yet know the common patterns of usage in the domain. We lack the knowledge of which moves are worth making (which procedures are worth defining). We lack the experience to predict the consequences of making a move (executing a procedure).</p>
-<blockquote>
-<div><p><em>Structure and Interpretation of Computer Programs</em>, Abelson &amp; Sussman (MIT, 1996)</p>
-</div></blockquote>
+  <section class="tex2jax_ignore mathjax_ignore" id="modules-in-python">
+<h1>Modules in Python<a class="headerlink" href="#modules-in-python" title="Permalink to this headline">#</a></h1>
+<p>Before getting too far a field, it’s import to understand Python modules. They really quite simple: they are Python files — files that end in <code class="docutils literal notranslate"><span class="pre">.py</span></code> and available to your program.</p>
+<p>In fact, any time you create a new Python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) file alongside your <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file, you’ve created a <code class="docutils literal notranslate"><span class="pre">module</span></code> from which you can <code class="docutils literal notranslate"><span class="pre">import</span></code> procedures or variables or whatever. Take a quick look <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html#modules">at the Python docs</a> for more. Note this excerpt:</p>
+<div class="admonition-modules-in-python admonition">
+<p class="admonition-title">Modules in Python</p>
+<p>Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or into the main module (the collection of variables that you have access to in a script executed at the top level and in calculator mode).</p>
+<p>A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable <strong>name</strong>.</p>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what-are-modules.html">Modules in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="procedures-redux.html">Procedures Redux</a></li>
-</ul>
+<p>Best to see an simple example. Below are two files: the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file and some Python module called <code class="docutils literal notranslate"><span class="pre">myhelpers.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">main.py</span></code> makes use of what is in the other file by importing it as a module, e.g.,</p>
+<p><img alt="modules" src="../_images/modules.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="simple">
+<li><p>The file into which you are importing a module <em><strong>need not be named <code class="docutils literal notranslate"><span class="pre">main.py</span></code></strong></em></p></li>
+<li><p>The import example above assumes the files are in the same directory or folder — i.e., alongside each other — like so:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>some-directory/
+├── main.py
+└── myhelpers.py
+</pre></div>
+</div>
 </div>
 </section>
 
@@ -473,17 +481,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-ii/string-cheat-sheet.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">String Cheat Sheet</p>
+            <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="procedures-redux.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Procedures Redux</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
