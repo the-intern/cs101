@@ -32,6 +32,8 @@ url = None
 
 ```
 
-You can try it here:
+```{admonition} Try it by launching the notebook below
+:class: tip
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-ii-strings?labpath=src%2Fpart-ii-strings%2F07-try-it-yourself.ipynb)
+```
