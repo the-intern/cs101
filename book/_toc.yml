@@ -37,7 +37,12 @@ parts:
     chapters:
       - file: part-iii/index
         sections:
-          - file: part-iii/intro-to-browsers
+          - file: part-iii/introduction
+          - file: part-iii/what-are-modules
+          - file: part-iii/procedures-redux
+          # - file: part-iii/intro-to-browsers
+          # - file: part-iii/procs-movie
+          # - file: part-iii/proc-movie-second
 
   - caption: Addenda
     numbered: false
