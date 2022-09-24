@@ -1,6 +1,6 @@
 # Modules in Python
 
-Before getting too far a field, it's import to understand Python modules. They really quite simple: they are Python files --- files that end in `.py` and available to your program.
+Before getting too far afield, it's import to understand Python modules. They really quite simple: they are Python files --- files that end in `.py` and available to your program.
 
 In fact, any time you create a new Python (`.py`) file alongside your `main.py` file, you've created a `module` from which you can `import` procedures or variables or whatever. Take a quick look [at the Python docs](https://docs.python.org/3/tutorial/modules.html#modules) for more. Note this excerpt:
 
