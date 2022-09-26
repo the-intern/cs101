@@ -32,7 +32,7 @@ parts:
           - file: part-ii/assign-extract-url
           - file: part-ii/string-cheat-sheet
 
-  - caption: "Part III • Procedures & Contro"
+  - caption: "Part III • Repetition: Procedures & Control"
     numbered: false
     chapters:
       - file: part-iii/index
@@ -40,6 +40,7 @@ parts:
           - file: part-iii/introduction
           - file: part-iii/what-are-modules
           - file: part-iii/procedures-redux
+          - file: part-iii/practicing-with-procedures
           # - file: part-iii/intro-to-browsers
           # - file: part-iii/procs-movie
           # - file: part-iii/proc-movie-second
