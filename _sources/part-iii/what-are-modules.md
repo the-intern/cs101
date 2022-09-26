@@ -12,9 +12,7 @@ A module is a file containing Python definitions and statements. The file name i
 
 ```
 
-Best to see an simple example. Below are two files: the `main.py` file and some Python module called `myhelpers.py`.
-
-`main.py` makes use of what is in the other file by importing it as a module, e.g.,
+Best to see an simple example. Below are two files: the `main.py` file and some Python module called `myhelpers.py`. The file or _module_ `myhelpers.py` contains two procedures that are now available to be used (properly **_called_**) in the `main.py` file through the `import` keyword, e.g.,
 
 ![modules](images/modules.png)
 
