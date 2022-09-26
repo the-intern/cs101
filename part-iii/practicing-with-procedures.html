@@ -447,6 +447,16 @@ title="Print to PDF"
    Abstraction
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#re-usable-over-and-over">
+   Re-Usable, Over and Over
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -469,6 +479,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstraction">
    Abstraction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#re-usable-over-and-over">
+   Re-Usable, Over and Over
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
   </a>
  </li>
 </ul>
@@ -532,8 +552,9 @@ title="Print to PDF"
 </div>
 <section id="abstraction">
 <h2>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline">#</a></h2>
-<p>Immediately you think, “That’s not all that useful.  We are stuck with the same string and the same character every time.  What’s the point of such a constrained, limited procedure?”</p>
-<p>That’s where <code class="docutils literal notranslate"><span class="pre">parameters</span></code> or <code class="docutils literal notranslate"><span class="pre">arguments</span></code> come into play.  These are what give a procedure it’s usefulness — it can act differently depending on the data we give it.</p>
+<p>Immediately you think, <em><strong>“That’s not all that useful.  We are stuck with the same string and the same character every time.  What’s the point of such a constrained, limited procedure?”</strong></em></p>
+<p>That’s where <code class="docutils literal notranslate"><span class="pre">parameters</span></code> or <code class="docutils literal notranslate"><span class="pre">arguments</span></code> come into play.  These are what give a procedure it’s usefulness — it can act differently depending on the data we feed it.</p>
+<p>And we <em><strong>feed it</strong></em> into the procedure by using those parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> found just before the colon in the procedure’s definition.</p>
 <p>So instead of being stuck with the same string and same character from that string, we’ll alter the procedure.</p>
 <p>And, in keeping with its new-found versatility, we’ll rename it.</p>
 <div class="cell docutils container">
@@ -591,6 +612,98 @@ title="Print to PDF"
 </div>
 </div>
 </section>
+<section id="re-usable-over-and-over">
+<h2>Re-Usable, Over and Over<a class="headerlink" href="#re-usable-over-and-over" title="Permalink to this headline">#</a></h2>
+<p>Keep in mind that, once you define the procedure, you can use it, i.e., <code class="docutils literal notranslate"><span class="pre">call</span></code> it over and over; moreover, you need not define it every time you call it.  _<strong>You define it once; you call it repeatedly.</strong></p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<p>Write a procedure that takes in three integers and returns the sum of their squares:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_squares</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="c1"># note: remove the word pass below!</span>
+    <span class="c1"># and replace it with your code</span>
+    <span class="k">pass</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can test your code if you launch this notebook in binder 👉 <a class="reference external" href="https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-iii-procs?labpath=src%2Fpart-iii-procs"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Write a procedure that takes as arguments a string and returns a float representing half the string’s length:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">half_length</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># note: remove the word pass below!</span>
+    <span class="c1"># and replace it with your code</span>
+    <span class="k">pass</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a procedure that takes in three characters (<em><strong>single</strong></em> letter strings, e.g., ‘a’, ‘r’, ‘3’) and return the sum of their Unicode code points.  From the Python docs:</p>
+<blockquote>
+<div><p>Given a string representing one Unicode character, return an integer representing the Unicode code point of that character. For example, <code class="docutils literal notranslate"><span class="pre">ord('a')</span></code> returns the integer 97 … This is the inverse of <code class="docutils literal notranslate"><span class="pre">chr()</span></code>.</p>
+</div></blockquote>
+<p>Thus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="go">97</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="go">98</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<span class="go">52</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_code_points</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="c1"># remember to replace pass with your code!</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a procedure that increments a float or integer by 1 and returns that incremented value</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">incr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">pass</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a procedure that returns the very last character of a string</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_last_chr</span><span class="p">(</span><span class="n">a_string</span><span class="p">):</span>
+    <span class="k">pass</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>According to Newton’s second law of motion, force can be expressed as the product of mass and acceleration of the body.  Write a procedure that, given the mass and acceleration of an object, returns the force.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_force</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">acceleration</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a procedure that, taking in two strings, returns a string that is the first string, followed by two repetitions of the second string, followed by the first string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">abba_ize</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="border-bottom: 10px; padding:10px;border: 1px solid gray;border-radius: 5px">
+<p><b>In case you missed it the first, seventh, and fifteenth times, try the code in here by launching 🚀 this notebook</b></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-iii-procs?labpath=src%2Fpart-iii-procs"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</div></section>
 </section>
 
     <script type="text/x-thebe-config">
