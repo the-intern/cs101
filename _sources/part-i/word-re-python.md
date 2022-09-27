@@ -7,15 +7,15 @@ _True story: The first version of Google was written in Python. The reason: Pyth
 
 # Why Python
 
-Guido van Rossum began to toy with Python as an idea over Christmas break, 1989.  He explains:
+Guido van Rossum began to toy with Python as an idea over Christmas break, 1989. He explains:
 
->I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office (a government-run research lab in Amsterdam) would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose _Python_ as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
+> I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office (a government-run research lab in Amsterdam) would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose _Python_ as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
 
-In less than a decade, Python would become the language Google chose to build an initial form its search engine.
+In less than a decade, Python would become the language Google chose to build an initial form of its search engine.
 
 In a few years, out of hundreds of other languages, many of which had been around for several more years than Python, the latter became one of the top four or five.
 
-Python gained in popularity for any number of reasons.  U of C Berkeley argues that Python is:
+Python gained in popularity for any number of reasons. U of C Berkeley argues that Python is:
 
 - Flexible and Reusable
 
@@ -37,13 +37,13 @@ Python gained in popularity for any number of reasons.  U of C Berkeley argues t
 
 > One of the best reasons to learn Python 3 is that it is in high demand. In fact, some surveys indicate that it is currently the most in-demand programming language, making it a highly marketable skill.
 
-(Ok, this is a bit of circular or _recursive_ reasoning.  But that's appropriate for a programming language.)
+(Ok, this is a bit of circular or _recursive_ reasoning. But that's appropriate for a programming language.)
 
 - The Choice of Big Names
 
 > [Large tech companies use it.] Facebook, Instagram, WhatsApp, and Twitter are just a handful that can help you grasp the extent of Python’s capabilities and reliability.
 
-Python is, when compared to other languages, relatively easy to learn.  Yet it is a premiere high-level language.  We could use others, but why argue with success?
+Python is, when compared to other languages, relatively easy to learn. Yet it is a premiere high-level language. We could use others, but why argue with success?
 
 ```{seealso}
 - Guido van Rossum [The King's Speech](http://neopythonic.blogspot.com/2016/04/kings-day-speech.html).

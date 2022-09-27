@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Procedures &amp; Control &#8212; Coding</title>
+    <title>Control Through True and False &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
-    <link rel="prev" title="String Cheat Sheet" href="../part-ii/string-cheat-sheet.html" />
+    <link rel="next" title="Addenda" href="../addenda/index.html" />
+    <link rel="prev" title="Practicing Procedures" href="practicing-with-procedures.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -234,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Procedures &amp; Control
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -242,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="introduction.html">
      Introduction
@@ -263,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
      Practicing Procedures
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="true-false-and-booleans.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Control Through True and False
     </a>
    </li>
@@ -355,6 +355,17 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -377,7 +388,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-iii/index.md"
+        <a href="../_sources/part-iii/true-false-and-booleans.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -388,7 +399,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -414,23 +425,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use">
+   Use
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-statements">
+   Conditional Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-operators">
+   Boolean Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#booleans-are-data-types">
+   Booleans Are Data Types
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Procedures & Control</h1>
+                <h1>Control Through True and False</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use">
+   Use
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-statements">
+   Conditional Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-operators">
+   Boolean Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#booleans-are-data-types">
+   Booleans Are Data Types
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -438,24 +516,125 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="procedures-control">
-<h1>Procedures &amp; Control<a class="headerlink" href="#procedures-control" title="Permalink to this headline">#</a></h1>
-<div class="admonition-a-first-brain admonition">
-<p class="admonition-title">A First Brain</p>
-<p>We have now considered the elements of programming: We have used primitive arithmetic operations, we have combined these operations, and we have abstracted these composite operations by defining them as compound procedures. But that is not enough to enable us to say that we know how to program. Our situation is analogous to that of someone who has learned the rules for how the pieces move in chess but knows nothing of typical openings, tactics, or strategy. Like the novice chess player, we don’t yet know the common patterns of usage in the domain. We lack the knowledge of which moves are worth making (which procedures are worth defining). We lack the experience to predict the consequences of making a move (executing a procedure).</p>
-<blockquote>
-<div><p><em>Structure and Interpretation of Computer Programs</em>, Abelson &amp; Sussman (MIT, 1996)</p>
-</div></blockquote>
+  <section class="tex2jax_ignore mathjax_ignore" id="control-through-true-and-false">
+<h1>Control Through True and False<a class="headerlink" href="#control-through-true-and-false" title="Permalink to this headline">#</a></h1>
+<div style="color: firebrick; background: beige; border: 2px solid black">
+      <h1>Note:</h1>
+      <h2>This page is under construction ...</h2>
+    </div><p>Booleans are one of five basic <code class="docutils literal notranslate"><span class="pre">types</span></code> of objects in Python:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (integer)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (float)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (Boolean)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ol>
+<p>Mentioned at the start of this part is the need for control over programs.  That comprises the ability to repeat operations and the ability to determine whether something is or is not something else.  Boolean expressions are a large part of the latter, and they are fairly simple in both syntax and operation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># False</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># True</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what-are-modules.html">Modules in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="procedures-redux.html">Procedures Redux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="practicing-with-procedures.html">Practicing Procedures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="true-false-and-booleans.html">Control Through True and False</a></li>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<section id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline">#</a></h2>
+<p>If boolean expressions are used to control your programs, how is that done?  In two primary contexts:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops (to be covered in a bit) and</p></li>
+<li><p>conditional statements marked by keywords <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using for conditional statements</span>
+
+<span class="c1"># data is a string of hexadecimal characters</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;6e6f77206973207468652074696d6520746f2073656520746865206b696e67207468652074696d6520746&#39;</span>
+
+<span class="c1"># but the length will determine what we do with it ...</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data is too large to process.&#39;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Process data with XYZ protocol.&#39;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data is useless.&#39;</span><span class="p">)</span>
+    
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Process data with XYZ protocol.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conditional-statements">
+<h2>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">#</a></h2>
+<p>Above the conditional statements begine with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>.  A series of conditional statements always begins with <code class="docutils literal notranslate"><span class="pre">if</span></code>.  It may end there, i.e., you may want to know only whether something is <code class="docutils literal notranslate"><span class="pre">True</span></code> and don’t care if it isn’t.  But if you do, depending on the number of possibilities, you use either <code class="docutils literal notranslate"><span class="pre">else</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> or both.</p>
+<p>Let’s look closer at the syntax, first the <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> is the keyword that kicks off the code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;boolean</span> <span class="pre">expr&gt;</span></code> is an expression that evaluates to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> colon is required immedately after the expression; it causes Python to anticipate an indented code block to follow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;statement&gt;</span></code> is a Python statement, i.e., the command to follow; however, that command is only executed if and only if the expression above can be rendered true.</p></li>
+</ul>
+</section>
+<section id="boolean-operators">
+<h2>Boolean Operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="booleans-are-data-types">
+<h2>Booleans Are Data Types<a class="headerlink" href="#booleans-are-data-types" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -467,16 +646,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jupyterbook-env"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "jupyterbook-env",
             path: "./part-iii"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jupyterbook-env'</script>
 
               </div>
               
@@ -485,17 +664,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-ii/string-cheat-sheet.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="practicing-with-procedures.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">String Cheat Sheet</p>
+            <p class="prev-next-title">Practicing Procedures</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="../addenda/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Addenda</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
