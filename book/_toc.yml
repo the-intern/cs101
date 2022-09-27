@@ -41,6 +41,7 @@ parts:
           - file: part-iii/what-are-modules
           - file: part-iii/procedures-redux
           - file: part-iii/practicing-with-procedures
+          - file: part-iii/true-false-and-booleans
           # - file: part-iii/intro-to-browsers
           # - file: part-iii/procs-movie
           # - file: part-iii/proc-movie-second

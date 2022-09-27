@@ -6,3 +6,7 @@ def to_fahrenheit():
     print(
         f"The temperature in celsius of {userinput_to_int} degrees is equivalent to {celsius_temp} degrees in fahrenheit."
     )
+
+
+def to_celsius():
+    pass
