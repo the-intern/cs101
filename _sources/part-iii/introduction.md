@@ -24,6 +24,6 @@ But, in order to accomplish that, we have some prerequisites:
 1. Be able to write (i.e., **_implement_**) and call on our very own custom **_procedures_**; and
 2. Be able to **_control_** our program in such a way that, depending on the data (e.g., how many links on a page), the program will operate appropriately
 
-Procedures will package code so it can be reused with different inputs.
+- **_Procedures_** will package code so it can be reused with different inputs.
 
-Control will allow us to manage the program's _state_, instead of just executing instructions one after the other.
+- **_Control_** will allow us to manage the program's _state_, instead of just executing instructions one after the other.

@@ -1,6 +1,8 @@
 # Modules in Python
 
-Before getting too far afield, it's import to understand Python modules. They really quite simple: they are Python files --- files that end in `.py` and available to your program.
+Before getting too far afield, it's import to understand Python modules -- because we will be importing and using them so often.
+
+They are quite simple: **they are merely Python files --- i.e., files that end in `.py` and available to your program**.
 
 In fact, any time you create a new Python (`.py`) file alongside your `main.py` file, you've created a `module` from which you can `import` procedures or variables or whatever. Take a quick look [at the Python docs](https://docs.python.org/3/tutorial/modules.html#modules) for more. Note this excerpt:
 
@@ -12,9 +14,16 @@ A module is a file containing Python definitions and statements. The file name i
 
 ```
 
-Best to see an simple example. Below are two files: the `main.py` file and some Python module called `myhelpers.py`. The file or _module_ `myhelpers.py` contains two procedures that are now available to be used (properly **_called_**) in the `main.py` file through the `import` keyword, e.g.,
+If that sounds a little too close to gobbleygook, you're not alone. It is **_always_** best to see a simple example. So here goes:
 
-![modules](images/modules.png)
+Below are two Python files:
+
+- `main.py`
+- `myhelpers.py`
+
+The file or _module_ `myhelpers.py` contains two procedures that are now available to be used (or **_called_**) in the `main.py` file because `main.py` uses the `import` keyword to get at those procedures, e.g.,
+
+![modules](images/modules-rev.png)
 
 `````{note}
 
