@@ -459,23 +459,24 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use">
-   Use
+  <a class="reference internal nav-link" href="#boolean-basics">
+   Boolean Basics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conditional-statements">
-   Conditional Statements
+  <a class="reference internal nav-link" href="#use-in-conditional-statements">
+   Use in Conditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean-operators">
-   Boolean Operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-are-data-types">
-   Booleans Are Data Types
+  <a class="reference internal nav-link" href="#use-in-while-loops">
+   Use in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   Loops
   </a>
  </li>
 </ul>
@@ -498,23 +499,24 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use">
-   Use
+  <a class="reference internal nav-link" href="#boolean-basics">
+   Boolean Basics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conditional-statements">
-   Conditional Statements
+  <a class="reference internal nav-link" href="#use-in-conditional-statements">
+   Use in Conditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean-operators">
-   Boolean Operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-are-data-types">
-   Booleans Are Data Types
+  <a class="reference internal nav-link" href="#use-in-while-loops">
+   Use in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   Loops
   </a>
  </li>
 </ul>
@@ -529,18 +531,63 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="control-through-true-and-false">
 <h1>Control Through True and False<a class="headerlink" href="#control-through-true-and-false" title="Permalink to this headline">#</a></h1>
-<div style="color: firebrick; background: beige; border: 2px solid black">
-      <h1>Note:</h1>
-      <h2>This page is under construction ...</h2>
-    </div><p>Booleans are one of five basic <code class="docutils literal notranslate"><span class="pre">types</span></code> of objects in Python:</p>
+<p>One of the five primitive data types in Python are <code class="docutils literal notranslate"><span class="pre">booleans</span></code> — i.e., expressions that resolve to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> — and as a primitive data type join:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (integer)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (float)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (Boolean)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
 </ol>
-<p>Mentioned at the start of this part is the need for control over programs.  That comprises the ability to repeat operations and the ability to determine whether something is or is not something else.  Boolean expressions are a large part of the latter, and they are fairly simple in both syntax and operation.</p>
+<p>Mentioned at the start of this part is the need for <em><strong>control</strong></em> over programs, and booleans are fundamental to that control being, as they are, required for</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops, and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditional</span></code> statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>)</p></li>
+</ul>
+<p>That comprises the ability to repeat operations and the ability to determine whether something is or is not something else and they are fairly simple in both syntax and operation.</p>
+<section id="boolean-basics">
+<h2>Boolean Basics<a class="headerlink" href="#boolean-basics" title="Permalink to this headline">#</a></h2>
+<p>Boolean expressions resolve to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> and often resolve based on comparison operators (cf. logical operators <em>below</em>) :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Operator</p></th>
+<th class="text-align:center head"><p>Example</p></th>
+<th class="text-align:center head"><p>Meaning</p></th>
+<th class="text-align:center head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td class="text-align:center"><p><strong>a == b</strong></p></td>
+<td class="text-align:center"><p>Equal to</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a is equal to b, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td class="text-align:center"><p><strong>a != b</strong></p></td>
+<td class="text-align:center"><p>Not equal to</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if not equal, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;</span> </code></p></td>
+<td class="text-align:center"><p><strong>a &lt; b</strong></p></td>
+<td class="text-align:center"><p>Less than</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a is less than b, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td class="text-align:center"><p><strong>a &lt;= b</strong></p></td>
+<td class="text-align:center"><p>Less than or equal to</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a is less than or equal to b, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> </code></p></td>
+<td class="text-align:center"><p><strong>a &gt; b</strong></p></td>
+<td class="text-align:center"><p>Greater than</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a is greater than b, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td class="text-align:center"><p><strong>a &gt;= b</strong></p></td>
+<td class="text-align:center"><p>Greater than or equal to</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a is greater than or equal to b, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p></td>
+</tr>
+</tbody>
+</table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
@@ -554,6 +601,10 @@ title="Print to PDF"
 
 <span class="nb">print</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1"># True</span>
+
+<span class="c1"># can compare string values also</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span> <span class="o">!=</span> <span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+<span class="c1"># True</span>
 </pre></div>
 </div>
 </div>
@@ -562,17 +613,15 @@ title="Print to PDF"
 True
 False
 True
+True
 </pre></div>
 </div>
 </div>
 </div>
-<section id="use">
-<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline">#</a></h2>
-<p>If boolean expressions are used to control your programs, how is that done?  In two primary contexts:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops (to be covered in a bit) and</p></li>
-<li><p>conditional statements marked by keywords <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
-</ul>
+</section>
+<section id="use-in-conditional-statements">
+<h2>Use in Conditional Statements<a class="headerlink" href="#use-in-conditional-statements" title="Permalink to this headline">#</a></h2>
+<p>As mentioned above, among other uses, booleans as the result of comparison are used in conditional statements marked by keywords <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using for conditional statements</span>
@@ -600,10 +649,8 @@ True
 </div>
 </div>
 </div>
-</section>
-<section id="conditional-statements">
-<h2>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">#</a></h2>
-<p>Above the conditional statements begine with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>.  A series of conditional statements always begins with <code class="docutils literal notranslate"><span class="pre">if</span></code>.  It may end there, i.e., you may want to know only whether something is <code class="docutils literal notranslate"><span class="pre">True</span></code> and don’t care if it isn’t.  But if you do, depending on the number of possibilities, you use either <code class="docutils literal notranslate"><span class="pre">else</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> or both.</p>
+<p>The conditional statements begin with <code class="docutils literal notranslate"><span class="pre">if</span></code>, may continue with <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and can finish with <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
+<p>A series of conditional statements always begins with <code class="docutils literal notranslate"><span class="pre">if</span></code>.  It may end there, i.e., you may want to know only whether something is <code class="docutils literal notranslate"><span class="pre">True</span></code> and don’t care if it isn’t.  But if you do, depending on the number of possibilities, you use either <code class="docutils literal notranslate"><span class="pre">else</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> or both.</p>
 <p>Let’s look closer at the syntax, first the <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">&gt;</span>
@@ -615,36 +662,48 @@ True
 <li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> colon is required immedately after the expression; it causes Python to anticipate an indented code block to follow</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;statement&gt;</span></code> is a Python statement, i.e., the command to follow; however, that command is only executed if and only if the expression above can be rendered true.</p></li>
 </ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">elif</span></code> is identical but for the keyword and for its place in the conditional statement hierarchy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Note: immediately preceding the elif comes an if statement </span>
+<span class="c1"># then ... if logic demands:</span>
+
+<span class="k">elif</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> is merely a default and takes no boolean.  It, like the <code class="docutils literal notranslate"><span class="pre">elif</span></code> <em><strong>must</strong></em> be preceded by an <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
 </section>
-<section id="boolean-operators">
-<h2>Boolean Operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="booleans-are-data-types">
-<h2>Booleans Are Data Types<a class="headerlink" href="#booleans-are-data-types" title="Permalink to this headline">#</a></h2>
+<section id="use-in-while-loops">
+<h2>Use in <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops<a class="headerlink" href="#use-in-while-loops" title="Permalink to this headline">#</a></h2>
+<p>In addition to controlling the direction of a program, i.e., what to do given a change in the data, you often need to repeat a block of code several times over.  In fact, depending on the data you are processing, you may have no way of knowing at any given time the number of iterations you’ll have to make.  For such situations the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop was ready made.</p>
+<p>Let’s look closer at the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop’s syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statements</span><span class="o">&gt;</span>
+    
+</pre></div>
+</div>
+<p>Example use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In the loop&quot;</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In the loop
+In the loop
+In the loop
+In the loop
+In the loop
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
-</pre></div>
-</div>
-</div>
-</div>
+<p>See the next few pages for some brief videos on <code class="docutils literal notranslate"><span class="pre">while</span></code> loop basics.</p>
 </section>
 </section>
 
