@@ -519,6 +519,11 @@ title="Print to PDF"
    loop that generates a random integer from 1 to 9 and only breaks out if the integer is equal to 5
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-procedure-that-takes-in-an-integer-and-prints-backward-from-that-integer-down-to-0-and-then-prints-blastoff">
+   5. Write a procedure that takes in an integer and prints backward from that integer down to 0 and then prints “Blastoff!”
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -589,6 +594,11 @@ title="Print to PDF"
    loop that generates a random integer from 1 to 9 and only breaks out if the integer is equal to 5
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-procedure-that-takes-in-an-integer-and-prints-backward-from-that-integer-down-to-0-and-then-prints-blastoff">
+   5. Write a procedure that takes in an integer and prints backward from that integer down to 0 and then prints “Blastoff!”
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -601,7 +611,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="practicing-loops-and-conditions">
 <h1>Practicing Loops and Conditions<a class="headerlink" href="#practicing-loops-and-conditions" title="Permalink to this headline">#</a></h1>
-<section id="write-a-while-loop-such-that-you-print-out-the-first-10-natural-numbers">
+<div style="border-bottom: 10px; padding:10px;border: 1px solid gray;border-radius: 5px; background-color: #16CDE4">
+<p><b>Try the code in here by launching 🚀 this notebook</b></p>
+<p>👉 <a class="reference external" href="https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-iii-procs?labpath=src%2Fpart-iii-procs"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</div><section id="write-a-while-loop-such-that-you-print-out-the-first-10-natural-numbers">
 <h2>1.  Write a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop such that you print out the first 10 natural numbers:<a class="headerlink" href="#write-a-while-loop-such-that-you-print-out-the-first-10-natural-numbers" title="Permalink to this headline">#</a></h2>
 <p>1</p>
 <p>2</p>
@@ -680,21 +693,10 @@ True
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 <span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiou&#39;</span>
 
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="k">pass</span> <span class="c1"># remove this</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">letters</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiou&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">pass</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">):</span>
+    <span class="c1"># do something here</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -709,6 +711,20 @@ True
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">pass</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="write-a-procedure-that-takes-in-an-integer-and-prints-backward-from-that-integer-down-to-0-and-then-prints-blastoff">
+<h2>5. Write a procedure that takes in an integer and prints backward from that integer down to 0 and then prints “Blastoff!”<a class="headerlink" href="#write-a-procedure-that-takes-in-an-integer-and-prints-backward-from-that-integer-down-to-0-and-then-prints-blastoff" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">pass</span> 
+    
 </pre></div>
 </div>
 </div>
