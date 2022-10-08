@@ -46,6 +46,7 @@ parts:
           - file: part-iii/true-false-and-booleans
           - file: part-iii/intro-to-while-loops
           - file: part-iii/practicing-loops-and-conditions
+          - file: part-iii/reviewing-loops-conditions
           # - file: part-iii/jquiz
           # - file: part-iii/intro-to-browsers
           # - file: part-iii/procs-movie
