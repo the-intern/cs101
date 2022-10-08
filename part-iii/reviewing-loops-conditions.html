@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Procedures &amp; Control &#8212; Coding</title>
+    <title>Reviewing Loops and Conditions &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
-    <link rel="prev" title="String Cheat Sheet" href="../part-ii/string-cheat-sheet.html" />
+    <link rel="next" title="Addenda" href="../addenda/index.html" />
+    <link rel="prev" title="Practicing Loops and Conditions" href="practicing-loops-and-conditions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -234,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Procedures &amp; Control
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -242,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="introduction.html">
      Introduction
@@ -289,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
      Practicing Loops and Conditions
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reviewing-loops-conditions.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Reviewing Loops and Conditions
     </a>
    </li>
@@ -403,7 +403,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-iii/index.md"
+        <a href="../_sources/part-iii/reviewing-loops-conditions.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -440,23 +440,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops-and-conditionals">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   Loops and Conditionals
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Procedures & Control</h1>
+                <h1>Reviewing Loops and Conditions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops-and-conditionals">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   Loops and Conditionals
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -464,32 +511,21 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="procedures-control">
-<h1>Procedures &amp; Control<a class="headerlink" href="#procedures-control" title="Permalink to this headline">#</a></h1>
-<div class="admonition-a-first-brain admonition">
-<p class="admonition-title">A First Brain</p>
-<p>We have now considered the elements of programming: We have used primitive arithmetic operations, we have combined these operations, and we have abstracted these composite operations by defining them as compound procedures. But that is not enough to enable us to say that we know how to program. Our situation is analogous to that of someone who has learned the rules for how the pieces move in chess but knows nothing of typical openings, tactics, or strategy. Like the novice chess player, we don’t yet know the common patterns of usage in the domain. We lack the knowledge of which moves are worth making (which procedures are worth defining). We lack the experience to predict the consequences of making a move (executing a procedure).</p>
-<blockquote>
-<div><p><em>Structure and Interpretation of Computer Programs</em>, Abelson &amp; Sussman (MIT, 1996)</p>
-</div></blockquote>
+  <section class="tex2jax_ignore mathjax_ignore" id="reviewing-loops-and-conditions">
+<h1>Reviewing Loops and Conditions<a class="headerlink" href="#reviewing-loops-and-conditions" title="Permalink to this headline">#</a></h1>
+<p>Below is a video how to write <code class="docutils literal notranslate"><span class="pre">while</span></code> loops and, within them, use conditional statements.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This video goes through the exercises found on <a class="reference external" href="https://www.man-made-code.com/part-iii/practicing-loops-and-conditions.html">exercises page</a></p>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what-are-modules.html">Modules in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="procedures-redux.html">Procedures Redux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="practicing-with-procedures.html">Practicing Procedures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reviewing-practice-exercises.html">Reviewing Procedures and Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="true-false-and-booleans.html">Control Through True and False</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro-to-while-loops.html">Introduction to <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="practicing-loops-and-conditions.html">Practicing Loops and Conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reviewing-loops-conditions.html">Reviewing Loops and Conditions</a></li>
-</ul>
-</div>
+<section id="while-loops-and-conditionals">
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> Loops and Conditionals<a class="headerlink" href="#while-loops-and-conditionals" title="Permalink to this headline">#</a></h2>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/SBHQsbe_sfQ" title="while Loop - Exercises" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <div style="border-bottom: 10px; padding:10px;border: 1px solid gray;border-radius: 5px; background-color: #16CDE4">
 <p><b>Try the code in here by launching 🚀 this notebook</b></p>
 <p>👉 <a class="reference external" href="https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-iii-procs?labpath=src%2Fpart-iii-procs"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -519,17 +555,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-ii/string-cheat-sheet.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="practicing-loops-and-conditions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">String Cheat Sheet</p>
+            <p class="prev-next-title">Practicing Loops and Conditions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="../addenda/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Addenda</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
