@@ -20,6 +20,12 @@ Some of these videos go through the exercises found on [exercises page](https://
 
 ---
 
-## Procedure - Working Through the Exercises A
+## Procedure - Working Through the Exercises
 
 <iframe width="800" height="500"  src="https://www.youtube.com/embed/rex7MpgZiOM" title="Procedure - Exercises A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Procedure - Working Through the Exercises - Final
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/2aujRcueMJI" title="Procedure - Exercises B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
