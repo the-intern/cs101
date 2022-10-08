@@ -10,3 +10,11 @@ We have now considered the elements of programming: We have used primitive arith
 ```{tableofcontents}
 
 ```
+
+<div style="border-bottom: 10px; padding:10px;border: 1px solid gray;border-radius: 5px; background-color: #16CDE4">
+
+<b>Try the code in here by launching 🚀 this notebook</b>
+
+👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caterinadiacomo/caterina-man-made-code/part-iii-procs?labpath=src%2Fpart-iii-procs)
+
+</div>

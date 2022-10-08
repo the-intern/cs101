@@ -10,7 +10,7 @@ logo: images/intern.jpeg
 # See https://jupyterbook.org/content/execute.html
 # * change to "cache" from "force"
 execute:
-  execute_notebooks: force
+  execute_notebooks: "off"
   # ! placeholder for use later on
   exclude_patterns:
     - "pattern2"
