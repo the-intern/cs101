@@ -541,14 +541,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="control-through-true-and-false">
 <h1>Control Through True and False<a class="headerlink" href="#control-through-true-and-false" title="Permalink to this headline">#</a></h1>
-<p>One of the five primitive data types in Python are <code class="docutils literal notranslate"><span class="pre">booleans</span></code> — i.e., expressions that resolve to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> — and as a primitive data type join:</p>
+<p>One of the five <em><strong>primitive</strong></em> data types in Python are <code class="docutils literal notranslate"><span class="pre">booleans</span></code> — i.e., expressions that resolve to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Thus, the five primitive data types are:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (integer)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (float)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">str</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (boolean)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
 </ol>
-<p>Mentioned at the start of this part is the need for <em><strong>control</strong></em> over programs, and booleans are fundamental to that control being, as they are, required for</p>
+<p>Mentioned at the start of this part is the need for <em><strong>control</strong></em> over programs.  Booleans are fundamental to that control and are required for:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops, and</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conditional</span></code> statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>)</p></li>
@@ -660,7 +661,8 @@ True
 </div>
 </div>
 <p>The conditional statements begin with <code class="docutils literal notranslate"><span class="pre">if</span></code>, may continue with <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and can finish with <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
-<p>A series of conditional statements always begins with <code class="docutils literal notranslate"><span class="pre">if</span></code>.  It may end there, i.e., you may want to know only whether something is <code class="docutils literal notranslate"><span class="pre">True</span></code> and don’t care if it isn’t.  But if you do, depending on the number of possibilities, you use either <code class="docutils literal notranslate"><span class="pre">else</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> or both.</p>
+<p>A series of conditional statements always begins with <code class="docutils literal notranslate"><span class="pre">if</span></code>.  It may end there, i.e., you may want to know only whether something is <code class="docutils literal notranslate"><span class="pre">True</span></code> and, if it isn’t, will forego performing some other operation.</p>
+<p>But if you do want to explore more than just one thing is <code class="docutils literal notranslate"><span class="pre">True</span></code> or you have a default operation to perform, then depending on the number of possibilities, you use either <code class="docutils literal notranslate"><span class="pre">else</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> or both.</p>
 <p>Let’s look closer at the syntax, first the <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">&gt;</span>
@@ -685,7 +687,8 @@ True
 </section>
 <section id="use-in-while-loops">
 <h2>Use in <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops<a class="headerlink" href="#use-in-while-loops" title="Permalink to this headline">#</a></h2>
-<p>In addition to controlling the direction of a program, i.e., what to do given a change in the data, you often need to repeat a block of code several times over.  In fact, depending on the data you are processing, you may have no way of knowing at any given time the number of iterations you’ll have to make.  For such situations the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop was ready made.</p>
+<p>In addition to controlling the direction of a program, i.e., what to do given a change in the data, you often need to repeat a block of code several times over.</p>
+<p>In fact, depending on the data you are processing, you may have no way of knowing at any given time the number of iterations you’ll have to make.  For such situations the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop was ready made.</p>
 <p>Let’s look closer at the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop’s syntax:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">boolean</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statements</span><span class="o">&gt;</span>
