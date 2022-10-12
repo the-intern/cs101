@@ -52,6 +52,14 @@ parts:
           # - file: part-iii/procs-movie
           # - file: part-iii/proc-movie-second
 
+  - caption: Assignments
+    numbered: false
+    chapters:
+      - file: assignments/index
+        sections:
+          - file: assignments/05-while-loop-instructions
+          - file: assignments/06-procedures-instructions
+
   - caption: Addenda
     numbered: false
     chapters:
