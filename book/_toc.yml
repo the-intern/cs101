@@ -52,6 +52,13 @@ parts:
           # - file: part-iii/procs-movie
           # - file: part-iii/proc-movie-second
 
+  - caption: "Part IV • Data Structures"
+    numbered: false
+    chapters:
+      - file: part-iv/index
+        sections:
+          - file: part-iv/the-problem
+
   - caption: Assignments
     numbered: false
     chapters:
