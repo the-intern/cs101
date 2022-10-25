@@ -58,6 +58,7 @@ parts:
       - file: part-iv/index
         sections:
           - file: part-iv/the-problem
+          - file: part-iv/list-basics
 
   - caption: Assignments
     numbered: false
