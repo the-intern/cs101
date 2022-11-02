@@ -1,1 +1,5 @@
 # Data Structures
+
+```{tableofcontents}
+
+```

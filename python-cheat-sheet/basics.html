@@ -1,0 +1,1112 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Basics &#8212; Coding</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/_logo.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Built-in Functions" href="builtins.html" />
+    <link rel="prev" title="A Rough Cheat Sheet" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/intern.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Coding</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    CS 101 - An Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part I • Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-i/index.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/the-minds-tangle.html">
+     The Mind’s Tangle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/only-thing-necessary.html">
+     The One Thing Necessary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/gameplan.html">
+     Game Plan
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/word-re-python.html">
+     Why Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/search-engines.html">
+     Building a Search Engine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/learn-to-type.html">
+     Almost a Prerequisite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/coding-env.html">
+     Coding Environment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part II • Numbers, Strings, Operators, and Methods
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-ii/index.html">
+   Numbers, Strings, Operators, and Methods
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/light-speed.html">
+     Light Speed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/strings-i.html">
+     String Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/strings-ii.html">
+     Strings - Continued
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-methods.html">
+     Procedures: Built-in Functions and String Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-methods-ii.html">
+     String Procedures - Extracting a Sub-String
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/exer-extract-link.html">
+     Extracting a Link
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/assign-extract-url.html">
+     Try It Yourself
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-cheat-sheet.html">
+     String Cheat Sheet
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part III • Repetition: Procedures &amp; Control
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-iii/index.html">
+   Procedures &amp; Control
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/what-are-modules.html">
+     Modules in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/procedures-redux.html">
+     Procedures Redux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/practicing-with-procedures.html">
+     Practicing Procedures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/reviewing-practice-exercises.html">
+     Reviewing Procedures and Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/true-false-and-booleans.html">
+     Control Through True and False
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/intro-to-while-loops.html">
+     Introduction to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/practicing-loops-and-conditions.html">
+     Practicing Loops and Conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/reviewing-loops-conditions.html">
+     Reviewing Loops and Conditions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part IV • Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-iv/index.html">
+   Data Structures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/the-problem.html">
+     The Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/list-basics.html">
+     List Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/for-loop-intro.html">
+     Python’s
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     Loop
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../assignments/index.html">
+   Instructions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/05-while-loop-instructions.html">
+     Challenge - 05 -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/06-procedures-instructions.html">
+     Challenge - 06 - Procedures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/08-lists-helper-videos.html">
+     Challenge 08 - Counting Vowels
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Cheat Sheet
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   A Rough Cheat Sheet
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="builtins.html">
+     Built-in Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="control-flow.html">
+     Control Flow
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Addenda
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../addenda/index.html">
+   Addenda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/glossary/index.html">
+     Glossary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/bibliography/index.html">
+     Bibliography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/example-assignments/index.html">
+     Assignments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python-cheat-sheet/basics.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math-operators">
+   Math Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#augmented-assignment-operators">
+   Augmented Assignment Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types">
+   Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concatenation-and-replication">
+   Concatenation and Replication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-print-function">
+   The print() Function
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-end-keyword">
+     The end keyword
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-sep-keyword">
+     The sep keyword
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-input-function">
+   The input() Function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-len-function">
+   The len() Function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-str-int-and-float-functions">
+   The str(), int(), and float() Functions
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Basics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math-operators">
+   Math Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#augmented-assignment-operators">
+   Augmented Assignment Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types">
+   Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concatenation-and-replication">
+   Concatenation and Replication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-print-function">
+   The print() Function
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-end-keyword">
+     The end keyword
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-sep-keyword">
+     The sep keyword
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-input-function">
+   The input() Function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-len-function">
+   The len() Function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-str-int-and-float-functions">
+   The str(), int(), and float() Functions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h1>
+<section id="math-operators">
+<h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">#</a></h2>
+<p>From <strong>Highest</strong> to <strong>Lowest</strong> precedence:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operators</p></th>
+<th class="head"><p>Operation</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>Exponent</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">8</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>Modulus/Remainder</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">22</span> <span class="pre">%</span> <span class="pre">8</span> <span class="pre">=</span> <span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>//</p></td>
+<td><p>Integer division</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">22</span> <span class="pre">//</span> <span class="pre">8</span> <span class="pre">=</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Division</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">22</span> <span class="pre">/</span> <span class="pre">8</span> <span class="pre">=</span> <span class="pre">2.75</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">9</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Subtraction</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">-</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Addition</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">4</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Examples of expressions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">6</span>
+<span class="go"># 20</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span>
+<span class="go"># 30</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">8</span>
+<span class="go">#256</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">23</span> <span class="o">//</span> <span class="mi">7</span>
+<span class="go"># 3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">23</span> <span class="o">%</span> <span class="mi">7</span>
+<span class="go"># 2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">7</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go"># 16.0</span>
+</pre></div>
+</div>
+</section>
+<section id="augmented-assignment-operators">
+<h2>Augmented Assignment Operators<a class="headerlink" href="#augmented-assignment-operators" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Equivalent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">+=</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">var</span> <span class="pre">+</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">-=</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">var</span> <span class="pre">-</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">*=</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">var</span> <span class="pre">*</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">/=</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">var</span> <span class="pre">/</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">%=</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">var</span> <span class="pre">%</span> <span class="pre">1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span> <span class="o">+=</span> <span class="s1">&#39; world!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greeting</span>
+<span class="go"># &#39;Hello world!&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number</span>
+<span class="go"># 2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;item&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">*=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span>
+<span class="go"># [&#39;item&#39;, &#39;item&#39;, &#39;item&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Type</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Integers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-2,</span> <span class="pre">-1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Floating-point numbers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-1.25,</span> <span class="pre">-1.0,</span> <span class="pre">--0.5,</span> <span class="pre">0.0,</span> <span class="pre">0.5,</span> <span class="pre">1.0,</span> <span class="pre">1.25</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Strings</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'a',</span> <span class="pre">'aa',</span> <span class="pre">'aaa',</span> <span class="pre">'Hello!',</span> <span class="pre">'11</span> <span class="pre">cats'</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concatenation-and-replication">
+<h2>Concatenation and Replication<a class="headerlink" href="#concatenation-and-replication" title="Permalink to this headline">#</a></h2>
+<p>String concatenation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Alice&#39;</span> <span class="s1">&#39;Bob&#39;</span>
+<span class="go"># &#39;AliceBob&#39;</span>
+</pre></div>
+</div>
+<p>String Replication:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Alice&#39;</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="go"># &#39;AliceAliceAliceAliceAlice&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>You can name a variable anything as long as it obeys the following rules:</p>
+<ol class="simple">
+<li><p>It can be only one word.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># bad</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my</span> <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># good</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>It can use only letters, numbers, and the underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) character.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; # bad
+&gt;&gt;&gt; %$@variable = &#39;Hello&#39;
+
+&gt;&gt;&gt; # good
+&gt;&gt;&gt; my_var = &#39;Hello&#39;
+
+&gt;&gt;&gt; # good
+&gt;&gt;&gt; my_var_2 = &#39;Hello&#39;
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>It can’t begin with a number.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># this wont work</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">23</span><span class="n">_var</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Variable name starting with an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) are considered as “unuseful”.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># _spam should not be used again in the code</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_spam</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
+<p>Inline comment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment</span>
+</pre></div>
+</div>
+<p>Multiline comment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a</span>
+<span class="c1"># multiline comment</span>
+</pre></div>
+</div>
+<p>Code with a comment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># initialization</span>
+</pre></div>
+</div>
+<p>Please note the two spaces in front of the comment.</p>
+<p>Function docstring:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a function docstring</span>
+<span class="sd">    You can also use:</span>
+<span class="sd">    &#39;&#39;&#39; Function Docstring &#39;&#39;&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="the-print-function">
+<h2>The print() Function<a class="headerlink" href="#the-print-function" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function writes the value of the argument(s) it is given. […] it handles multiple arguments, floating point-quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<span class="go"># Hello world!</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="go"># Hello world! 1</span>
+</pre></div>
+</div>
+<section id="the-end-keyword">
+<h3>The end keyword<a class="headerlink" href="#the-end-keyword" title="Permalink to this headline">#</a></h3>
+<p>The keyword argument <code class="docutils literal notranslate"><span class="pre">end</span></code> can be used to avoid the newline after the output, or end the output with a different string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phrase</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;printed&#39;</span><span class="p">,</span> <span class="s1">&#39;with&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;dash&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;between&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="c1"># printed-with-a-dash-in-between-</span>
+</pre></div>
+</div>
+</section>
+<section id="the-sep-keyword">
+<h3>The sep keyword<a class="headerlink" href="#the-sep-keyword" title="Permalink to this headline">#</a></h3>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">sep</span></code> specify how to separate the objects, if there is more than one:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;dogs&#39;</span><span class="p">,</span> <span class="s1">&#39;mice&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="c1"># cats,dogs,mice</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="the-input-function">
+<h2>The input() Function<a class="headerlink" href="#the-input-function" title="Permalink to this headline">#</a></h2>
+<p>This function takes the input from the user and converts it into a string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;What is your name?&#39;</span><span class="p">)</span>   <span class="c1"># ask for their name</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_name</span><span class="p">))</span>
+<span class="go"># What is your name?</span>
+<span class="go"># Martha</span>
+<span class="go"># Hi, Martha</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">input()</span></code> can also set a default message without using <code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your name? &#39;</span><span class="p">)</span>  <span class="c1"># default message</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_name</span><span class="p">))</span>
+<span class="go"># What is your name? Martha</span>
+<span class="go"># Hi, Martha</span>
+</pre></div>
+</div>
+</section>
+<section id="the-len-function">
+<h2>The len() Function<a class="headerlink" href="#the-len-function" title="Permalink to this headline">#</a></h2>
+<p>Evaluates to the integer value of the number of characters in a string, list, dictionary, etc.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="go"># 5</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">])</span>
+<span class="go"># 3</span>
+</pre></div>
+</div>
+<base-warning>
+  <base-warning-title>Test of emptiness</base-warning-title>
+  <base-warning-content>
+    Test of emptiness of strings, lists, dictionaries, etc., should not use
+    <code>len</code>, but prefer direct boolean evaluation.
+  </base-warning-content>
+</base-warning>
+<p>Test of emptiness example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="go"># bad</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># evaluates to True</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the list is not empty!&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># the list is not empty!</span>
+
+<span class="go"># good</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">a</span><span class="p">:</span> <span class="c1"># evaluates to True</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the list is not empty!&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># the list is not empty!</span>
+</pre></div>
+</div>
+</section>
+<section id="the-str-int-and-float-functions">
+<h2>The str(), int(), and float() Functions<a class="headerlink" href="#the-str-int-and-float-functions" title="Permalink to this headline">#</a></h2>
+<p>These functions allow you to change the type of variable. For example, you can transform from an <code class="docutils literal notranslate"><span class="pre">integer</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code> to a <code class="docutils literal notranslate"><span class="pre">string</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="mi">29</span><span class="p">)</span>
+<span class="go"># &#39;29&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="o">-</span><span class="mf">3.14</span><span class="p">)</span>
+<span class="go"># &#39;-3.14&#39;</span>
+</pre></div>
+</div>
+<p>Or from a <code class="docutils literal notranslate"><span class="pre">string</span></code> to an <code class="docutils literal notranslate"><span class="pre">integer</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11&#39;</span><span class="p">)</span>
+<span class="go"># 11</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.14&#39;</span><span class="p">)</span>
+<span class="go"># 3.14</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python-cheat-sheet"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">A Rough Cheat Sheet</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="builtins.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Built-in Functions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Barley-Benincasa Lab & Studios ✏️ in cooperation with The Intern<br/>
+  
+      &copy; Copyright 2022-2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

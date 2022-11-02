@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Structures &#8212; Coding</title>
+    <title>Built-in Functions &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Problem" href="the-problem.html" />
-    <link rel="prev" title="Reviewing Loops and Conditions" href="../part-iii/reviewing-loops-conditions.html" />
+    <link rel="next" title="Python Control Flow" href="control-flow.html" />
+    <link rel="prev" title="Python Basics" href="basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -302,29 +302,29 @@ const thebe_selector_output = ".output, .cell_output"
   Part IV • Data Structures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-iv/index.html">
    Data Structures
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="the-problem.html">
+    <a class="reference internal" href="../part-iv/the-problem.html">
      The Problem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="list-basics.html">
+    <a class="reference internal" href="../part-iv/list-basics.html">
      List Basics
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="for-loop-intro.html">
+    <a class="reference internal" href="../part-iv/for-loop-intro.html">
      Python’s
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -382,30 +382,30 @@ const thebe_selector_output = ".output, .cell_output"
   Python Cheat Sheet
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../python-cheat-sheet/index.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    A Rough Cheat Sheet
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../python-cheat-sheet/basics.html">
-     Basics
+    <a class="reference internal" href="basics.html">
+     Python Basics
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python-cheat-sheet/builtins.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Built-in Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python-cheat-sheet/control-flow.html">
-     Control Flow
+    <a class="reference internal" href="control-flow.html">
+     Python Control Flow
     </a>
    </li>
   </ul>
@@ -517,7 +517,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-iv/index.md"
+        <a href="../_sources/python-cheat-sheet/builtins.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -566,7 +566,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Structures</h1>
+                <h1>Built-in Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -578,15 +578,72 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-structures">
-<h1>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="the-problem.html">The Problem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="list-basics.html">List Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="for-loop-intro.html">Python’s <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="built-in-functions">
+<h1>Built-in Functions<a class="headerlink" href="#built-in-functions" title="Permalink to this headline">#</a></h1>
+<p>The Python interpreter has a number of functions and types built into it that are always available.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">abs()</span></code></p></td>
+<td><p>Return the absolute value of a number.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool()</span></code></p></td>
+<td><p>Return a Boolean value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">chr()</span></code></p></td>
+<td><p>Return the string representing a character.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float()</span></code></p></td>
+<td><p>Return a floating point number from a number or string.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input()</span></code></p></td>
+<td><p>This function takes an input and converts it into a string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">int()</span></code></p></td>
+<td><p>Return an integer object constructed from a number or string.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len()</span></code></p></td>
+<td><p>Return the length (the number of items) of an object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list()</span></code></p></td>
+<td><p>Rather than being a function, list is a mutable sequence type.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">max()</span></code></p></td>
+<td><p>Return the largest item in an iterable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">min()</span></code></p></td>
+<td><p>Return the smallest item in an iterable.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ord()</span></code></p></td>
+<td><p>Return an integer representing the Unicode code point of a character.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pow()</span></code></p></td>
+<td><p>Return base to the power exp.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></td>
+<td><p>Print objects to the text stream file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">round()</span></code></p></td>
+<td><p>Return number rounded to ndigits precision after the decimal point.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></p></td>
+<td><p>Return a new sorted list from the items in iterable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p></td>
+<td><p>Return a str version of object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sum()</span></code></p></td>
+<td><p>Sums start and the items of an iterable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">type()</span></code></p></td>
+<td><p>Return the type of an object.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
     <script type="text/x-thebe-config">
@@ -602,7 +659,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./part-iv"
+            path: "./python-cheat-sheet"
         },
         predefinedOutput: true
     }
@@ -616,17 +673,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-iii/reviewing-loops-conditions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reviewing Loops and Conditions</p>
+            <p class="prev-next-title">Python Basics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="the-problem.html" title="next page">
+    <a class='right-next' id="next-link" href="control-flow.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Problem</p>
+        <p class="prev-next-title">Python Control Flow</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

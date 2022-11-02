@@ -1,0 +1,1359 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Control Flow &#8212; Coding</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/_logo.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Addenda" href="../addenda/index.html" />
+    <link rel="prev" title="Built-in Functions" href="builtins.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/intern.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Coding</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    CS 101 - An Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part I • Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-i/index.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/the-minds-tangle.html">
+     The Mind’s Tangle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/only-thing-necessary.html">
+     The One Thing Necessary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/gameplan.html">
+     Game Plan
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/word-re-python.html">
+     Why Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/search-engines.html">
+     Building a Search Engine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/learn-to-type.html">
+     Almost a Prerequisite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-i/coding-env.html">
+     Coding Environment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part II • Numbers, Strings, Operators, and Methods
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-ii/index.html">
+   Numbers, Strings, Operators, and Methods
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/light-speed.html">
+     Light Speed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/strings-i.html">
+     String Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/strings-ii.html">
+     Strings - Continued
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-methods.html">
+     Procedures: Built-in Functions and String Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-methods-ii.html">
+     String Procedures - Extracting a Sub-String
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/exer-extract-link.html">
+     Extracting a Link
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/assign-extract-url.html">
+     Try It Yourself
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-ii/string-cheat-sheet.html">
+     String Cheat Sheet
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part III • Repetition: Procedures &amp; Control
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-iii/index.html">
+   Procedures &amp; Control
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/what-are-modules.html">
+     Modules in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/procedures-redux.html">
+     Procedures Redux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/practicing-with-procedures.html">
+     Practicing Procedures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/reviewing-practice-exercises.html">
+     Reviewing Procedures and Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/true-false-and-booleans.html">
+     Control Through True and False
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/intro-to-while-loops.html">
+     Introduction to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/practicing-loops-and-conditions.html">
+     Practicing Loops and Conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iii/reviewing-loops-conditions.html">
+     Reviewing Loops and Conditions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part IV • Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part-iv/index.html">
+   Data Structures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/the-problem.html">
+     The Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/list-basics.html">
+     List Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part-iv/for-loop-intro.html">
+     Python’s
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     Loop
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../assignments/index.html">
+   Instructions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/05-while-loop-instructions.html">
+     Challenge - 05 -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/06-procedures-instructions.html">
+     Challenge - 06 - Procedures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../assignments/08-lists-helper-videos.html">
+     Challenge 08 - Counting Vowels
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Cheat Sheet
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   A Rough Cheat Sheet
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics.html">
+     Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="builtins.html">
+     Built-in Functions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Control Flow
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Addenda
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../addenda/index.html">
+   Addenda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/glossary/index.html">
+     Glossary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/bibliography/index.html">
+     Bibliography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../addenda/example-assignments/index.html">
+     Assignments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/python-cheat-sheet/control-flow.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-operators">
+   Comparison Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-operators">
+   Boolean Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mixing-operators">
+   Mixing Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statements">
+   if Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ternary-conditional-operator">
+   Ternary Conditional Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switch-case-statement">
+   Switch-Case Statement
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-single-values">
+     Matching single values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-with-the-or-pattern">
+     Matching with the or Pattern
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-by-the-length-of-an-iterable">
+     Matching by the length of an Iterable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default-value">
+     Default value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-builtin-classes">
+     Matching Builtin Classes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#guarding-match-case-statements">
+     Guarding Match-Case Statements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loop-statements">
+   while Loop Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#break-statements">
+   break Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continue-statements">
+   continue Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-range-function">
+   The range() function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-else-statement">
+   For else statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ending-a-program-with-sys-exit">
+   Ending a Program with sys.exit()
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Control Flow</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-operators">
+   Comparison Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-operators">
+   Boolean Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mixing-operators">
+   Mixing Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statements">
+   if Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ternary-conditional-operator">
+   Ternary Conditional Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switch-case-statement">
+   Switch-Case Statement
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-single-values">
+     Matching single values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-with-the-or-pattern">
+     Matching with the or Pattern
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-by-the-length-of-an-iterable">
+     Matching by the length of an Iterable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default-value">
+     Default value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matching-builtin-classes">
+     Matching Builtin Classes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#guarding-match-case-statements">
+     Guarding Match-Case Statements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loop-statements">
+   while Loop Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#break-statements">
+   break Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continue-statements">
+   continue Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-range-function">
+   The range() function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-else-statement">
+   For else statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ending-a-program-with-sys-exit">
+   Ending a Program with sys.exit()
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="control-flow">
+<h1>Control Flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">#</a></h1>
+<p>Control flow is the order in which individual statements, instructions or function calls are executed or evaluated. The control flow of a Python program is regulated by conditional statements, loops, and function calls.</p>
+<section id="comparison-operators">
+<h2>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>Equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td><p>Not equal to</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>Less than</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>Greater Than</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>Less than or Equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>Greater than or Equal to</p></td>
+</tr>
+</tbody>
+</table>
+<p>These operators evaluate to True or False depending on the values you give them.</p>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">42</span> <span class="o">==</span> <span class="mi">42</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">40</span> <span class="o">==</span> <span class="mi">42</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;hello&#39;</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;hello&#39;</span> <span class="o">==</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;dog&#39;</span> <span class="o">!=</span> <span class="s1">&#39;cat&#39;</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">42</span> <span class="o">==</span> <span class="mf">42.0</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">42</span> <span class="o">==</span> <span class="s1">&#39;42&#39;</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</section>
+<section id="boolean-operators">
+<h2>Boolean Operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">#</a></h2>
+<p>There are three Boolean operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">and</span></code> Operator’s <em>Truth</em> Table:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Expression</p></th>
+<th class="head"><p>Evaluates to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">True</span> <span class="pre">and</span> <span class="pre">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">True</span> <span class="pre">and</span> <span class="pre">False</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">and</span> <span class="pre">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">and</span> <span class="pre">False</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">or</span></code> Operator’s <em>Truth</em> Table:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Expression</p></th>
+<th class="head"><p>Evaluates to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">True</span> <span class="pre">or</span> <span class="pre">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">True</span> <span class="pre">or</span> <span class="pre">False</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">or</span> <span class="pre">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">or</span> <span class="pre">False</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">not</span></code> Operator’s <em>Truth</em> Table:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Expression</p></th>
+<th class="head"><p>Evaluates to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">True</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">False</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mixing-operators">
+<h2>Mixing Operators<a class="headerlink" href="#mixing-operators" title="Permalink to this headline">#</a></h2>
+<p>You can mix boolean and comparison operators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">9</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Also, you can mix use multiple Boolean operators in an expression, along with the comparison operators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</section>
+<section id="if-statements">
+<h2>if Statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement evaluates an expression, and if that expression is <code class="docutils literal notranslate"><span class="pre">True</span></code>, it then executes the following indented code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Debora&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Debora&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, Debora&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Hi, Debora</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="s1">&#39;George&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are not George&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># You are not George</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> statement executes only if the evaluation of the <code class="docutils literal notranslate"><span class="pre">if</span></code> and all the <code class="docutils literal notranslate"><span class="pre">elif</span></code> expressions are <code class="docutils literal notranslate"><span class="pre">False</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Debora&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;George&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, George.&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are not George&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># You are not George</span>
+</pre></div>
+</div>
+<p>Only after the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement expression is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement is evaluated and executed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;George&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Debora&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi Debora!&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;George&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi George!&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Hi George!</span>
+</pre></div>
+</div>
+<p>the <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> parts are optional.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Antony&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Debora&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi Debora!&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;George&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi George!&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Who are you?&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Who are you?</span>
+</pre></div>
+</div>
+</section>
+<section id="ternary-conditional-operator">
+<h2>Ternary Conditional Operator<a class="headerlink" href="#ternary-conditional-operator" title="Permalink to this headline">#</a></h2>
+<p>Many programming languages have a ternary operator, which define a conditional expression. The most common usage is to make a terse, simple conditional assignment statement. In other words, it offers one-line code to evaluate the first expression if the condition is true, and otherwise it evaluates the second expression.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">expression1</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="k">else</span> <span class="o">&lt;</span><span class="n">expression2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this if statement:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kid&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;adult&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># output: kid</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># is equivalent to this ternary operator:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kid&#39;</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="k">else</span> <span class="s1">&#39;adult&#39;</span><span class="p">)</span>
+<span class="go"># output: kid</span>
+</pre></div>
+</div>
+<p>Ternary operators can be chained:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this ternary operator:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kid&#39;</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">13</span> <span class="k">else</span> <span class="s1">&#39;teen&#39;</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="k">else</span> <span class="s1">&#39;adult&#39;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># is equivalent to this if statement:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kid&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;teen&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;adult&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># output: teen</span>
+</pre></div>
+</div>
+</section>
+<section id="switch-case-statement">
+<h2>Switch-Case Statement<a class="headerlink" href="#switch-case-statement" title="Permalink to this headline">#</a></h2>
+<base-disclaimer>
+  <base-disclaimer-title>
+    Switch-Case statements
+  </base-disclaimer-title>
+  <base-disclaimer-content>
+  In computer programming languages, a switch statement is a type of selection control mechanism used to allow the value of a variable or expression to change the control flow of program execution via search and map.
+  </base-disclaimer-content>
+</base-disclaimer>
+<p>The <em>Switch-Case statements</em>, or <strong>Structural Pattern Matching</strong>, was firstly introduced in 2020 via <a class="reference external" href="https://peps.python.org/pep-0622/">PEP 622</a>, and then officially released with <strong>Python 3.10</strong> in September 2022.</p>
+<base-disclaimer>
+  <base-disclaimer-title>
+    Official Tutorial
+  </base-disclaimer-title>
+  <base-disclaimer-content>
+  The <a href="https://peps.python.org/pep-0636/" target="_blank">PEP 636</a> provides an official tutorial for the Python Pattern matching or Switch-Case statements.
+  </base-disclaimer-content>
+</base-disclaimer>
+<section id="matching-single-values">
+<h3>Matching single values<a class="headerlink" href="#matching-single-values" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response_code</span> <span class="o">=</span> <span class="mi">201</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">response_code</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">200</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">201</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Created&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">300</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Multiple Choices&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">307</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temporary Redirect&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">404</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;404 Not Found&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">500</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">502</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;502 Bad Gateway&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Created</span>
+</pre></div>
+</div>
+</section>
+<section id="matching-with-the-or-pattern">
+<h3>Matching with the or Pattern<a class="headerlink" href="#matching-with-the-or-pattern" title="Permalink to this headline">#</a></h3>
+<p>In this example, the pipe character (<code class="docutils literal notranslate"><span class="pre">|</span></code> or <code class="docutils literal notranslate"><span class="pre">or</span></code>) allows python to return the same response for two or more cases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response_code</span> <span class="o">=</span> <span class="mi">502</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">response_code</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">200</span> <span class="o">|</span> <span class="mi">201</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">300</span> <span class="o">|</span> <span class="mi">307</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Redirect&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">400</span> <span class="o">|</span> <span class="mi">401</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bad Request&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">500</span> <span class="o">|</span> <span class="mi">502</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Internal Server Error</span>
+</pre></div>
+</div>
+</section>
+<section id="matching-by-the-length-of-an-iterable">
+<h3>Matching by the length of an Iterable<a class="headerlink" href="#matching-by-the-length-of-an-iterable" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">today_responses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">404</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">today_responses</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="p">[</span><span class="n">a</span><span class="p">]:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;One response today: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Two responses today: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">]:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;All responses: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">rest</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># All responses: 200, 300, [404, 500]</span>
+</pre></div>
+</div>
+</section>
+<section id="default-value">
+<h3>Default value<a class="headerlink" href="#default-value" title="Permalink to this headline">#</a></h3>
+<p>The underscore symbol (<code class="docutils literal notranslate"><span class="pre">_</span></code>) is used to define a default case:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response_code</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">response_code</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">200</span> <span class="o">|</span> <span class="mi">201</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">300</span> <span class="o">|</span> <span class="mi">307</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Redirect&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">400</span> <span class="o">|</span> <span class="mi">401</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bad Request&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="mi">500</span> <span class="o">|</span> <span class="mi">502</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Internal Server Error&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="k">_</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Code&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Invalid Code</span>
+</pre></div>
+</div>
+</section>
+<section id="matching-builtin-classes">
+<h3>Matching Builtin Classes<a class="headerlink" href="#matching-builtin-classes" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response_code</span> <span class="o">=</span> <span class="s2">&quot;300&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">response_code</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="nb">int</span><span class="p">():</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code is a number&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="nb">str</span><span class="p">():</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code is a string&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="k">_</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code is neither a string nor a number&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Code is a string</span>
+</pre></div>
+</div>
+</section>
+<section id="guarding-match-case-statements">
+<h3>Guarding Match-Case Statements<a class="headerlink" href="#guarding-match-case-statements" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response_code</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">response_code</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="nb">int</span><span class="p">():</span>
+<span class="gp">... </span>            <span class="k">if</span> <span class="n">response_code</span> <span class="o">&gt;</span> <span class="mi">99</span> <span class="ow">and</span> <span class="n">response_code</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">:</span>
+<span class="gp">... </span>                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code is a valid number&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">case</span> <span class="k">_</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code is an invalid number&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Code is a valid number</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="while-loop-statements">
+<h2>while Loop Statements<a class="headerlink" href="#while-loop-statements" title="Permalink to this headline">#</a></h2>
+<p>The while statement is used for repeated execution as long as an expression is <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spam</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">spam</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world.&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">spam</span> <span class="o">=</span> <span class="n">spam</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">...</span>
+<span class="go"># Hello, world.</span>
+<span class="go"># Hello, world.</span>
+<span class="go"># Hello, world.</span>
+<span class="go"># Hello, world.</span>
+<span class="go"># Hello, world.</span>
+</pre></div>
+</div>
+</section>
+<section id="break-statements">
+<h2>break Statements<a class="headerlink" href="#break-statements" title="Permalink to this headline">#</a></h2>
+<p>If the execution reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement, it immediately exits the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop’s clause:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please type your name: &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;your name&#39;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Thank you!&#39;</span><span class="p">)</span>
+<span class="go"># Please type your name: your name</span>
+<span class="go"># Thank you!</span>
+</pre></div>
+</div>
+</section>
+<section id="continue-statements">
+<h2>continue Statements<a class="headerlink" href="#continue-statements" title="Permalink to this headline">#</a></h2>
+<p>When the program execution reaches a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement, the program execution immediately jumps back to the start of the loop.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Who are you? &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="s1">&#39;Joe&#39;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">continue</span>
+<span class="gp">... </span>    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Password? (It is a fish.): &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s1">&#39;swordfish&#39;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Access granted.&#39;</span><span class="p">)</span>
+<span class="go"># Who are you? Charles</span>
+<span class="go"># Who are you? Debora</span>
+<span class="go"># Who are you? Joe</span>
+<span class="go"># Password? (It is a fish.): swordfish</span>
+<span class="go"># Access granted.</span>
+</pre></div>
+</div>
+</section>
+<section id="for-loop">
+<h2>For loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over a <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">dictionary</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code> or <code class="docutils literal notranslate"><span class="pre">string</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bella&#39;</span><span class="p">,</span> <span class="s1">&#39;Milo&#39;</span><span class="p">,</span> <span class="s1">&#39;Loki&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">pet</span> <span class="ow">in</span> <span class="n">pets</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">pet</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Bella</span>
+<span class="go"># Milo</span>
+<span class="go"># Loki</span>
+</pre></div>
+</div>
+</section>
+<section id="the-range-function">
+<h2>The range() function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">range()</span></code> function returns a sequence of numbers. It starts from 0, increments by 1, and stops before a specified number:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Will stop at 5! or 4? (</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># Will stop at 5! or 4? (0)</span>
+<span class="go"># Will stop at 5! or 4? (1)</span>
+<span class="go"># Will stop at 5! or 4? (2)</span>
+<span class="go"># Will stop at 5! or 4? (3)</span>
+<span class="go"># Will stop at 5! or 4? (4)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">range()</span></code> function can also modify it’s 3 defaults arguments. The first two will be the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code> values, and the third will be the <code class="docutils literal notranslate"><span class="pre">step</span></code> argument. The step is the amount that the variable is increased by after each iteration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># range(start, stop, step)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+<span class="o">...</span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="c1"># 0</span>
+<span class="c1"># 2</span>
+<span class="c1"># 4</span>
+<span class="c1"># 6</span>
+<span class="c1"># 8</span>
+</pre></div>
+</div>
+<p>You can even use a negative number for the step argument to make the for loop count down instead of up.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go"># 5</span>
+<span class="go"># 4</span>
+<span class="go"># 3</span>
+<span class="go"># 2</span>
+<span class="go"># 1</span>
+<span class="go"># 0</span>
+</pre></div>
+</div>
+</section>
+<section id="for-else-statement">
+<h2>For else statement<a class="headerlink" href="#for-else-statement" title="Permalink to this headline">#</a></h2>
+<p>This allows to specify a statement to execute in case of the full loop has been executed. Only
+useful when a <code class="docutils literal notranslate"><span class="pre">break</span></code> condition can occur in the loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+<span class="gp">... </span>   <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="k">break</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;only executed when no item is equal to 3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="ending-a-program-with-sys-exit">
+<h2>Ending a Program with sys.exit()<a class="headerlink" href="#ending-a-program-with-sys-exit" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">exit()</span></code> function allows exiting Python.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">feedback</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Type exit to exit: &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">feedback</span> <span class="o">==</span> <span class="s1">&#39;exit&#39;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You typed </span><span class="si">{</span><span class="n">feedback</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go"># Type exit to exit: open</span>
+<span class="go"># Type exit to exit: close</span>
+<span class="go"># Type exit to exit: exit</span>
+<span class="go"># You typed exit</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python-cheat-sheet"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="builtins.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Built-in Functions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../addenda/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Addenda</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Barley-Benincasa Lab & Studios ✏️ in cooperation with The Intern<br/>
+  
+      &copy; Copyright 2022-2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
