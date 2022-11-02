@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Structures &#8212; Coding</title>
+    <title>Python’s for Loop &#8212; Coding</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/_logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Problem" href="the-problem.html" />
-    <link rel="prev" title="Reviewing Loops and Conditions" href="../part-iii/reviewing-loops-conditions.html" />
+    <link rel="next" title="Instructions" href="../assignments/index.html" />
+    <link rel="prev" title="List Basics" href="list-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -304,7 +304,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Data Structures
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -312,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="the-problem.html">
      The Problem
@@ -323,8 +323,8 @@ const thebe_selector_output = ".output, .cell_output"
      List Basics
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="for-loop-intro.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Python’s
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -483,7 +483,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/part-iv/index.md"
+        <a href="../_sources/part-iv/for-loop-intro.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -520,23 +520,94 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-of-range-in-for-loop">
+   Use of
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     range
+    </span>
+   </code>
+   in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   Loop
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Structures</h1>
+                <h1>Python’s for Loop</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-of-range-in-for-loop">
+   Use of
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     range
+    </span>
+   </code>
+   in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   Loop
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -544,10 +615,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-structures">
-<h1>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="pythons-for-loop">
+<h1>Python’s <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#pythons-for-loop" title="Permalink to this headline">#</a></h1>
+<p>You’ve seen the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop but, with the introduction of another <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, i.e., the <code class="docutils literal notranslate"><span class="pre">list</span></code> (the <code class="docutils literal notranslate"><span class="pre">string</span></code> being the first), it’s time to learn the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, a means of repeating code blocks for the extent of an iterable’s length.</p>
+<p>The while loop typically is designed to repeat a specific block of code an <em>unknown</em> number of times until a condition is met. In some cases, it is intended to repeat without end.</p>
+<p>But if the number of loops can be known ahead of time, you typically will use the <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>.</p>
+<p>When we say the number of loops “can be known ahead of time,” that doesn’t necessarily mean a specific number. Rather, it means the number of repetitions can be known with respect to something else. Thus, when you know you need to iterate over a string or list, you know that the repetitions will be <strong><em>no more</em></strong> than the size of the string or list or whatever other iterable you are moving through.</p>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">#</a></h2>
+<p>The most basic and common for loop contains two keywords (<code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code>) and two variable names:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">some_iterable</span><span class="p">:</span>
+    <span class="c1"># code block</span>
+
+</pre></div>
 </div>
+<p>In the for loop above, the <code class="docutils literal notranslate"><span class="pre">var</span></code> is simply the variable name you provide and <code class="docutils literal notranslate"><span class="pre">some_iterable</span></code> is just that – a string or list or some other iterable over which you loop. <code class="docutils literal notranslate"><span class="pre">var</span></code> could be any variable name upon which you decide – following all the same rules for variable naming – and upon each iteration through the loop, the <code class="docutils literal notranslate"><span class="pre">var</span></code> will be assigned to the next item in the iteratable.</p>
+<p>Thus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># George</span>
+<span class="c1"># John</span>
+<span class="c1"># James</span>
+<span class="c1"># Benjamin</span>
+
+</pre></div>
+</div>
+</section>
+<section id="use-of-range-in-for-loop">
+<h2>Use of <code class="docutils literal notranslate"><span class="pre">range</span></code> in <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#use-of-range-in-for-loop" title="Permalink to this headline">#</a></h2>
+<p>Python’s <code class="docutils literal notranslate"><span class="pre">range()</span></code> function creates a series of integers on the fly …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1">#</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># 0</span>
+<span class="c1"># 1</span>
+<span class="c1"># 2</span>
+<span class="c1"># 3</span>
+<span class="c1"># 4</span>
+<span class="c1"># 5</span>
+<span class="c1"># 6</span>
+<span class="c1"># 7</span>
+<span class="c1"># 8</span>
+<span class="c1"># 9</span>
+
+</pre></div>
+</div>
+<p>… and it works quite well with for loops because the integers generated can be used to index into sequences like lists and strings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="c1"># 0 George</span>
+<span class="c1"># 1 John</span>
+<span class="c1"># 2 James</span>
+<span class="c1"># 3 Benjamin</span>
+
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -577,17 +711,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../part-iii/reviewing-loops-conditions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="list-basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reviewing Loops and Conditions</p>
+            <p class="prev-next-title">List Basics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="the-problem.html" title="next page">
+    <a class='right-next' id="next-link" href="../assignments/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Problem</p>
+        <p class="prev-next-title">Instructions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
