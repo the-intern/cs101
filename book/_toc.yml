@@ -70,6 +70,15 @@ parts:
           - file: assignments/06-procedures-instructions
           - file: assignments/08-lists-helper-videos
 
+  - caption: Python Cheat Sheet
+    numbered: false
+    chapters:
+      - file: python-cheat-sheet/index
+        sections:
+          - file: python-cheat-sheet/basics
+          - file: python-cheat-sheet/builtins
+          - file: python-cheat-sheet/control-flow
+
   - caption: Addenda
     numbered: false
     chapters:
