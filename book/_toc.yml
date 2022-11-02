@@ -59,6 +59,7 @@ parts:
         sections:
           - file: part-iv/the-problem
           - file: part-iv/list-basics
+          - file: part-iv/for-loop-intro
 
   - caption: Assignments
     numbered: false
