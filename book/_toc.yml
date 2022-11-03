@@ -69,6 +69,7 @@ parts:
           - file: assignments/05-while-loop-instructions
           - file: assignments/06-procedures-instructions
           - file: assignments/08-lists-helper-videos
+          - file: assignments/challenge-9-vid
 
   - caption: Python Cheat Sheet
     numbered: false
