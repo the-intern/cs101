@@ -1,3 +1,3 @@
 # Instructions
 
-See assignment instructions that follow.
+Assignments have been indefinitely removed.

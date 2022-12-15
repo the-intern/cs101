@@ -14,6 +14,8 @@ kernelspec:
 
 ```{warning}
 
-__This site is updated approximately every two days.  Clear your browser's cache when visiting so that it loads the updates.__
+__This site is under construction.__
+
+Merry Christmas
 
 ```
